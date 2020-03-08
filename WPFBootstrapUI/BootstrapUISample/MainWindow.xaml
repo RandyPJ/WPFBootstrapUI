@@ -14,15 +14,18 @@
         <bootstrap:Alert
             Margin="10"
             Content="Hola mundo"
+            IsAlertDismissible="True"
             Style="{StaticResource Alert-Primary}" />
         <bootstrap:Alert
             Margin="10"
             Content="Hola mundo"
+            IsAlertDismissible="True"
             Style="{StaticResource Alert-Secondary}" />
 
         <bootstrap:Alert
             Margin="10"
             Content="Hola mundo"
+            IsAlertDismissible="True"
             Style="{StaticResource Alert-Success}" />
 
         <bootstrap:Alert
