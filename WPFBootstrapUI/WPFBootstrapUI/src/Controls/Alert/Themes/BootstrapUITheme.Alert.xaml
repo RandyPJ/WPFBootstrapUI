@@ -17,7 +17,7 @@
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
-        <Setter Property="Height" Value="60" />
+        <Setter Property="Height" Value="50" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
