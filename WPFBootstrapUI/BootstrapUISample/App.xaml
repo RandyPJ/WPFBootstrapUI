@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/Alert/Themes/BootstrapUITheme.Alert.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/ColorsDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

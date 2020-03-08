@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFBootstrapUI.src.Colors">
+
+    <!--  Base Colors  -->
+    <SolidColorBrush x:Key="PrimarySolidColorBrush" Color="#0074d9" />
+    <SolidColorBrush x:Key="InfoSolidColorBrush" Color="#17a2b8" />
+    <SolidColorBrush x:Key="SuccessSolidColorBrush" Color="#28a745" />
+    <SolidColorBrush x:Key="WarningSolidColorBrush" Color="#ffc107" />
+    <SolidColorBrush x:Key="DangerSolidColorBrush" Color="#dc3545" />
+    <SolidColorBrush x:Key="DarkSolidColorBrush" Color="#343a40" />
+    <SolidColorBrush x:Key="SecondarySolidColorBrush" Color="#6c757d" />
+    <SolidColorBrush x:Key="LightSolidColorBrush" Color="#f8f9fa" />
+    <SolidColorBrush x:Key="WhiteSolidColorBrush" Color="#ffffff" />
+
+</ResourceDictionary>

@@ -4,26 +4,24 @@
     xmlns:AlertControl="clr-namespace:WPFBootstrapUI.src.Controls.Alert.Implementation"
     xmlns:local="clr-namespace:WPFBootstrapUI.src.Controls.Alert.Themes">
 
-
-    <Style x:Key="Alert-Base" TargetType="{x:Type AlertControl:Alert}">
-        <Setter Property="AlertControl:Alert.CornerRadius" Value="2" />
-        <Setter Property="Padding" Value="20,12" />
-    </Style>
-
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/ColorsDictionary.xaml" />
+    </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="Alert-Primary" TargetType="{x:Type AlertControl:Alert}">
-        <Setter Property="AlertControl:Alert.CornerRadius" Value="2" />
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
-        <Setter Property="AlertForeground" Value="Aqua" />
+        <Setter Property="Height" Value="100" />
+        <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
-                    <Grid>
+                    <Grid Height="{TemplateBinding Height}">
                         <Border
-                            Background="White"
+                            Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
-                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius)}" />
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
                         <TextBlock
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"

@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\
 WPFBootstrapUI
 none
 false
 DEBUG;TRACE
 
-1-1249437193
+21583812134
 
-51603045646
+41988497057
 13152784993
-src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;
+src\Colors\ColorsDictionary.xaml;src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;
 
-True
+False
 
