@@ -10,11 +10,44 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <Grid>
+    <StackPanel>
         <bootstrap:Alert
-            Width="100"
-            Height="40"
-            Style="{StaticResource Alert-Primary}"
-            Text="Hola" />
-    </Grid>
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Primary}" />
+        <bootstrap:Alert
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Secondary}" />
+
+        <bootstrap:Alert
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Success}" />
+
+        <bootstrap:Alert
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Danger}" />
+
+        <bootstrap:Alert
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Warning}" />
+
+        <bootstrap:Alert
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Info}" />
+
+        <bootstrap:Alert
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Light}" />
+
+        <bootstrap:Alert
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource Alert-Dark}" />
+    </StackPanel>
 </Window>

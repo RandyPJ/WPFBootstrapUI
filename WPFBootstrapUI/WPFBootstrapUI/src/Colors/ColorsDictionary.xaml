@@ -14,4 +14,34 @@
     <SolidColorBrush x:Key="LightSolidColorBrush" Color="#f8f9fa" />
     <SolidColorBrush x:Key="WhiteSolidColorBrush" Color="#ffffff" />
 
+
+    <SolidColorBrush x:Key="AlertPrimarySolidColorBrush" Color="#CCE5FF" />
+    <SolidColorBrush x:Key="AlertPrimaryForegroundSolidColorBrush" Color="#195494" />
+
+    <SolidColorBrush x:Key="AlertSecondarySolidColorBrush" Color="#E2E3E5" />
+    <SolidColorBrush x:Key="AlertSecondaryForegroundSolidColorBrush" Color="#383D41" />
+
+    <SolidColorBrush x:Key="AlertSuccessSolidColorBrush" Color="#D4EDDA" />
+    <SolidColorBrush x:Key="AlertSuccessForegroundSolidColorBrush" Color="#155724" />
+
+    <SolidColorBrush x:Key="AlertDangerSolidColorBrush" Color="#F8D7DA" />
+    <SolidColorBrush x:Key="AlertDangerForegroundSolidColorBrush" Color="#721C24" />
+
+    <SolidColorBrush x:Key="AlertWarningSolidColorBrush" Color="#FFF3CD" />
+    <SolidColorBrush x:Key="AlertWarningForegroundSolidColorBrush" Color="#856404" />
+
+    <SolidColorBrush x:Key="AlertInfoSolidColorBrush" Color="#D1ECF1" />
+    <SolidColorBrush x:Key="AlertInfoForegroundSolidColorBrush" Color="#0C5460" />
+
+    <SolidColorBrush x:Key="AlertLightSolidColorBrush" Color="#FEFEFE" />
+    <SolidColorBrush x:Key="AlertLightForegroundSolidColorBrush" Color="#8C8C8D" />
+
+    <SolidColorBrush x:Key="AlertDarkSolidColorBrush" Color="#D6D8D9" />
+    <SolidColorBrush x:Key="AlertDarkForegroundSolidColorBrush" Color="#1B1E21" />
+
+
+
+
+
+
 </ResourceDictionary>

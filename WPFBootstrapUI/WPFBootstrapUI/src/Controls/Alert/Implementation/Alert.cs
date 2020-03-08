@@ -36,27 +36,5 @@ namespace WPFBootstrapUI.src.Controls.Alert.Implementation
         // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CornerRadiusProperty =
             DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(Alert), new PropertyMetadata(new CornerRadius(2.0)));
-
-
-
-
-
-
-
-        public Brush AlertForeground
-        {
-            get { return (Brush)GetValue(AlertForegroundProperty); }
-            set { SetValue(AlertForegroundProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for AlertForeground.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty AlertForegroundProperty =
-            DependencyProperty.Register("AlertForeground", typeof(Brush), typeof(Alert), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(0,0,0))));
-
-
-
-
-
-
     }
 }

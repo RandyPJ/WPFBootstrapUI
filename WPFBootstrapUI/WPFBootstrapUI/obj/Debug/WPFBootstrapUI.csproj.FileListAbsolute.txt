@@ -23,3 +23,4 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debu
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csproj.GenerateResource.cache
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.dll
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.pdb
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Fonts\FontFamilyDictionary.baml

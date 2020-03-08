@@ -8,26 +8,236 @@
         <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/ColorsDictionary.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="Alert-Primary" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="Alert-Base" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
-        <Setter Property="Height" Value="100" />
-        <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
+        <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
+        <Setter Property="Height" Value="60" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+    </Style>
 
+    <Style
+        x:Key="Alert-Primary"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertPrimaryForegroundSolidColorBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
-                    <Grid Height="{TemplateBinding Height}">
+                    <Grid>
                         <Border
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
-                        <TextBlock
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Foreground="{TemplateBinding AlertForeground}"
-                            Text="{TemplateBinding Text}" />
-                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="Alert-Secondary"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertSecondarySolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertSecondaryForegroundSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="Alert-Success"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertSuccessSolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertSuccessForegroundSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="Alert-Danger"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertDangerSolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertDangerForegroundSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="Alert-Warning"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertWarningSolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertWarningForegroundSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="Alert-Info"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertInfoSolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertInfoForegroundSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="Alert-Light"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertLightSolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertLightForegroundSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="Alert-Dark"
+        BasedOn="{StaticResource Alert-Base}"
+        TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="Background" Value="{StaticResource AlertDarkSolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertDarkForegroundSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type AlertControl:Alert}">
+                    <Grid>
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                        <ContentPresenter
+                            Margin="20,0,0,0"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                            TextBlock.FontSize="{TemplateBinding FontSize}"
+                            TextBlock.Foreground="{TemplateBinding Foreground}" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
