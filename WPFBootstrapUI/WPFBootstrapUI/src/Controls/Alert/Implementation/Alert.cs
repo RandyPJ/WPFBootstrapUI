@@ -1,6 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows;
 using System;
+using System.Windows.Media;
 
 namespace WPFBootstrapUI.src.Controls.Alert.Implementation
 {
@@ -21,9 +22,9 @@ namespace WPFBootstrapUI.src.Controls.Alert.Implementation
             DismissButton = GetTemplateChild(part_DismissButton) as Button;
 
             if (DismissButton == null)
-            {
                 throw new InvalidOperationException($"Control {part_DismissButton} not found in the template.");
-            }
+
+            SetAlertDismissButtonForeground(DismissButton, this.Foreground);
 
             DismissButton.Click += DismissButton_Click;
 
@@ -35,17 +36,6 @@ namespace WPFBootstrapUI.src.Controls.Alert.Implementation
             this.Visibility = Visibility.Collapsed;
         }
 
-        public string Text
-        {
-            get { return (string)GetValue(TextProperty); }
-            set { SetValue(TextProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty TextProperty =
-            DependencyProperty.Register("Text", typeof(string), typeof(Alert), new PropertyMetadata(string.Empty));
-
-
         public static CornerRadius GetCornerRadius(DependencyObject obj)
         {
             return (CornerRadius)obj.GetValue(CornerRadiusProperty);
@@ -56,10 +46,8 @@ namespace WPFBootstrapUI.src.Controls.Alert.Implementation
             obj.SetValue(CornerRadiusProperty, value);
         }
 
-        // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CornerRadiusProperty =
             DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(Alert), new PropertyMetadata(new CornerRadius(2.0)));
-
 
         public bool IsAlertDismissible
         {
@@ -67,8 +55,28 @@ namespace WPFBootstrapUI.src.Controls.Alert.Implementation
             set { SetValue(IsAlertDismissibleProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for AlertDismissible.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IsAlertDismissibleProperty =
             DependencyProperty.Register("IsAlertDismissible", typeof(bool), typeof(Alert), new PropertyMetadata(false));
+
+
+        public static Brush GetAlertDismissButtonForeground(DependencyObject obj)
+        {
+            return (Brush)obj.GetValue(AlertDismissButtonForegroundProperty);
+        }
+
+        public static void SetAlertDismissButtonForeground(DependencyObject obj, Brush value)
+        {
+            obj.SetValue(AlertDismissButtonForegroundProperty, value);
+        }
+
+        public static readonly DependencyProperty AlertDismissButtonForegroundProperty =
+            DependencyProperty.RegisterAttached("AlertDismissButtonForeground", typeof(Brush), typeof(Alert), new PropertyMetadata(Brushes.Transparent,OnAlertAssistDismissForegroundChanged));
+
+        private static void OnAlertAssistDismissForegroundChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Button button = (Button)d;
+            if (e.NewValue != e.OldValue)
+                button.Foreground = (Brush)e.NewValue;
+        }
     }
 }

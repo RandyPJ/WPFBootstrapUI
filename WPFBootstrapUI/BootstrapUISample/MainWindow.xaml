@@ -31,6 +31,7 @@
         <bootstrap:Alert
             Margin="10"
             Content="Hola mundo"
+            IsAlertDismissible="True"
             Style="{StaticResource Alert-Danger}" />
 
         <bootstrap:Alert
