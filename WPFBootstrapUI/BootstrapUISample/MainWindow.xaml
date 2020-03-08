@@ -11,6 +11,7 @@
     Height="450"
     mc:Ignorable="d">
     <StackPanel>
+
         <bootstrap:Alert
             Margin="10"
             Content="Hola mundo"

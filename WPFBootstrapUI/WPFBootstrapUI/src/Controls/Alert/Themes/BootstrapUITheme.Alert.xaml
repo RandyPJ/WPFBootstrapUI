@@ -127,7 +127,6 @@
         TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertDangerSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertDangerForegroundSolidColorBrush}" />
-
     </Style>
 
     <Style
@@ -136,7 +135,6 @@
         TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertWarningSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertWarningForegroundSolidColorBrush}" />
-
     </Style>
 
     <Style
@@ -145,7 +143,6 @@
         TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertInfoSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertInfoForegroundSolidColorBrush}" />
-
     </Style>
 
     <Style
@@ -154,7 +151,6 @@
         TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertLightSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertLightForegroundSolidColorBrush}" />
-
     </Style>
 
     <Style

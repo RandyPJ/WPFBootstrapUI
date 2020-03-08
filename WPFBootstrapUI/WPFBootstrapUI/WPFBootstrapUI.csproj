@@ -81,7 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\Controls\Button\Implementation\" />
-    <Folder Include="src\Controls\Button\Themes\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="src\Colors\ColorsDictionary.xaml">
@@ -89,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Controls\Button\Themes\BootstrapUITheme.Button.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

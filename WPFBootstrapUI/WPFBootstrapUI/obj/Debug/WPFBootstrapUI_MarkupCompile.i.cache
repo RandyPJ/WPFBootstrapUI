@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-31306505547
+4-399038273
 
 6-2049768021
 15-237304285
-src\Colors\ColorsDictionary.xaml;src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;src\Fonts\FontFamilyDictionary.xaml;
+src\Colors\ColorsDictionary.xaml;src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;src\Controls\Button\Themes\BootstrapUITheme.Button.xaml;src\Fonts\FontFamilyDictionary.xaml;
 
 True
 
