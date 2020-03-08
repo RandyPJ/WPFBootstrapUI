@@ -1,0 +1,12 @@
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\WPFBootstrapUI.dll
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\WPFBootstrapUI.pdb
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csprojAssemblyReference.cache
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI_MarkupCompile.cache
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI_MarkupCompile.lref
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.g.resources
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.Properties.Resources.resources
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csproj.GenerateResource.cache
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.dll
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.pdb
+C:\Users\usuario\source\repos\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Alert\Themes\BootstrapUITheme.Alert.baml
