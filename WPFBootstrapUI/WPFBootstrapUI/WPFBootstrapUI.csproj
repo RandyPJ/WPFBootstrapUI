@@ -67,6 +67,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="src\BorderAssist.cs" />
     <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
     <Compile Include="src\Converters\BooleanToVisibilityConverter.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

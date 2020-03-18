@@ -9,13 +9,14 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder">
                         <Grid>
-                            <Border x:Name="InnerBorder" />
+                            <Border x:Name="InnerBorder" Background="{TemplateBinding Background}" />
                             <ContentPresenter
                                 x:Name="Presenter"
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Grid>
                     </Border>
+
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="White" />

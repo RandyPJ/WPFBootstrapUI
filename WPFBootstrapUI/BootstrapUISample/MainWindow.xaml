@@ -10,49 +10,59 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <StackPanel>
 
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            IsAlertDismissible="True"
-            Style="{StaticResource Alert-Primary}" />
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            IsAlertDismissible="True"
-            Style="{StaticResource Alert-Secondary}" />
+    <TabControl>
+        <TabItem Header="Alerts">
+            <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    IsAlertDismissible="True"
+                    Style="{StaticResource Alert-Primary}" />
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    IsAlertDismissible="True"
+                    Style="{StaticResource Alert-Secondary}" />
 
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            IsAlertDismissible="True"
-            Style="{StaticResource Alert-Success}" />
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    IsAlertDismissible="True"
+                    Style="{StaticResource Alert-Success}" />
 
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            IsAlertDismissible="True"
-            Style="{StaticResource Alert-Danger}" />
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    IsAlertDismissible="True"
+                    Style="{StaticResource Alert-Danger}" />
 
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            Style="{StaticResource Alert-Warning}" />
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    IsAlertDismissible="True"
+                    Style="{StaticResource Alert-Warning}" />
 
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            Style="{StaticResource Alert-Info}" />
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    Style="{StaticResource Alert-Info}" />
 
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            Style="{StaticResource Alert-Light}" />
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    Style="{StaticResource Alert-Light}" />
 
-        <bootstrap:Alert
-            Margin="10"
-            Content="Hola mundo"
-            Style="{StaticResource Alert-Dark}" />
-    </StackPanel>
+                <bootstrap:Alert
+                    Margin="10"
+                    Content="Hola mundo"
+                    Style="{StaticResource Alert-Dark}" />
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Buttons">
+            <StackPanel>
+                <Button />
+            </StackPanel>
+        </TabItem>
+    </TabControl>
 </Window>
