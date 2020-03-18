@@ -32,3 +32,4 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debu
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.xml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csproj.CopyComplete
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Button\Themes\BootstrapUITheme.Button.baml
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csproj.CoreCompileInputs.cache

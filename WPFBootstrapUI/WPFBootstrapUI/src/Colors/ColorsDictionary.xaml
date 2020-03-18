@@ -5,15 +5,33 @@
     xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
 
     <!--  Base Colors  -->
-    <SolidColorBrush x:Key="PrimarySolidColorBrush" Color="#0074d9" />
-    <SolidColorBrush x:Key="InfoSolidColorBrush" Color="#17a2b8" />
-    <SolidColorBrush x:Key="SuccessSolidColorBrush" Color="#28a745" />
-    <SolidColorBrush x:Key="WarningSolidColorBrush" Color="#ffc107" />
-    <SolidColorBrush x:Key="DangerSolidColorBrush" Color="#dc3545" />
-    <SolidColorBrush x:Key="DarkSolidColorBrush" Color="#343a40" />
-    <SolidColorBrush x:Key="SecondarySolidColorBrush" Color="#6c757d" />
-    <SolidColorBrush x:Key="LightSolidColorBrush" Color="#f8f9fa" />
-    <SolidColorBrush x:Key="WhiteSolidColorBrush" Color="#ffffff" />
+
+    <Color x:Key="PrimaryColor">#0074d9</Color>
+    <SolidColorBrush x:Key="PrimarySolidColorBrush" Color="{StaticResource PrimaryColor}" />
+
+    <Color x:Key="InfoColor">#17a2b8</Color>
+    <SolidColorBrush x:Key="InfoSolidColorBrush" Color="{StaticResource InfoColor}" />
+
+    <Color x:Key="SuccessColor">#28a745</Color>
+    <SolidColorBrush x:Key="SuccessSolidColorBrush" Color="{StaticResource SuccessColor}" />
+
+    <Color x:Key="WarningColor">#ffc107</Color>
+    <SolidColorBrush x:Key="WarningSolidColorBrush" Color="{StaticResource WarningColor}" />
+
+    <Color x:Key="DangerColor">#dc3545</Color>
+    <SolidColorBrush x:Key="DangerSolidColorBrush" Color="{StaticResource DangerColor}" />
+
+    <Color x:Key="DarkColor">#343a40</Color>
+    <SolidColorBrush x:Key="DarkSolidColorBrush" Color="{StaticResource DarkColor}" />
+
+    <Color x:Key="SecondaryColor">#6c757d</Color>
+    <SolidColorBrush x:Key="SecondarySolidColorBrush" Color="{StaticResource SecondaryColor}" />
+
+    <Color x:Key="LightSolidColor">#f8f9fa</Color>
+    <SolidColorBrush x:Key="LightSolidColorBrush" Color="{StaticResource LightSolidColor}" />
+
+    <Color x:Key="WhiteColor">#ffffff</Color>
+    <SolidColorBrush x:Key="WhiteSolidColorBrush" Color="{StaticResource WhiteColor}" />
 
 
     <SolidColorBrush x:Key="AlertPrimarySolidColorBrush" Color="#CCE5FF" />
@@ -41,8 +59,27 @@
     <SolidColorBrush x:Key="AlertDarkForegroundSolidColorBrush" Color="#1B1E21" />
 
 
+    <Color x:Key="PrimaryHoveredColor">#0069d9</Color>
+    <SolidColorBrush x:Key="PrimaryHoveredSolidColorBrush" Color="{StaticResource PrimaryHoveredColor}" />
 
+    <Color x:Key="SecondaryHoveredColor">#5a6268</Color>
+    <SolidColorBrush x:Key="SecondaryHoveredSolidColorBrush" Color="{StaticResource SecondaryHoveredColor}" />
 
+    <Color x:Key="SuccessHoveredColor">#218838</Color>
+    <SolidColorBrush x:Key="SuccessHoveredSolidColorBrush" Color="{StaticResource SuccessHoveredColor}" />
 
+    <Color x:Key="DangerHoveredColor">#c82333</Color>
+    <SolidColorBrush x:Key="DangerHoveredSolidColorBrush" Color="{StaticResource DangerHoveredColor}" />
 
+    <Color x:Key="WarningHoveredColor">#d39e00</Color>
+    <SolidColorBrush x:Key="WarningHoveredSolidColorBrush" Color="{StaticResource WarningHoveredColor}" />
+
+    <Color x:Key="InfoHoveredColor">#117a8b</Color>
+    <SolidColorBrush x:Key="InfoHoveredSolidColorBrush" Color="{StaticResource InfoHoveredColor}" />
+
+    <Color x:Key="LightHoveredColor">#dae0e5</Color>
+    <SolidColorBrush x:Key="LightHoveredSolidColorBrush" Color="{StaticResource LightHoveredColor}" />
+
+    <Color x:Key="DarkHoveredColor">#23272b</Color>
+    <SolidColorBrush x:Key="DarkHoveredSolidColorBrush" Color="{StaticResource DarkHoveredColor}" />
 </ResourceDictionary>

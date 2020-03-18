@@ -3,28 +3,641 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.src.Controls.Button.Themes">
 
-    <Style x:Key="Button-Base" TargetType="{x:Type ButtonBase}">
+    <Style x:Key="btn-base" TargetType="{x:Type ButtonBase}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+    </Style>
+
+    <Style
+        x:Key="btn-primary"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="OutterBorder">
-                        <Grid>
-                            <Border x:Name="InnerBorder" Background="{TemplateBinding Background}" />
-                            <ContentPresenter
-                                x:Name="Presenter"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            UseLayoutRounding="True">
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource PrimarySolidColorBrush}"
+                                BorderBrush="{StaticResource PrimarySolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5">
+                                <Label
+                                    Padding="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Content="{TemplateBinding Content}"
+                                    Foreground="{TemplateBinding Foreground}" />
+                            </Border>
                         </Grid>
                     </Border>
-
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="White" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
                         </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimarySolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
+    <Style
+        x:Key="btn-secondary"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertSecondarySolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid>
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource SecondarySolidColorBrush}"
+                                BorderBrush="{StaticResource SecondarySolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5" />
+                            <Label
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSecondarySolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSecondarySolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondarySolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSecondarySolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="btn-success"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertSuccessSolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid>
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource SuccessSolidColorBrush}"
+                                BorderBrush="{StaticResource SuccessSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5" />
+                            <Label
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSuccessSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSuccessSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSuccessSolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="btn-danger"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertDangerSolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid>
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource DangerSolidColorBrush}"
+                                BorderBrush="{StaticResource DangerSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5" />
+                            <Label
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDangerSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDangerSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDangerSolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="btn-warning"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertWarningSolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid>
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource WarningSolidColorBrush}"
+                                BorderBrush="{StaticResource WarningSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5" />
+                            <Label
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertWarningSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertWarningSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertWarningSolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="btn-info"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertInfoSolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid>
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource InfoSolidColorBrush}"
+                                BorderBrush="{StaticResource InfoSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5" />
+                            <Label
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertInfoSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertInfoSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertInfoSolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="btn-light"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertLightSolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid>
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource LightSolidColorBrush}"
+                                BorderBrush="{StaticResource LightSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5" />
+                            <Label
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertLightSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertLightSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource LightSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertLightSolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="btn-dark"
+        BasedOn="{StaticResource btn-base}"
+        TargetType="{x:Type ButtonBase}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border
+                        x:Name="OutterBorder"
+                        BorderBrush="{StaticResource AlertDarkSolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5">
+                        <Grid>
+                            <Border
+                                x:Name="InnerBorder"
+                                Background="{StaticResource DarkSolidColorBrush}"
+                                BorderBrush="{StaticResource DarkSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5" />
+                            <Label
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}"
+                                Foreground="{TemplateBinding Foreground}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDarkSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDarkSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="True" />
+                                <Condition Property="IsMouseOver" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDarkSolidColorBrush}" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                                <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

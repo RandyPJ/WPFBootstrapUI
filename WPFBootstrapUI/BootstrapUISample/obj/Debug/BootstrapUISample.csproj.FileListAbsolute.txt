@@ -40,3 +40,4 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\D
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.Core.xml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.xml
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.csproj.CoreCompileInputs.cache
