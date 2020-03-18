@@ -82,4 +82,9 @@
 
     <Color x:Key="DarkHoveredColor">#23272b</Color>
     <SolidColorBrush x:Key="DarkHoveredSolidColorBrush" Color="{StaticResource DarkHoveredColor}" />
+
+    <Color x:Key="LinkButtonForegroundColor">#007bff</Color>
+    <SolidColorBrush x:Key="LinkButtonForegroundSolidColorBrush" Color="{StaticResource LinkButtonForegroundColor}" />
+
+
 </ResourceDictionary>

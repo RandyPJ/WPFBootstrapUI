@@ -2,6 +2,7 @@
     x:Class="BootstrapUISample.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:assist="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
     xmlns:bootstrap="clr-namespace:WPFBootstrapUI.src.Controls.Alert.Implementation;assembly=WPFBootstrapUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BootstrapUISample"
@@ -23,7 +24,6 @@
                     FontFamily="{StaticResource SegoeUI}"
                     FontSize="60"
                     FontWeight="Light" />
-
 
                 <bootstrap:Alert
                     Margin="10"
@@ -83,6 +83,7 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -103,7 +104,8 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Content="Primary"
-                    Style="{StaticResource btn-primary}" />
+                    Style="{StaticResource btn-primary}"
+                    ToolTip="Hola mundo" />
 
                 <Button
                     Grid.Row="1"
@@ -146,6 +148,13 @@
                     Grid.Column="8"
                     Content="Dark"
                     Style="{StaticResource btn-dark}" />
+
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="9"
+                    assist:TextAssist.Text="Link"
+                    Style="{StaticResource btn-link}" />
+
             </Grid>
         </TabItem>
     </TabControl>

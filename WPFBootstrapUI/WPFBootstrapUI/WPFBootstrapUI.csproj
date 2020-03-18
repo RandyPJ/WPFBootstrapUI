@@ -70,6 +70,7 @@
     <Compile Include="src\BorderAssist.cs" />
     <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
     <Compile Include="src\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="src\TextAssist.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
