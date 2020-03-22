@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:assist="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
-    xmlns:bootstrap="clr-namespace:WPFBootstrapUI.src.Controls.Alert.Implementation;assembly=WPFBootstrapUI"
+    xmlns:bootstrap="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BootstrapUISample"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"

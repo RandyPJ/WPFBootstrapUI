@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="src\BorderAssist.cs" />
     <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
+    <Compile Include="src\Controls\Card\Implementation\Card.cs" />
     <Compile Include="src\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="src\TextAssist.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -94,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\Controls\Button\Themes\BootstrapUITheme.Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Controls\Card\Themes\BootstrapUITheme.Card.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

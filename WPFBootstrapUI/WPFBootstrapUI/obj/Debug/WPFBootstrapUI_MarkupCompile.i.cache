@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-4-399038273
+5-973727775
 
-8504681400
+9-884238509
 15-237304285
-src\Colors\ColorsDictionary.xaml;src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;src\Controls\Button\Themes\BootstrapUITheme.Button.xaml;src\Fonts\FontFamilyDictionary.xaml;
+src\Colors\ColorsDictionary.xaml;src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;src\Controls\Button\Themes\BootstrapUITheme.Button.xaml;src\Controls\Card\Themes\BootstrapUITheme.Card.xaml;src\Fonts\FontFamilyDictionary.xaml;
 
 True
 
