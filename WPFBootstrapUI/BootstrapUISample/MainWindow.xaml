@@ -2,6 +2,7 @@
     x:Class="BootstrapUISample.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:WPFBootstrapUI.src.Controls;assembly=WPFBootstrapUI"
     xmlns:assist="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
     xmlns:bootstrap="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -164,10 +165,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <TextBox
-                    Grid.Row="0"
-                    Margin="10"
-                    Style="{StaticResource BootstrapTextbox}" />
+                <Controls:TextBox Grid.Row="0" />
             </Grid>
         </TabItem>
     </TabControl>
