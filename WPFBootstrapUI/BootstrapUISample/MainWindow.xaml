@@ -157,5 +157,18 @@
 
             </Grid>
         </TabItem>
+
+        <TabItem Header="TextBoxes">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBox
+                    Grid.Row="0"
+                    Margin="10"
+                    Style="{StaticResource BootstrapTextbox}" />
+            </Grid>
+        </TabItem>
     </TabControl>
 </Window>
