@@ -68,10 +68,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="src\BootstrapTextBoxAssist.cs" />
     <Compile Include="src\BorderAssist.cs" />
     <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
     <Compile Include="src\Controls\Card\Implementation\Card.cs" />
-    <Compile Include="src\Controls\TextBox\Implementation\TextBox.cs" />
     <Compile Include="src\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="src\TextAssist.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\Controls\Button\Implementation\" />
+    <Folder Include="src\Controls\TextBox\Implementation\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="src\Colors\ColorsDictionary.xaml">
