@@ -32,7 +32,8 @@
     <SolidColorBrush x:Key="WhiteSolidColorBrush" Color="{StaticResource WhiteColor}" />
 
 
-    <SolidColorBrush x:Key="AlertPrimarySolidColorBrush" Color="#CCE5FF" />
+    <Color x:Key="AlertPrimaryColor">#CCE5FF</Color>
+    <SolidColorBrush x:Key="AlertPrimarySolidColorBrush" Color="{StaticResource AlertPrimaryColor}" />
     <SolidColorBrush x:Key="AlertPrimaryForegroundSolidColorBrush" Color="#195494" />
 
     <SolidColorBrush x:Key="AlertSecondarySolidColorBrush" Color="#E2E3E5" />

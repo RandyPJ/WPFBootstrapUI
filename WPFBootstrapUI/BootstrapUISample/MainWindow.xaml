@@ -14,6 +14,12 @@
     WindowState="Maximized"
     mc:Ignorable="d">
 
+    <Window.Resources>
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+    </Window.Resources>
+
     <TabControl>
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
@@ -163,9 +169,28 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <TextBox Grid.Row="0" Style="{StaticResource BootstrapTextbox}" />
+                <Label
+                    Grid.Row="0"
+                    Grid.ColumnSpan="8"
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    Content="TextBox"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light" />
+
+                <TextBox
+                    Grid.Row="1"
+                    assist:BootstrapTextBoxAssist.PlaceHolder="Nombre"
+                    Style="{StaticResource BootstrapTextbox}" />
+
+                <TextBox
+                    Grid.Row="2"
+                    assist:BootstrapTextBoxAssist.PlaceHolder="Apellido"
+                    Style="{StaticResource BootstrapTextbox}" />
             </Grid>
         </TabItem>
     </TabControl>
