@@ -71,6 +71,7 @@
     <Compile Include="src\BootstrapTextBoxAssist.cs" />
     <Compile Include="src\BorderAssist.cs" />
     <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
+    <Compile Include="src\Controls\Badge\Implementation\Badge.cs" />
     <Compile Include="src\Controls\Card\Implementation\Card.cs" />
     <Compile Include="src\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="src\TextAssist.cs" />
@@ -94,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Controls\Badge\Themes\BootstrapUITheme.Badge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

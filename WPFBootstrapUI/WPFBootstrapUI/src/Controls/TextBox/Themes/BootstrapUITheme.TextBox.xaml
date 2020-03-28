@@ -6,16 +6,18 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.src.Controls.TextBox.Themes">
 
 
-    <Style x:Key="BootstrapTextbox" TargetType="{x:Type TextBox}">
+    <Style x:Key="BootstrapTextbox" TargetType="{x:Type TextBoxBase}">
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Padding" Value="10" />
         <Setter Property="Cursor" Value="IBeam" />
         <Setter Property="Height" Value="Auto" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Assist:BootstrapTextBoxAssist.IsMonitoring" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBox}">
+                <ControlTemplate TargetType="{x:Type TextBoxBase}">
                     <Border
                         x:Name="OutterBorder"
                         BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
@@ -28,6 +30,7 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
+
                             <Border
                                 x:Name="InnerBorder"
                                 Height="{TemplateBinding Height}"
@@ -46,28 +49,6 @@
                                 Foreground="SlateGray"
                                 Text="{TemplateBinding Assist:BootstrapTextBoxAssist.PlaceHolder}"
                                 Visibility="Collapsed" />
-
-                            <TextBlock
-                                x:Name="PART_PasswordChar"
-                                Margin="{Binding ElementName=PART_Placeholder, Path=Margin}"
-                                VerticalAlignment="Center"
-                                Text="{TemplateBinding Assist:BootstrapTextBoxAssist.PasswordChar}"
-                                Visibility="Collapsed" />
-
-                            <CheckBox
-                                x:Name="PART_PasswordVisible"
-                                Grid.Column="1"
-                                Width="Auto"
-                                Height="Auto"
-                                Margin="0,0,20,0"
-                                HorizontalContentAlignment="Center"
-                                VerticalContentAlignment="Center"
-                                Background="Transparent"
-                                BorderBrush="{x:Null}"
-                                Content="{iconPack:FontAwesome Kind=EyeRegular}"
-                                Cursor="Hand"
-                                Visibility="Collapsed" />
-
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -122,51 +103,23 @@
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="Text" Value="" />
+                                <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
                                 <Condition Property="IsFocused" Value="True" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
                                 <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
-                                <Setter TargetName="PART_PasswordChar" Property="Visibility" Value="Collapsed" />
-                                <Setter TargetName="PART_PasswordVisible" Property="Visibility" Value="Collapsed" />
-                                <Setter Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
-                                <Setter TargetName="PART_PasswordVisible" Property="IsChecked" Value="False" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="Text" Value="" />
+                                <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
                                 <Condition Property="IsFocused" Value="False" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
                                 <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
-                                <Setter TargetName="PART_PasswordChar" Property="Visibility" Value="Collapsed" />
-                                <Setter TargetName="PART_PasswordVisible" Property="Visibility" Value="Collapsed" />
-                                <Setter Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
-                                <Setter TargetName="PART_PasswordVisible" Property="IsChecked" Value="False" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
-
-                        <Trigger Property="Assist:BootstrapTextBoxAssist.HasText" Value="True">
-                            <Setter TargetName="PART_PasswordVisible" Property="Visibility" Value="Visible" />
-                            <Setter TargetName="InnerBorder" Property="BorderThickness" Value="1,1,0,1" />
-                            <Setter TargetName="InnerBorder" Property="CornerRadius" Value="1,1,0,0" />
-                        </Trigger>
-
-                        <Trigger Property="Assist:BootstrapTextBoxAssist.HasText" Value="False">
-                            <Setter TargetName="PART_PasswordVisible" Property="Visibility" Value="Collapsed" />
-                            <Setter TargetName="InnerBorder" Property="BorderThickness" Value="1,1,0,1" />
-                            <Setter TargetName="InnerBorder" Property="CornerRadius" Value="1,1,0,0" />
-                        </Trigger>
-
-                        <Trigger SourceName="PART_PasswordVisible" Property="IsChecked" Value="False">
-                            <Setter TargetName="PART_PasswordVisible" Property="Content" Value="{iconPack:FontAwesome Kind=EyeRegular}" />
-                        </Trigger>
-
-                        <Trigger SourceName="PART_PasswordVisible" Property="IsChecked" Value="True">
-                            <Setter TargetName="PART_PasswordVisible" Property="Content" Value="{iconPack:FontAwesome Kind=EyeSlashRegular}" />
-                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

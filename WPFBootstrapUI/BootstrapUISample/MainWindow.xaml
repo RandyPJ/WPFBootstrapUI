@@ -2,6 +2,7 @@
     x:Class="BootstrapUISample.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:WPFBootstrapUI.src.Controls;assembly=WPFBootstrapUI"
     xmlns:assist="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
     xmlns:bootstrap="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -36,6 +37,7 @@
                     Content="Hola mundo"
                     IsAlertDismissible="True"
                     Style="{StaticResource Alert-Primary}" />
+
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
@@ -75,6 +77,33 @@
                     Content="Hola mundo"
                     Style="{StaticResource Alert-Dark}" />
             </StackPanel>
+        </TabItem>
+
+        <TabItem Header="Badges">
+            <Grid HorizontalAlignment="Center">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    Content="Badges"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light" />
+
+                <Controls:Badge
+                    Grid.Row="1"
+                    Content="Notificaciones"
+                    IsNotificationBadge="True"
+                    NotificationNumber="10"
+                    Style="{StaticResource badge-notification}"
+                    ToolTip="Hola mundo" />
+
+            </Grid>
         </TabItem>
 
         <TabItem Header="Buttons">
@@ -167,6 +196,7 @@
         <TabItem Header="TextBoxes">
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
