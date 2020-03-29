@@ -15,12 +15,6 @@
     WindowState="Maximized"
     mc:Ignorable="d">
 
-    <Window.Resources>
-        <Style TargetType="{x:Type TabItem}">
-            <Setter Property="FontSize" Value="20" />
-        </Style>
-    </Window.Resources>
-
     <TabControl>
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
