@@ -6,16 +6,19 @@ namespace WPFBootstrapUI.src.Animations
 {
     public static class StoryBoardHelper
     {
-        public static void SlideToLeft(this Storyboard storyboard, long seconds, double accelerationRatio)
+        public static void SlideToLeft(this Storyboard storyboard, long seconds,float offset, float decelerationRatio)
         {
-            Storyboard sb = new Storyboard();
-
-            new ThicknessAnimation()
+            ThicknessAnimation animation = new ThicknessAnimation()
             {
                 Duration = new Duration(new TimeSpan(seconds)),
-                From = new Thickness(),
-                AccelerationRatio = accelerationRatio
+                From = new Thickness(0),
+                To = new Thickness(),
+                DecelerationRatio = decelerationRatio
             };
+
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+
+            storyboard.Children.Add(animation);
         }
     }
 }

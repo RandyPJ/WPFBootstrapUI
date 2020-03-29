@@ -12,8 +12,6 @@
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/Alert/Themes/BootstrapUITheme.Alert.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/Button/Themes/BootstrapUITheme.Button.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/TextBox/Themes/BootstrapUITheme.TextBox.xaml" />
-
-
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
