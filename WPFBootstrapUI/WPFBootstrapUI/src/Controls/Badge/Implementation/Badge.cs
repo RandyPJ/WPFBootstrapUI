@@ -33,14 +33,14 @@ namespace WPFBootstrapUI.src.Controls
             DependencyProperty.Register("IsNotificationBadge", typeof(bool), typeof(Badge), new PropertyMetadata(false));
 
 
-        public object NotificationNumber
+        public int NotificationNumber
         {
-            get { return (object)GetValue(NotificationNumberProperty); }
+            get { return (int)GetValue(NotificationNumberProperty); }
             set { SetValue(NotificationNumberProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for NotificationNumber.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty NotificationNumberProperty =
-            DependencyProperty.Register("NotificationNumber", typeof(object), typeof(Badge), new PropertyMetadata(null));
+            DependencyProperty.Register("NotificationNumber", typeof(int), typeof(Badge), new PropertyMetadata(0));
     }
 }

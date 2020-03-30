@@ -16,6 +16,13 @@
     mc:Ignorable="d">
 
     <TabControl>
+
+        <TabControl.Resources>
+            <Style TargetType="{x:Type TabItem}">
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+        </TabControl.Resources>
+
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <Label
