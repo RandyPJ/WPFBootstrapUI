@@ -6,13 +6,13 @@ namespace WPFBootstrapUI.src.Animations
 {
     public static class StoryBoardHelper
     {
-        public static void SlideToLeft(this Storyboard storyboard, long seconds,float offset, float decelerationRatio)
+        public static void SlideToLeft(this Storyboard storyboard, long seconds,float offset, float decelerationRatio, bool keepMargin)
         {
             ThicknessAnimation animation = new ThicknessAnimation()
             {
                 Duration = new Duration(new TimeSpan(seconds)),
                 From = new Thickness(0),
-                To = new Thickness(),
+                To = new Thickness(-offset, keepMargin ? offset : 0, 0,0),
                 DecelerationRatio = decelerationRatio
             };
 
