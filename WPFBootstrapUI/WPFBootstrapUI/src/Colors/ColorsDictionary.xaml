@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="http://schemas.softcode.com/WPFBootrapUI"
     xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
 
     <!--  Base Colors  -->
@@ -31,10 +32,9 @@
     <Color x:Key="WhiteColor">#ffffff</Color>
     <SolidColorBrush x:Key="WhiteSolidColorBrush" Color="{StaticResource WhiteColor}" />
 
-
-    <Color x:Key="AlertPrimaryColor">#CCE5FF</Color>
+    <Color x:Key="AlertPrimaryColor">#CAE6FD</Color>
     <SolidColorBrush x:Key="AlertPrimarySolidColorBrush" Color="{StaticResource AlertPrimaryColor}" />
-    <SolidColorBrush x:Key="AlertPrimaryForegroundSolidColorBrush" Color="#195494" />
+    <SolidColorBrush x:Key="AlertPrimaryForegroundSolidColorBrush" Color="#004281" />
 
     <SolidColorBrush x:Key="AlertSecondarySolidColorBrush" Color="#E2E3E5" />
     <SolidColorBrush x:Key="AlertSecondaryForegroundSolidColorBrush" Color="#383D41" />

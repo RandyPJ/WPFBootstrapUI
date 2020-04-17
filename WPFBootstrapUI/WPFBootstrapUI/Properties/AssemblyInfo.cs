@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
-using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Markup;
 
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
@@ -15,6 +14,11 @@ using System.Windows;
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+
+
+[assembly: XmlnsDefinition("http://schemas.softcode.com/WPFBootrapUI", "WPFBootstrapUI.src")]
+[assembly: XmlnsDefinition("http://schemas.softcode.com/WPFBootrapUI", "WPFBootstrapUI.src.Controls")]
+[assembly: XmlnsPrefix("http://schemas.softcode.com/WPFBootrapUI", "bootstrap")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
 // para los componentes COM.  Si es necesario obtener acceso a un tipo en este ensamblado desde 
@@ -31,13 +35,13 @@ using System.Windows;
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
 
-[assembly:ThemeInfo(
-    ResourceDictionaryLocation.None, //donde se encuentran los diccionarios de recursos específicos del tema
-                             //(se utiliza si no se encuentra ningún recurso en la página,
-                             // ni diccionarios de recursos de la aplicación)
+[assembly: ThemeInfo(
+    ResourceDictionaryLocation.SourceAssembly, //donde se encuentran los diccionarios de recursos específicos del tema
+                                               //(se utiliza si no se encuentra ningún recurso en la página,
+                                               // ni diccionarios de recursos de la aplicación)
     ResourceDictionaryLocation.SourceAssembly //donde se encuentra el diccionario de recursos genérico
-                                      //(se utiliza si no se encuentra ningún recurso en la página,
-                                      // aplicación o diccionarios de recursos específicos del tema)
+                                              //(se utiliza si no se encuentra ningún recurso en la página,
+                                              // aplicación o diccionarios de recursos específicos del tema)
 )]
 
 

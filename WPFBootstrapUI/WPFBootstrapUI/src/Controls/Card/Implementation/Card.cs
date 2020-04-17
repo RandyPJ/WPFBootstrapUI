@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace WPFBootstrapUI.src
+namespace WPFBootstrapUI.src.Controls
 {
     public class Card : ContentControl
     {

@@ -3,7 +3,7 @@ using System.Windows;
 using System;
 using System.Windows.Media;
 
-namespace WPFBootstrapUI.src
+namespace WPFBootstrapUI.src.Controls
 {
     [TemplatePart(Name = "PART_DismissButton", Type = typeof(Button))]
     public class Alert : ContentControl

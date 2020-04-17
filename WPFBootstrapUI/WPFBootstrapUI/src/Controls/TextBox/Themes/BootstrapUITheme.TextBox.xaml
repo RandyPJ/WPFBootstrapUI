@@ -5,6 +5,116 @@
     xmlns:iconPack="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:WPFBootstrapUI.src.Controls.TextBox.Themes">
 
+    <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBoxBase}">
+        <Border x:Name="OutterBorder"
+            BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
+            BorderThickness="4"
+            CornerRadius="5"
+            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+            UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+            <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Border x:Name="InnerBorder"
+                    Height="{TemplateBinding Height}"
+                    BorderBrush="LightGray"
+                    BorderThickness="1"
+                    CornerRadius="{Binding ElementName=OutterBorder, Path=CornerRadius}"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                    UseLayoutRounding="{TemplateBinding UseLayoutRounding}" />
+
+                <ScrollViewer x:Name="PART_ContentHost" />
+
+                <TextBlock x:Name="PART_Placeholder"
+                    Margin="12,0,0,0"
+                    VerticalAlignment="Center"
+                    Foreground="SlateGray"
+                    Text="{TemplateBinding Assist:BootstrapTextBoxAssist.PlaceHolder}"
+                    Visibility="Collapsed" />
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+
+            <Trigger Property="IsFocused" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard
+                            Storyboard.TargetName="OutterBorder"
+                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                            <ColorAnimation
+                                From="Transparent"
+                                To="{StaticResource AlertPrimaryColor}"
+                                Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard
+                            Storyboard.TargetName="OutterBorder"
+                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                            <ColorAnimation
+                                From="{StaticResource AlertPrimaryColor}"
+                                To="Transparent"
+                                Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+            <Trigger Property="IsFocused" Value="False">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard
+                            Storyboard.TargetName="OutterBorder"
+                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                            <ColorAnimation
+                                From="{StaticResource AlertPrimaryColor}"
+                                To="Transparent"
+                                Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard
+                            Storyboard.TargetName="OutterBorder"
+                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                            <ColorAnimation
+                                From="Transparent"
+                                To="{StaticResource AlertPrimaryColor}"
+                                Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
+                    <Condition Property="IsFocused" Value="True" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
+                    <Condition Property="IsFocused" Value="False" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 
     <Style x:Key="BootstrapTextbox" TargetType="{x:Type TextBoxBase}">
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -15,114 +125,8 @@
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="Assist:BootstrapTextBoxAssist.IsMonitoring" Value="True" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBoxBase}">
-                    <Border
-                        x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
-                        BorderThickness="4"
-                        CornerRadius="5"
-                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-                        <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-
-                            <Border
-                                x:Name="InnerBorder"
-                                Height="{TemplateBinding Height}"
-                                BorderBrush="LightGray"
-                                BorderThickness="1"
-                                CornerRadius="{Binding ElementName=OutterBorder, Path=CornerRadius}"
-                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}" />
-
-                            <ScrollViewer x:Name="PART_ContentHost" />
-
-                            <TextBlock
-                                x:Name="PART_Placeholder"
-                                Margin="12,0,0,0"
-                                VerticalAlignment="Center"
-                                Foreground="SlateGray"
-                                Text="{TemplateBinding Assist:BootstrapTextBoxAssist.PlaceHolder}"
-                                Visibility="Collapsed" />
-                        </Grid>
-                    </Border>
-                    <ControlTemplate.Triggers>
-
-                        <Trigger Property="IsFocused" Value="True">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard Storyboard.TargetName="OutterBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                                        <ColorAnimation
-                                            From="Transparent"
-                                            To="{StaticResource AlertPrimaryColor}"
-                                            Duration="0:0:0.2" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-
-                            <Trigger.ExitActions>
-                                <BeginStoryboard>
-                                    <Storyboard Storyboard.TargetName="OutterBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                                        <ColorAnimation
-                                            From="{StaticResource AlertPrimaryColor}"
-                                            To="Transparent"
-                                            Duration="0:0:0.2" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.ExitActions>
-                        </Trigger>
-
-                        <Trigger Property="IsFocused" Value="False">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard Storyboard.TargetName="OutterBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                                        <ColorAnimation
-                                            From="{StaticResource AlertPrimaryColor}"
-                                            To="Transparent"
-                                            Duration="0:0:0.2" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-
-                            <Trigger.ExitActions>
-                                <BeginStoryboard>
-                                    <Storyboard Storyboard.TargetName="OutterBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                                        <ColorAnimation
-                                            From="Transparent"
-                                            To="{StaticResource AlertPrimaryColor}"
-                                            Duration="0:0:0.2" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.ExitActions>
-                        </Trigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
-                                <Condition Property="IsFocused" Value="True" />
-                            </MultiTrigger.Conditions>
-                            <MultiTrigger.Setters>
-                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
-                            </MultiTrigger.Setters>
-                        </MultiTrigger>
-
-                        <MultiTrigger>
-                            <MultiTrigger.Conditions>
-                                <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
-                                <Condition Property="IsFocused" Value="False" />
-                            </MultiTrigger.Conditions>
-                            <MultiTrigger.Setters>
-                                <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
-                            </MultiTrigger.Setters>
-                        </MultiTrigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="Template" Value="{StaticResource TextBoxControlTemplate}" />
     </Style>
+
+    <Style BasedOn="{StaticResource BootstrapTextbox}" TargetType="{x:Type TextBox}" />
 </ResourceDictionary>

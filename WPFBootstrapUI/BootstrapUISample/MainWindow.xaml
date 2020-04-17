@@ -1,28 +1,20 @@
-﻿<Window
-    x:Class="BootstrapUISample.MainWindow"
+﻿<Window x:Class="BootstrapUISample.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:Controls="clr-namespace:WPFBootstrapUI.src.Controls;assembly=WPFBootstrapUI"
-    xmlns:assist="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
-    xmlns:bootstrap="clr-namespace:WPFBootstrapUI.src;assembly=WPFBootstrapUI"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:bootstrap="http://schemas.softcode.com/WPFBootrapUI"
     xmlns:local="clr-namespace:BootstrapUISample"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
     Width="800"
     Height="450"
     WindowStartupLocation="CenterScreen"
-    WindowState="Maximized"
-    mc:Ignorable="d">
+    WindowState="Maximized">
 
     <TabControl>
-
         <TabControl.Resources>
             <Style TargetType="{x:Type TabItem}">
                 <Setter Property="FontSize" Value="20" />
             </Style>
         </TabControl.Resources>
-
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <Label
@@ -96,11 +88,9 @@
                     FontSize="60"
                     FontWeight="Light" />
 
-                <Controls:Badge
+                <bootstrap:Badge
                     Grid.Row="1"
                     Content="Notificaciones"
-                    IsNotificationBadge="True"
-                    NotificationNumber="10"
                     Style="{StaticResource badge-notification}"
                     ToolTip="Hola mundo" />
 
@@ -188,7 +178,7 @@
                 <Button
                     Grid.Row="1"
                     Grid.Column="9"
-                    assist:TextAssist.Text="Link"
+                    bootstrap:TextAssist.Text="Link"
                     Style="{StaticResource btn-link}" />
 
             </Grid>
@@ -215,13 +205,11 @@
 
                 <TextBox
                     Grid.Row="1"
-                    assist:BootstrapTextBoxAssist.PlaceHolder="Nombre"
-                    Style="{StaticResource BootstrapTextbox}" />
+                    bootstrap:BootstrapTextBoxAssist.PlaceHolder="Nombre" />
 
                 <TextBox
                     Grid.Row="2"
-                    assist:BootstrapTextBoxAssist.PlaceHolder="Apellido"
-                    Style="{StaticResource BootstrapTextbox}" />
+                    bootstrap:BootstrapTextBoxAssist.PlaceHolder="Apellido" />
             </Grid>
         </TabItem>
     </TabControl>
