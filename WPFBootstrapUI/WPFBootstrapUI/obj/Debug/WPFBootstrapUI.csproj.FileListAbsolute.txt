@@ -18,15 +18,18 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debu
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\MahApps.Metro.IconPacks.Core.xml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.xml
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csprojAssemblyReference.cache
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Colors\ColorsDictionary.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI_MarkupCompile.cache
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI_MarkupCompile.lref
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\BootstrapUIBaseRoot.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Alert\Themes\BootstrapUITheme.Alert.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Badge\Themes\BootstrapUITheme.Badge.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Button\Themes\BootstrapUITheme.Button.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Card\Themes\BootstrapUITheme.Card.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\TextBox\Themes\BootstrapUITheme.TextBox.baml
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Window\Themes\BootstrapUITheme.Window.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Fonts\FontFamilyDictionary.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.g.resources
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.Properties.Resources.resources
@@ -35,4 +38,3 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debu
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csproj.CopyComplete
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.dll
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.pdb
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csprojAssemblyReference.cache

@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFBootstrapUI.src">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Controls/Badge/Themes/BootstrapUITheme.Badge.xaml" />
+        <ResourceDictionary Source="Controls/Alert/Themes/BootstrapUITheme.Alert.xaml" />
+        <ResourceDictionary Source="Controls/Button/Themes/BootstrapUITheme.Button.xaml" />
+        <ResourceDictionary Source="Controls/TextBox/Themes/BootstrapUITheme.TextBox.xaml" />
+        <ResourceDictionary Source="Controls/Window/Themes/BootstrapUITheme.Window.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

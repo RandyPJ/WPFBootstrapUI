@@ -2,10 +2,13 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:bootstrap="http://schemas.softcode.com/WPFBootrapUI"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:BootstrapUISample"
     Title="MainWindow"
     Width="800"
     Height="450"
+    Icon="{iconPacks:FontAwesomeImage Kind=BootstrapBrands}"
+    Style="{StaticResource MainWindowStyle}"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
