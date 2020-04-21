@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-9789556062
+10440747443
 
-12-173282528
+13-890827283
 15-237304285
-src\BootstrapUIBaseRoot.xaml;src\Colors\ColorsDictionary.xaml;src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;src\Controls\Badge\Themes\BootstrapUITheme.Badge.xaml;src\Controls\Button\Themes\BootstrapUITheme.Button.xaml;src\Controls\Card\Themes\BootstrapUITheme.Card.xaml;src\Controls\TextBox\Themes\BootstrapUITheme.TextBox.xaml;src\Controls\Window\Themes\BootstrapUITheme.Window.xaml;src\Fonts\FontFamilyDictionary.xaml;
+src\BootstrapUIBaseRoot.xaml;src\Colors\ColorsDictionary.xaml;src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml;src\Controls\Badge\Themes\BootstrapUITheme.Badge.xaml;src\Controls\Button\Themes\BootstrapUITheme.Button.xaml;src\Controls\Card\Themes\BootstrapUITheme.Card.xaml;src\Controls\TabControl\Themes\BootstrapUITheme.TabControl.xaml;src\Controls\TextBox\Themes\BootstrapUITheme.TextBox.xaml;src\Controls\Window\Themes\BootstrapUITheme.Window.xaml;src\Fonts\FontFamilyDictionary.xaml;
 
 False
 

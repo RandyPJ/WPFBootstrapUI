@@ -18,8 +18,8 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debu
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\MahApps.Metro.IconPacks.Core.xml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.xml
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csprojAssemblyReference.cache
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Colors\ColorsDictionary.baml
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\Window\Themes\BootstrapUITheme.Window.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI_MarkupCompile.cache
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI_MarkupCompile.lref
@@ -38,3 +38,5 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debu
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csproj.CopyComplete
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.dll
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.pdb
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\WPFBootstrapUI.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\WPFBootstrapUI\obj\Debug\src\Controls\TabControl\Themes\BootstrapUITheme.TabControl.baml

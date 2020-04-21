@@ -7,7 +7,8 @@
     Title="MainWindow"
     Width="800"
     Height="450"
-    Icon="{iconPacks:FontAwesomeImage Kind=BootstrapBrands}"
+    Icon="{iconPacks:FontAwesomeImage Kind=BootstrapBrands,
+                                      Brush=White}"
     Style="{StaticResource MainWindowStyle}"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
@@ -17,6 +18,7 @@
             <Style TargetType="{x:Type TabItem}">
                 <Setter Property="FontSize" Value="20" />
             </Style>
+            <Style BasedOn="{StaticResource TabItemStyle}" TargetType="{x:Type TabItem}" />
         </TabControl.Resources>
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
@@ -132,9 +134,20 @@
                 <Button
                     Grid.Row="1"
                     Grid.Column="0"
-                    Content="Primary"
+                    VerticalContentAlignment="Center"
                     Style="{StaticResource btn-primary}"
-                    ToolTip="Hola mundo" />
+                    ToolTip="Hola mundo">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconFontAwesome
+                                VerticalAlignment="Center"
+                                Kind="SaveRegular" />
+                            <TextBlock
+                                Margin="5,0,0,0"
+                                Text="Primary" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
 
                 <Button
                     Grid.Row="1"

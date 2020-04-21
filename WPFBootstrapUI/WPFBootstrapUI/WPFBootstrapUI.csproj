@@ -74,6 +74,9 @@
     <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
     <Compile Include="src\Controls\Badge\Implementation\Badge.cs" />
     <Compile Include="src\Controls\Card\Implementation\Card.cs" />
+    <Compile Include="src\Controls\Window\Themes\BootstrapUITheme.Window.xaml.cs">
+      <DependentUpon>BootstrapUITheme.Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="src\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="src\TextAssist.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,13 +118,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="src\Controls\TabControl\Themes\BootstrapUITheme.TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="src\Controls\TextBox\Themes\BootstrapUITheme.TextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="src\Controls\Window\Themes\BootstrapUITheme.Window.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="src\Fonts\FontFamilyDictionary.xaml">
       <SubType>Designer</SubType>

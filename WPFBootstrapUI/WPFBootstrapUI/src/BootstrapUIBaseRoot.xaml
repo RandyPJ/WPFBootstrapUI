@@ -7,6 +7,7 @@
         <ResourceDictionary Source="Controls/Alert/Themes/BootstrapUITheme.Alert.xaml" />
         <ResourceDictionary Source="Controls/Button/Themes/BootstrapUITheme.Button.xaml" />
         <ResourceDictionary Source="Controls/TextBox/Themes/BootstrapUITheme.TextBox.xaml" />
+        <ResourceDictionary Source="Controls/TabControl/Themes/BootstrapUITheme.TabControl.xaml" />
         <ResourceDictionary Source="Controls/Window/Themes/BootstrapUITheme.Window.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
