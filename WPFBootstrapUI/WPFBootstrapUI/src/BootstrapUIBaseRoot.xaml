@@ -10,5 +10,4 @@
         <ResourceDictionary Source="Controls/TabControl/Themes/BootstrapUITheme.TabControl.xaml" />
         <ResourceDictionary Source="Controls/Window/Themes/BootstrapUITheme.Window.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
 </ResourceDictionary>

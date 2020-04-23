@@ -9,17 +9,11 @@
     Height="450"
     Icon="{iconPacks:FontAwesomeImage Kind=BootstrapBrands,
                                       Brush=White}"
-    Style="{StaticResource MainWindowStyle}"
+    Style="{StaticResource Window-Primary}"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
-    <TabControl>
-        <TabControl.Resources>
-            <Style TargetType="{x:Type TabItem}">
-                <Setter Property="FontSize" Value="20" />
-            </Style>
-            <Style BasedOn="{StaticResource TabItemStyle}" TargetType="{x:Type TabItem}" />
-        </TabControl.Resources>
+    <TabControl Margin="5">
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <Label
@@ -79,8 +73,9 @@
 
         <TabItem Header="Badges">
             <Grid HorizontalAlignment="Center">
-
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
@@ -93,11 +88,137 @@
                     FontSize="60"
                     FontWeight="Light" />
 
-                <bootstrap:Badge
+                <StackPanel
                     Grid.Row="1"
-                    Content="Notificaciones"
-                    Style="{StaticResource badge-notification}"
-                    ToolTip="Hola mundo" />
+                    Orientation="Horizontal">
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-primary}"
+                        Text="primary"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-secondary}"
+                        Text="secondary"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-success}"
+                        Text="success"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-danger}"
+                        Text="danger"
+                        ToolTip="Hola mundo" />
+
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-warning}"
+                        Text="warning"
+                        ToolTip="Hola mundo" />
+
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-info}"
+                        Text="info"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-light}"
+                        Text="light"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-dark}"
+                        Text="dark"
+                        ToolTip="Hola mundo" />
+                </StackPanel>
+
+                <Label
+                    Grid.Row="2"
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    Content="Pill Badges"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light" />
+                <StackPanel
+                    Grid.Row="3"
+                    Orientation="Horizontal">
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-primary}"
+                        Text="primary"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-secondary}"
+                        Text="secondary"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-success}"
+                        Text="success"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-danger}"
+                        Text="danger"
+                        ToolTip="Hola mundo" />
+
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-warning}"
+                        Text="warning"
+                        ToolTip="Hola mundo" />
+
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-info}"
+                        Text="info"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-light}"
+                        Text="light"
+                        ToolTip="Hola mundo" />
+
+                    <bootstrap:Badge
+                        Grid.Row="1"
+                        Margin="3"
+                        Style="{StaticResource badge-pill-dark}"
+                        Text="dark"
+                        ToolTip="Hola mundo" />
+                </StackPanel>
 
             </Grid>
         </TabItem>

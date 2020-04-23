@@ -90,7 +90,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="MainWindowStyle" TargetType="{x:Type Window}">
+    <Style x:Key="Window-Primary" TargetType="{x:Type Window}">
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
         <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />

@@ -85,8 +85,6 @@
     <Color x:Key="LinkButtonForegroundColor">#007bff</Color>
     <SolidColorBrush x:Key="LinkButtonForegroundSolidColorBrush" Color="{StaticResource LinkButtonForegroundColor}" />
 
-
-
     <Color x:Key="LightBlueControlColor">#7ABFFA</Color>
     <SolidColorBrush x:Key="LightBlueControlBorderBrush" Color="{StaticResource LightBlueControlColor}" />
 

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace WPFBootstrapUI.src.Controls
 {
-    public class Badge : ContentControl
+    public class Badge : Control
     {
         static Badge()
         {
@@ -16,31 +16,22 @@ namespace WPFBootstrapUI.src.Controls
             set { SetValue(TextProperty, value); }
         }
         
-
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextProperty =
-            DependencyProperty.Register("Text", typeof(string), typeof(Badge), new PropertyMetadata(string.Empty));
+            DependencyProperty.Register("Text", typeof(string), typeof(Badge), new FrameworkPropertyMetadata(string.Empty));
 
 
-        public bool IsNotificationBadge
+        public CornerRadius CornerRadius
         {
-            get { return (bool)GetValue(IsNotificationBadgeProperty); }
-            set { SetValue(IsNotificationBadgeProperty, value); }
+            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
+            set { SetValue(CornerRadiusProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for IsNotificationCounter.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty IsNotificationBadgeProperty =
-            DependencyProperty.Register("IsNotificationBadge", typeof(bool), typeof(Badge), new PropertyMetadata(false));
+        // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CornerRadiusProperty =
+            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(Badge), new PropertyMetadata(new CornerRadius(0,0,0,0)));
 
 
-        public int NotificationNumber
-        {
-            get { return (int)GetValue(NotificationNumberProperty); }
-            set { SetValue(NotificationNumberProperty, value); }
-        }
 
-        // Using a DependencyProperty as the backing store for NotificationNumber.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty NotificationNumberProperty =
-            DependencyProperty.Register("NotificationNumber", typeof(int), typeof(Badge), new PropertyMetadata(0));
     }
 }
