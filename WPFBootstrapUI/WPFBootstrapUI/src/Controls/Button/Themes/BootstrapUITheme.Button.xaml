@@ -89,6 +89,9 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
                         </Trigger>
@@ -142,6 +145,10 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
                         </Trigger>
@@ -195,6 +202,10 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
                         </Trigger>
@@ -248,6 +259,10 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
                         </Trigger>
@@ -302,6 +317,10 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
                         </Trigger>
@@ -355,6 +374,10 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
                         </Trigger>
@@ -462,6 +485,11 @@
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
                         </Trigger>

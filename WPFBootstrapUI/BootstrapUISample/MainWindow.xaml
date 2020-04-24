@@ -14,15 +14,19 @@
     WindowState="Maximized">
 
     <TabControl Margin="5">
+        <TabControl.Resources>
+            <Style BasedOn="{StaticResource tooltip-base}" TargetType="{x:Type ToolTip}" />
+        </TabControl.Resources>
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <Label
-                    Margin="20"
                     HorizontalAlignment="Center"
                     Content="Alerts"
                     FontFamily="{StaticResource SegoeUI}"
                     FontSize="60"
-                    FontWeight="Light" />
+                    FontWeight="Light"
+                    ToolTip="Hola"
+                    ToolTipService.Placement="Bottom" />
 
                 <bootstrap:Alert
                     Margin="10"
@@ -256,19 +260,9 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     VerticalContentAlignment="Center"
+                    Content="Primary"
                     Style="{StaticResource btn-primary}"
-                    ToolTip="Hola mundo">
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <iconPacks:PackIconFontAwesome
-                                VerticalAlignment="Center"
-                                Kind="SaveRegular" />
-                            <TextBlock
-                                Margin="5,0,0,0"
-                                Text="Primary" />
-                        </StackPanel>
-                    </Button.Content>
-                </Button>
+                    ToolTip="Hola mundo" />
 
                 <Button
                     Grid.Row="1"
@@ -347,6 +341,66 @@
                 <TextBox
                     Grid.Row="2"
                     bootstrap:BootstrapTextBoxAssist.PlaceHolder="Apellido" />
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="ToolTips">
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.ColumnSpan="5"
+                    HorizontalAlignment="Center"
+                    Content="ToolTips"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTip="Hola"
+                    ToolTipService.Placement="Bottom" />
+
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Content="ToolTip Left"
+                    Style="{StaticResource btn-primary}"
+                    ToolTip="ToolTip Left"
+                    ToolTipService.Placement="Left" />
+
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Content="ToolTip Top"
+                    Style="{StaticResource btn-primary}"
+                    ToolTip="ToolTip Top"
+                    ToolTipService.Placement="Top" />
+
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Content="ToolTip Right"
+                    Style="{StaticResource btn-primary}"
+                    ToolTip="ToolTip Right"
+                    ToolTipService.Placement="Right" />
+
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Content="ToolTip Bottom"
+                    Style="{StaticResource btn-primary}"
+                    ToolTip="ToolTip Bottom"
+                    ToolTipService.Placement="Bottom" />
+
             </Grid>
         </TabItem>
     </TabControl>

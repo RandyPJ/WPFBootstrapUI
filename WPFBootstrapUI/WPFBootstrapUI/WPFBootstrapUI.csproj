@@ -92,6 +92,7 @@
   <ItemGroup>
     <Folder Include="src\Controls\Button\Implementation\" />
     <Folder Include="src\Controls\TextBox\Implementation\" />
+    <Folder Include="src\Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="src\BootstrapUIBaseRoot.xaml">
@@ -123,6 +124,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="src\Controls\TextBox\Themes\BootstrapUITheme.TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Controls\ToolTip\BootstrapUITheme.ToolTip.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
