@@ -228,91 +228,177 @@
         </TabItem>
 
         <TabItem Header="Buttons">
-            <Grid HorizontalAlignment="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-
-                <Label
+                <Grid
                     Grid.Row="0"
-                    Grid.ColumnSpan="8"
-                    Margin="20"
-                    HorizontalAlignment="Center"
-                    Content="Buttons"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light" />
+                    HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                <Button
+                    <Label
+                        Grid.Row="0"
+                        Grid.ColumnSpan="8"
+                        Margin="20"
+                        HorizontalAlignment="Center"
+                        Content="Buttons"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalContentAlignment="Center"
+                        Content="Primary"
+                        Style="{StaticResource btn-primary}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Content="Secondary"
+                        Style="{StaticResource btn-secondary}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Content="Success"
+                        Style="{StaticResource btn-success}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        Content="Danger"
+                        Style="{StaticResource btn-danger}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="5"
+                        Content="Warning"
+                        Style="{StaticResource btn-warning}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="6"
+                        Content="Info"
+                        Style="{StaticResource btn-info}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="7"
+                        Content="Light"
+                        Style="{StaticResource btn-light}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="8"
+                        Content="Dark"
+                        Style="{StaticResource btn-dark}" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="9"
+                        bootstrap:TextAssist.Text="Link"
+                        Style="{StaticResource btn-link}" />
+
+
+
+
+                </Grid>
+                <Grid
                     Grid.Row="1"
-                    Grid.Column="0"
-                    VerticalContentAlignment="Center"
-                    Content="Primary"
-                    Style="{StaticResource btn-primary}"
-                    ToolTip="Hola mundo" />
+                    Grid.ColumnSpan="7"
+                    HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Content="Secondary"
-                    Style="{StaticResource btn-secondary}" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.ColumnSpan="7"
+                        Margin="20"
+                        HorizontalAlignment="Center"
+                        Content="Outline buttons"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light" />
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    Content="Success"
-                    Style="{StaticResource btn-success}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        VerticalContentAlignment="Center"
+                        Content="Primary"
+                        Style="{StaticResource btn-outline-primary}"
+                        ToolTip="hola mundo"
+                        ToolTipService.Placement="Left" />
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="4"
-                    Content="Danger"
-                    Style="{StaticResource btn-danger}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Content="Secondary"
+                        Style="{StaticResource btn-outline-secondary}" />
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="5"
-                    Content="Warning"
-                    Style="{StaticResource btn-warning}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Content="Success"
+                        Style="{StaticResource btn-outline-success}" />
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="6"
-                    Content="Info"
-                    Style="{StaticResource btn-info}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        Content="Danger"
+                        Style="{StaticResource btn-outline-danger}" />
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="7"
-                    Content="Light"
-                    Style="{StaticResource btn-light}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="5"
+                        Content="Warning"
+                        Style="{StaticResource btn-outline-warning}" />
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="8"
-                    Content="Dark"
-                    Style="{StaticResource btn-dark}" />
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="6"
+                        Content="Info"
+                        Style="{StaticResource btn-outline-info}" />
 
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="9"
-                    bootstrap:TextAssist.Text="Link"
-                    Style="{StaticResource btn-link}" />
-
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="7"
+                        Content="Dark"
+                        Style="{StaticResource btn-outline-dark}" />
+                </Grid>
             </Grid>
+
         </TabItem>
 
         <TabItem Header="TextBoxes">

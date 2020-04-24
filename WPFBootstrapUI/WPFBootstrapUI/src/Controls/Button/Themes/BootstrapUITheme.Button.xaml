@@ -43,8 +43,11 @@
         <Setter Property="Template" Value="{StaticResource WindowButtonTemplate}" />
     </Style>
 
+
+    <!--  Normal Button  -->
     <Style x:Key="btn-base" TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
@@ -64,15 +67,18 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
+                        Margin="{TemplateBinding Margin}"
                         BorderThickness="4"
                         CornerRadius="5"
+                        SnapsToDevicePixels="true"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
                         <Grid
+                            Margin="{TemplateBinding Margin}"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             SnapsToDevicePixels="true">
                             <Border x:Name="InnerBorder"
+                                Margin="{TemplateBinding Margin}"
                                 Background="{StaticResource PrimarySolidColorBrush}"
                                 BorderBrush="{StaticResource PrimarySolidColorBrush}"
                                 BorderThickness="1"
@@ -120,7 +126,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertSecondarySolidColorBrush}"
                         BorderThickness="4"
                         CornerRadius="5"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
@@ -177,7 +182,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertSuccessSolidColorBrush}"
                         BorderThickness="4"
                         CornerRadius="5"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
@@ -234,7 +238,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertDangerSolidColorBrush}"
                         BorderThickness="4"
                         CornerRadius="5"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
@@ -292,7 +295,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertWarningSolidColorBrush}"
                         BorderThickness="4"
                         CornerRadius="5"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
@@ -349,7 +351,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertInfoSolidColorBrush}"
                         BorderThickness="4"
                         CornerRadius="5"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
@@ -407,7 +408,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertLightSolidColorBrush}"
                         BorderThickness="4"
                         CornerRadius="5"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
@@ -460,7 +460,6 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="OutterBorder"
-                        BorderBrush="{StaticResource AlertDarkSolidColorBrush}"
                         BorderThickness="4"
                         CornerRadius="5"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
@@ -555,4 +554,504 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
+    <!--  Outlined Button  -->
+    <Style x:Key="btn-outline-base" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+    </Style>
+
+    <Style x:Key="btn-outline-primary" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="OutterBorder"
+                        BorderThickness="4"
+                        CornerRadius="5"
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            SnapsToDevicePixels="true">
+                            <Border x:Name="InnerBorder"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource PrimarySolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter x:Name="PART_Content"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    TextBlock.Foreground="{StaticResource PrimarySolidColorBrush}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="Transparent" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource PrimarySolidColorBrush}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btn-outline-secondary" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="OutterBorder"
+                        BorderBrush="{StaticResource SecondaryHoveredSolidColorBrush}"
+                        BorderThickness="4"
+                        CornerRadius="5"
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            SnapsToDevicePixels="true">
+                            <Border x:Name="InnerBorder"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource SecondarySolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter x:Name="PART_Content"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    TextBlock.Foreground="{StaticResource SecondarySolidColorBrush}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSecondarySolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSecondarySolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="Transparent" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource SecondarySolidColorBrush}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btn-outline-success" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="OutterBorder"
+                        BorderThickness="4"
+                        CornerRadius="5"
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            SnapsToDevicePixels="true">
+                            <Border x:Name="InnerBorder"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource SuccessSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter x:Name="PART_Content"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    TextBlock.Foreground="{StaticResource SecondarySolidColorBrush}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSuccessSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertSuccessSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="Transparent" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource SuccessSolidColorBrush}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btn-outline-danger" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="OutterBorder"
+                        BorderThickness="4"
+                        CornerRadius="5"
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            SnapsToDevicePixels="true">
+                            <Border x:Name="InnerBorder"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource DangerSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter x:Name="PART_Content"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    TextBlock.Foreground="{StaticResource DangerSolidColorBrush}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDangerSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDangerSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="Transparent" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource DangerSolidColorBrush}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btn-outline-warning" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="OutterBorder"
+                        BorderThickness="4"
+                        CornerRadius="5"
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            SnapsToDevicePixels="true">
+                            <Border x:Name="InnerBorder"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource WarningSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter x:Name="PART_Content"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    TextBlock.Foreground="{StaticResource WarningSolidColorBrush}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertWarningSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertWarningSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="Transparent" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource WarningSolidColorBrush}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btn-outline-info" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="OutterBorder"
+                        BorderThickness="4"
+                        CornerRadius="5"
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            SnapsToDevicePixels="true">
+                            <Border x:Name="InnerBorder"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource InfoSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter x:Name="PART_Content"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    TextBlock.Foreground="{StaticResource InfoSolidColorBrush}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertWarningSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertInfoSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="Transparent" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource InfoSolidColorBrush}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="btn-outline-dark" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="OutterBorder"
+                        BorderThickness="4"
+                        CornerRadius="5"
+                        UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                        <Grid
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            SnapsToDevicePixels="true">
+                            <Border x:Name="InnerBorder"
+                                Background="Transparent"
+                                BorderBrush="{StaticResource DarkSolidColorBrush}"
+                                BorderThickness="1"
+                                CornerRadius="5"
+                                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                <ContentPresenter x:Name="PART_Content"
+                                    Margin="{TemplateBinding Padding}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Focusable="False"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    TextBlock.Foreground="{StaticResource DarkSolidColorBrush}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.7" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDarkSolidColorBrush}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertDarkSolidColorBrush}" />
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False" />
+                                <Condition Property="IsFocused" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="InnerBorder" Property="Border.Background" Value="Transparent" />
+                            <Setter TargetName="PART_Content" Property="TextBlock.Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
