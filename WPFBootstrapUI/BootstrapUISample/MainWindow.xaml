@@ -13,7 +13,7 @@
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
-    <Grid Margin="10">
+    <!--<Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -28,9 +28,9 @@
             Content="Hello World"
             Style="{StaticResource btn-primary}" />
     </Grid>
-</Window>
+</Window>-->
 
-<!--<TabControl Margin="5">
+    <TabControl Margin="5">
         <TabControl.Resources>
             <Style BasedOn="{StaticResource tooltip-base}" TargetType="{x:Type ToolTip}" />
         </TabControl.Resources>
@@ -336,11 +336,8 @@
                         Grid.Column="9"
                         bootstrap:TextAssist.Text="Link"
                         Style="{StaticResource btn-link}" />
-
-
-
-
                 </Grid>
+
                 <Grid
                     Grid.Row="1"
                     Grid.ColumnSpan="7"
@@ -507,4 +504,28 @@
 
             </Grid>
         </TabItem>
-    </TabControl>-->
+
+        <TabItem Header="ComboBox">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Button
+                    Content="Hola"
+                    Style="{StaticResource btn-outline-danger}" />
+
+                <ComboBox Grid.Row="1">
+                    <ComboBoxItem Content="1" />
+                    <ComboBoxItem Content="2" />
+                    <ComboBoxItem Content="3" />
+                    <ComboBoxItem Content="4" />
+                    <ComboBoxItem Content="5" />
+                    <ComboBoxItem Content="6" />
+                </ComboBox>
+            </Grid>
+
+        </TabItem>
+    </TabControl>
+</Window>
