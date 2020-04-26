@@ -7,22 +7,18 @@
 
     <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBoxBase}">
         <Border x:Name="OutterBorder"
-            BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
+            BorderBrush="Transparent"
             BorderThickness="4"
-            CornerRadius="5"
+            CornerRadius="6"
             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
             UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
             <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-
                 <Border x:Name="InnerBorder"
                     Height="{TemplateBinding Height}"
+                    Background="Transparent"
                     BorderBrush="LightGray"
-                    BorderThickness="1"
-                    CornerRadius="{Binding ElementName=OutterBorder, Path=CornerRadius}"
+                    BorderThickness=".6"
+                    CornerRadius="4"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                     UseLayoutRounding="{TemplateBinding UseLayoutRounding}" />
 
@@ -37,61 +33,16 @@
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
-
             <Trigger Property="IsFocused" Value="True">
-                <Trigger.EnterActions>
-                    <BeginStoryboard>
-                        <Storyboard
-                            Storyboard.TargetName="OutterBorder"
-                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                            <ColorAnimation
-                                From="Transparent"
-                                To="{StaticResource AlertPrimaryColor}"
-                                Duration="0:0:0.2" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.EnterActions>
-
-                <Trigger.ExitActions>
-                    <BeginStoryboard>
-                        <Storyboard
-                            Storyboard.TargetName="OutterBorder"
-                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                            <ColorAnimation
-                                From="{StaticResource AlertPrimaryColor}"
-                                To="Transparent"
-                                Duration="0:0:0.2" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.ExitActions>
+                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                <Setter TargetName="InnerBorder" Property="Border.BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
+                <Setter TargetName="InnerBorder" Property="Opacity" Value="0.5" />
             </Trigger>
 
             <Trigger Property="IsFocused" Value="False">
-                <Trigger.EnterActions>
-                    <BeginStoryboard>
-                        <Storyboard
-                            Storyboard.TargetName="OutterBorder"
-                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                            <ColorAnimation
-                                From="{StaticResource AlertPrimaryColor}"
-                                To="Transparent"
-                                Duration="0:0:0.2" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.EnterActions>
-
-                <Trigger.ExitActions>
-                    <BeginStoryboard>
-                        <Storyboard
-                            Storyboard.TargetName="OutterBorder"
-                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
-                            <ColorAnimation
-                                From="Transparent"
-                                To="{StaticResource AlertPrimaryColor}"
-                                Duration="0:0:0.2" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </Trigger.ExitActions>
+                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                <Setter TargetName="InnerBorder" Property="Border.BorderBrush" Value="LightGray" />
+                <Setter TargetName="InnerBorder" Property="Opacity" Value="1" />
             </Trigger>
 
             <MultiTrigger>

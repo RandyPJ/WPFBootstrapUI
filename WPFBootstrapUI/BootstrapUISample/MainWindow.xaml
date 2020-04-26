@@ -512,18 +512,151 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Button
-                    Content="Hola"
-                    Style="{StaticResource btn-outline-danger}" />
+
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="ComboBox"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
 
                 <ComboBox Grid.Row="1">
-                    <ComboBoxItem Content="1" />
-                    <ComboBoxItem Content="2" />
-                    <ComboBoxItem Content="3" />
-                    <ComboBoxItem Content="4" />
-                    <ComboBoxItem Content="5" />
-                    <ComboBoxItem Content="6" />
+                    <ComboBoxItem Content="1adlsabfldsafblsahdfsadf" />
+                    <ComboBoxItem Content="2 asdfasdfasdfasdfasd" />
+                    <ComboBoxItem Content="3 asdfasdfasdfasdf" />
+                    <ComboBoxItem Content="4 asdfasdfasdf" />
+                    <ComboBoxItem Content="5 adsfasdfsafd" />
+                    <ComboBoxItem Content="6 asdfasdfsadf" />
                 </ComboBox>
+            </Grid>
+
+        </TabItem>
+
+        <TabItem Header="CheckBox">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="CheckBox"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <CheckBox
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    Content="Default CheckBox" />
+
+                <CheckBox
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    Content="Disabled CheckBox"
+                    IsEnabled="False" />
+            </Grid>
+
+        </TabItem>
+
+        <TabItem Header="RadioButton">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="RadioButton"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <RadioButton
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    Content="Default CheckBox" />
+
+                <RadioButton
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    Content="Disabled CheckBox"
+                    IsEnabled="False" />
+            </Grid>
+
+        </TabItem>
+
+        <TabItem Header="GroupBox">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="GroupBox"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <GroupBox
+                    Grid.Row="1"
+                    Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Grid}}"
+                    Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Grid}}"
+                    HorizontalAlignment="Center"
+                    Header="Datos del Paciente">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBox
+                            Grid.Row="0"
+                            bootstrap:BootstrapTextBoxAssist.PlaceHolder="Nombre" />
+
+                        <TextBox
+                            Grid.Row="1"
+                            bootstrap:BootstrapTextBoxAssist.PlaceHolder="Apellido" />
+
+                        <CheckBox
+                            Grid.Row="2"
+                            HorizontalAlignment="Left"
+                            Content="Activo" />
+
+                        <StackPanel
+                            Grid.Row="3"
+                            Orientation="Horizontal">
+                            <Button
+                                HorizontalAlignment="Left"
+                                Content="Guardar"
+                                Style="{StaticResource btn-primary}" />
+                            <Button
+                                HorizontalAlignment="Left"
+                                Content="Cancelar"
+                                Style="{StaticResource btn-danger}" />
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
             </Grid>
 
         </TabItem>

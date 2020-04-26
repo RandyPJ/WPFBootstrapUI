@@ -7,6 +7,9 @@
         <ResourceDictionary Source="Controls/Badge/Themes/BootstrapUITheme.Badge.xaml" />
         <ResourceDictionary Source="Controls/Alert/Themes/BootstrapUITheme.Alert.xaml" />
         <ResourceDictionary Source="Controls/Button/Themes/BootstrapUITheme.Button.xaml" />
+        <ResourceDictionary Source="Controls/CheckBox/Themes/BootstrapUITheme.CheckBox.xaml" />
+        <ResourceDictionary Source="Controls/RadioButton/Themes/BootstrapUITheme.RadioButton.xaml" />
+        <ResourceDictionary Source="Controls/GroupBox/Themes/BootstrapUITheme.GroupBox.xaml" />
         <ResourceDictionary Source="Controls/ComboBox/Themes/BootstrapUITheme.ComboBox.xaml" />
         <ResourceDictionary Source="Controls/TextBox/Themes/BootstrapUITheme.TextBox.xaml" />
         <ResourceDictionary Source="Controls/TabControl/Themes/BootstrapUITheme.TabControl.xaml" />
