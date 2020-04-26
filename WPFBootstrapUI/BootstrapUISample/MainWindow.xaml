@@ -660,5 +660,73 @@
             </Grid>
 
         </TabItem>
+
+        <TabItem Header="ProgreBar">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="ProgressBar"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <ProgressBar
+                    Grid.Row="1"
+                    Margin="10"
+                    Style="{StaticResource progressbar-primary}"
+                    Value="30" />
+
+                <ProgressBar
+                    Grid.Row="2"
+                    Margin="10"
+                    Style="{StaticResource progressbar-secondary}"
+                    Value="40" />
+
+                <ProgressBar
+                    Grid.Row="3"
+                    Margin="10"
+                    Style="{StaticResource progressbar-danger}"
+                    Value="50" />
+
+                <ProgressBar
+                    Grid.Row="4"
+                    Margin="10"
+                    Style="{StaticResource progressbar-success}"
+                    Value="60" />
+
+                <ProgressBar
+                    Grid.Row="5"
+                    Margin="10"
+                    Style="{StaticResource progressbar-warning}"
+                    Value="70" />
+
+                <ProgressBar
+                    Grid.Row="6"
+                    Margin="10"
+                    Style="{StaticResource progressbar-info}"
+                    Value="80" />
+
+                <ProgressBar
+                    Grid.Row="7"
+                    Margin="10"
+                    Style="{StaticResource progressbar-dark}"
+                    Value="90" />
+            </Grid>
+        </TabItem>
     </TabControl>
 </Window>

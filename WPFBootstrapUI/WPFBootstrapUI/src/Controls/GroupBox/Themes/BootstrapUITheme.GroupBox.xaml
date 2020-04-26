@@ -25,6 +25,7 @@
                 <ContentPresenter
                     ContentSource="Header"
                     RecognizesAccessKey="True"
+                    TextBlock.FontFamily="{TemplateBinding FontFamily}"
                     TextBlock.FontSize="{TemplateBinding FontSize}"
                     TextBlock.FontWeight="SemiBold"
                     TextBlock.Foreground="{TemplateBinding Foreground}" />

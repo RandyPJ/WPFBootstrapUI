@@ -6,6 +6,7 @@
         <ResourceDictionary Source="Controls/ToolTip/BootstrapUITheme.ToolTip.xaml" />
         <ResourceDictionary Source="Controls/Badge/Themes/BootstrapUITheme.Badge.xaml" />
         <ResourceDictionary Source="Controls/Alert/Themes/BootstrapUITheme.Alert.xaml" />
+        <ResourceDictionary Source="Controls/ProgressBar/Themes/BootstrapUITheme.ProgressBar.xaml" />
         <ResourceDictionary Source="Controls/Button/Themes/BootstrapUITheme.Button.xaml" />
         <ResourceDictionary Source="Controls/CheckBox/Themes/BootstrapUITheme.CheckBox.xaml" />
         <ResourceDictionary Source="Controls/RadioButton/Themes/BootstrapUITheme.RadioButton.xaml" />
