@@ -95,6 +95,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="src\Controls\ListBox\Themes\BootstrapUITheme.ListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Controls\ListView\Themes\BootstrapUITheme.ListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="src\Controls\PopOver\Themes\BootstrapUITheme.PopOver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

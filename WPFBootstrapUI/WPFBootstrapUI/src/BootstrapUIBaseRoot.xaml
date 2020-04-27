@@ -15,6 +15,8 @@
         <ResourceDictionary Source="Controls/ComboBox/Themes/BootstrapUITheme.ComboBox.xaml" />
         <ResourceDictionary Source="Controls/TextBox/Themes/BootstrapUITheme.TextBox.xaml" />
         <ResourceDictionary Source="Controls/TabControl/Themes/BootstrapUITheme.TabControl.xaml" />
+        <ResourceDictionary Source="Controls/ListView/Themes/BootstrapUITheme.ListView.xaml" />
+        <ResourceDictionary Source="Controls/ListBox/Themes/BootstrapUITheme.ListBox.xaml" />
         <ResourceDictionary Source="Controls/Window/Themes/BootstrapUITheme.Window.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

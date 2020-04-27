@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 
 namespace BootstrapUISample
 {
@@ -10,6 +11,22 @@ namespace BootstrapUISample
         public MainWindow()
         {
             InitializeComponent();
+            myListView.ItemsSource = GetList();
+        }
+
+        private List<Persona> GetList()
+        {
+            return new List<Persona>() {
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
+                new Persona() { Nombre = "Randy Manuel Pena Jimenez" }
+            };
         }
     }
 }

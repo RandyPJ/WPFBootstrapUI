@@ -756,5 +756,56 @@
                 <GroupBox />
             </Grid>
         </TabItem>
+
+        <TabItem Header="ListBox">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="ListBox"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <ListBox Grid.Row="1">
+                    <ListBoxItem>Hola</ListBoxItem>
+                    <ListBoxItem>Hola</ListBoxItem>
+                    <ListBoxItem>Hola</ListBoxItem>
+                    <ListBoxItem>Hola</ListBoxItem>
+                    <ListBoxItem>Hola</ListBoxItem>
+                </ListBox>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="ListView">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="ListView"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <ListView x:Name="myListView"
+                    Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate DataType="{x:Type local:Persona}">
+                            <TextBlock Text="{Binding Nombre}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </TabItem>
     </TabControl>
 </Window>
