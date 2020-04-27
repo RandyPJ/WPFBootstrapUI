@@ -728,5 +728,33 @@
                     Value="90" />
             </Grid>
         </TabItem>
+
+        <TabItem Header="PopOver">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="PopOver"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <bootstrap:PopOver
+                    Grid.Row="1"
+                    Width="100"
+                    Content="Hola"
+                    PopOverText="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                    PopupPlacement="Right"
+                    Style="{StaticResource popover-primary}" />
+
+                <GroupBox />
+            </Grid>
+        </TabItem>
     </TabControl>
 </Window>

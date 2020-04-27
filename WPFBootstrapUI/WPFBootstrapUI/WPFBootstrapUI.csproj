@@ -75,6 +75,8 @@
     <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
     <Compile Include="src\Controls\Badge\Implementation\Badge.cs" />
     <Compile Include="src\Controls\Card\Implementation\Card.cs" />
+    <Compile Include="src\Controls\PopOver\Implementation\PopOver.cs" />
+    <Compile Include="src\Controls\PopOver\PopOverHelper.cs" />
     <Compile Include="src\Controls\Window\Themes\BootstrapUITheme.Window.xaml.cs">
       <DependentUpon>BootstrapUITheme.Window.xaml</DependentUpon>
     </Compile>
@@ -90,6 +92,10 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Page Include="src\Controls\GroupBox\Themes\BootstrapUITheme.GroupBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Controls\PopOver\Themes\BootstrapUITheme.PopOver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

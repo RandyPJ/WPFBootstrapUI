@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace WPFBootstrapUI.src.Controls
 {
-    public class Card : ContentControl
+    public class Card : HeaderedContentControl
     {
         static Card()
         {
