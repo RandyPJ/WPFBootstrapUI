@@ -799,11 +799,13 @@
 
                 <ListView x:Name="myListView"
                     Grid.Row="1">
-                    <ListView.ItemTemplate>
-                        <DataTemplate DataType="{x:Type local:Persona}">
-                            <TextBlock Text="{Binding Nombre}" />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn
+                                DisplayMemberBinding="{Binding Nombre}"
+                                Header="Nombre" />
+                        </GridView>
+                    </ListView.View>
                 </ListView>
             </Grid>
         </TabItem>
