@@ -14,6 +14,7 @@ The Bootstrap like UI for WPF.
 * Instala el paquete nuget: _Install-Package WPFBootrapUI_   (Coming soon).
 * Edita el archivo App.xaml y agrega el siguiente código **XAML**:
 
+```
 <Application x:Class="BootstrapUISample.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -29,12 +30,12 @@ The Bootstrap like UI for WPF.
         </ResourceDictionary>
     </Application.Resources>
  </Application>
+```
 
-_Edite el MainWindow.xaml con el siguiente código:_
+**Edite el MainWindow.xaml con el siguiente código:**
 
-   
+```
 <Window
-    
     ...
     xmlns:bootstrap="http://schemas.softcode.com/WPFBootrapUI"
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
@@ -61,4 +62,6 @@ _Edite el MainWindow.xaml con el siguiente código:_
             Style="{StaticResource btn-primary}" />
     </Grid>
  </Window>
+```
+
 
