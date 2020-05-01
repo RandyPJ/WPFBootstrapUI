@@ -9,7 +9,7 @@ using System.Windows.Markup;
 [assembly: AssemblyTitle("WPFBootstrapUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("rpj")]
 [assembly: AssemblyProduct("WPFBootstrapUI")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

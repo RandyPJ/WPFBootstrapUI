@@ -4,6 +4,7 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.src">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Controls/Window/Themes/BootstrapUITheme.Window.xaml" />
         <ResourceDictionary Source="Controls/PopOver/Themes/BootstrapUITheme.PopOver.xaml" />
         <ResourceDictionary Source="Controls/ToolTip/BootstrapUITheme.ToolTip.xaml" />
         <ResourceDictionary Source="Controls/Badge/Themes/BootstrapUITheme.Badge.xaml" />
@@ -18,7 +19,6 @@
         <ResourceDictionary Source="Controls/TabControl/Themes/BootstrapUITheme.TabControl.xaml" />
         <ResourceDictionary Source="Controls/ListView/Themes/BootstrapUITheme.ListView.xaml" />
         <ResourceDictionary Source="Controls/ListBox/Themes/BootstrapUITheme.ListBox.xaml" />
-        <ResourceDictionary Source="Controls/Window/Themes/BootstrapUITheme.Window.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

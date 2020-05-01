@@ -9,7 +9,7 @@
     Height="450"
     Icon="{iconPacks:FontAwesomeImage Kind=BootstrapBrands,
                                       Brush=White}"
-    Style="{StaticResource Window-Primary}"
+    Style="{StaticResource window-primary}"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 

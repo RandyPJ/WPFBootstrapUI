@@ -32,11 +32,10 @@
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Padding" Value="10,5,10,5" />
-        <Setter Property="Margin" Value="20" />
+        <Setter Property="Padding" Value="10,5,10,8" />
         <Setter Property="IsTabStop" Value="False" />
         <Setter Property="Focusable" Value="False" />
-        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontSize" Value="12" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template" Value="{StaticResource WindowButtonTemplate}" />
