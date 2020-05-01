@@ -45,22 +45,18 @@ _Edite el MainWindow.xaml con el siguiente código:_
     Style="{StaticResource Window-Primary}"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
-  
      <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
         <bootstrap:Alert
             Grid.Row="0"
             Content="Hola Mundo"
             Style="{StaticResource Alert-Primary}" />
-       
         <Button
             Grid.Row="1"
             Content="Hello World"
             Style="{StaticResource btn-primary}" />
-    </Grid>
- </Window>
+    </Grid></Window>
 
