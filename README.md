@@ -28,12 +28,13 @@ The Bootstrap like UI for WPF.
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
-</Application>
+ </Application>
 
 _Edite el MainWindow.xaml con el siguiente código:_
 
    
 <Window
+   
     xmlns:bootstrap="http://schemas.softcode.com/WPFBootrapUI"
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:BootstrapUISample"
