@@ -63,4 +63,6 @@ The Bootstrap like UI for WPF.
  </Window>
 ```
 
+Más información en el [wiki](https://github.com/RandyPJ/WPFBootstrapUI/wiki/Inicio)
+
 
