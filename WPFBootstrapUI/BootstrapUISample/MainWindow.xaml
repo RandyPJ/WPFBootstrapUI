@@ -31,47 +31,47 @@
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Primary"
                     IsAlertDismissible="True"
                     Style="{StaticResource alert-primary}" />
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Secondary"
                     IsAlertDismissible="True"
                     Style="{StaticResource alert-secondary}" />
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Success"
                     IsAlertDismissible="True"
                     Style="{StaticResource alert-success}" />
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Danger"
                     IsAlertDismissible="True"
                     Style="{StaticResource alert-danger}" />
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Warning"
                     IsAlertDismissible="True"
                     Style="{StaticResource alert-warning}" />
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Info"
                     Style="{StaticResource alert-info}" />
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Light"
                     Style="{StaticResource alert-light}" />
 
                 <bootstrap:Alert
                     Margin="10"
-                    Content="Hola mundo"
+                    Content="Alert Dark"
                     Style="{StaticResource alert-dark}" />
             </StackPanel>
         </TabItem>
