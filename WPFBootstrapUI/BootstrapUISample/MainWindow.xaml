@@ -33,46 +33,46 @@
                     Margin="10"
                     Content="Hola mundo"
                     IsAlertDismissible="True"
-                    Style="{StaticResource Alert-Primary}" />
+                    Style="{StaticResource alert-primary}" />
 
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
                     IsAlertDismissible="True"
-                    Style="{StaticResource Alert-Secondary}" />
+                    Style="{StaticResource alert-secondary}" />
 
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
                     IsAlertDismissible="True"
-                    Style="{StaticResource Alert-Success}" />
+                    Style="{StaticResource alert-success}" />
 
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
                     IsAlertDismissible="True"
-                    Style="{StaticResource Alert-Danger}" />
+                    Style="{StaticResource alert-danger}" />
 
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
                     IsAlertDismissible="True"
-                    Style="{StaticResource Alert-Warning}" />
+                    Style="{StaticResource alert-warning}" />
 
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
-                    Style="{StaticResource Alert-Info}" />
+                    Style="{StaticResource alert-info}" />
 
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
-                    Style="{StaticResource Alert-Light}" />
+                    Style="{StaticResource alert-light}" />
 
                 <bootstrap:Alert
                     Margin="10"
                     Content="Hola mundo"
-                    Style="{StaticResource Alert-Dark}" />
+                    Style="{StaticResource alert-dark}" />
             </StackPanel>
         </TabItem>
 

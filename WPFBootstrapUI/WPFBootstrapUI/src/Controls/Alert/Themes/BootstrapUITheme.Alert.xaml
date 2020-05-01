@@ -76,7 +76,7 @@
         </Grid>
     </ControlTemplate>
 
-    <Style x:Key="Alert-Base" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-base" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
@@ -89,45 +89,45 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="Alert-Primary" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-primary" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertPrimarySolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertPrimaryForegroundSolidColorBrush}" />
     </Style>
 
-    <Style x:Key="Alert-Secondary" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-secondary" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertSecondarySolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertSecondaryForegroundSolidColorBrush}" />
     </Style>
 
-    <Style x:Key="Alert-Success" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-success" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertSuccessSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertSuccessForegroundSolidColorBrush}" />
     </Style>
 
-    <Style x:Key="Alert-Danger" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-danger" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertDangerSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertDangerForegroundSolidColorBrush}" />
     </Style>
 
-    <Style x:Key="Alert-Warning" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-warning" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertWarningSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertWarningForegroundSolidColorBrush}" />
     </Style>
 
-    <Style x:Key="Alert-Info" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-info" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertInfoSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertInfoForegroundSolidColorBrush}" />
     </Style>
 
-    <Style x:Key="Alert-Light" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-light" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertLightSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertLightForegroundSolidColorBrush}" />
     </Style>
 
-    <Style x:Key="Alert-Dark" BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-dark" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="Background" Value="{StaticResource AlertDarkSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertDarkForegroundSolidColorBrush}" />
     </Style>
 
-    <Style BasedOn="{StaticResource Alert-Base}" TargetType="{x:Type AlertControl:Alert}" />
+    <Style BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}" />
 </ResourceDictionary>
