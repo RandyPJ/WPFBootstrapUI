@@ -12,8 +12,8 @@ namespace WPFBootstrapUI.src.Controls
     [TemplatePart(Name = "PopupContainer", Type = typeof(Grid))]
     public class PopOver : ToggleButton
     {
-        string popupName = "Popup";
-        string containerName = "Container";
+        readonly string popupName = "Popup";
+        readonly string containerName = "Container";
 
         Popup Popup;
         Grid Container;
@@ -49,7 +49,7 @@ namespace WPFBootstrapUI.src.Controls
         }
 
         public static readonly DependencyProperty PopupPlacementProperty =
-            DependencyProperty.Register("PopupPlacement", typeof(PlacementMode), typeof(PopOver), new PropertyMetadata(PlacementMode.Left));
+            DependencyProperty.Register("PopupPlacement", typeof(PlacementMode), typeof(PopOver), new PropertyMetadata(PlacementMode.Relative));
 
 
         protected override void OnToggle()
@@ -77,6 +77,5 @@ namespace WPFBootstrapUI.src.Controls
                 }
             }
         }
-
     }
 }

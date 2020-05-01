@@ -76,7 +76,6 @@
     <Compile Include="src\Controls\Badge\Implementation\Badge.cs" />
     <Compile Include="src\Controls\Card\Implementation\Card.cs" />
     <Compile Include="src\Controls\PopOver\Implementation\PopOver.cs" />
-    <Compile Include="src\Controls\PopOver\PopOverHelper.cs" />
     <Compile Include="src\Controls\Window\Themes\BootstrapUITheme.Window.xaml.cs">
       <DependentUpon>BootstrapUITheme.Window.xaml</DependentUpon>
     </Compile>

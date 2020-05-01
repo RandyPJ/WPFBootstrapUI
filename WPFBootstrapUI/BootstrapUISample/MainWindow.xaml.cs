@@ -16,7 +16,8 @@ namespace BootstrapUISample
 
         private List<Persona> GetList()
         {
-            return new List<Persona>() {
+            return new List<Persona>() 
+            {
                 new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
                 new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
                 new Persona() { Nombre = "Randy Manuel Pena Jimenez" },

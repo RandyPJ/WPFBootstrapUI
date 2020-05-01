@@ -13,23 +13,6 @@
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
-    <!--<Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-
-        <bootstrap:Alert
-            Grid.Row="0"
-            Content="Hola Mundo"
-            Style="{StaticResource Alert-Primary}" />
-        <Button
-            Grid.Row="1"
-            Content="Hello World"
-            Style="{StaticResource btn-primary}" />
-    </Grid>
-</Window>-->
-
     <TabControl Margin="5">
         <TabControl.Resources>
             <Style BasedOn="{StaticResource tooltip-base}" TargetType="{x:Type ToolTip}" />
@@ -752,8 +735,6 @@
                     PopOverText="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
                     PopupPlacement="Right"
                     Style="{StaticResource popover-primary}" />
-
-                <GroupBox />
             </Grid>
         </TabItem>
 
@@ -799,13 +780,11 @@
 
                 <ListView x:Name="myListView"
                     Grid.Row="1">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn
-                                DisplayMemberBinding="{Binding Nombre}"
-                                Header="Nombre" />
-                        </GridView>
-                    </ListView.View>
+                    <ListView.ItemTemplate>
+                        <DataTemplate DataType="{x:Type local:Persona}">
+                            <TextBlock Text="{Binding Nombre}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </Grid>
         </TabItem>
