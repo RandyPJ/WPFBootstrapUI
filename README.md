@@ -6,7 +6,7 @@ The Bootstrap like UI for WPF.
 
 * Estilo moderno.
 * Soporte para .Net Framework >= 4.5.
-* Set de íconos FontAwesome integrados desde [MahApps.Metro.IconPacks](https://github.com/MahApps/MahApps.Metro.IconPacks)
+* Set de íconos FontAwesome integrados desde [MahApps.Metro.IconPacks](https://github.com/MahApps/MahApps.Metro.IconPacks).
 
 ### **Inicio rápido**
 
@@ -19,17 +19,16 @@ The Bootstrap like UI for WPF.
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     StartupUri="MainWindow.xaml">
-
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/ColorsDictionary.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Fonts/FontFamilyDictionary.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/BootstrapUIBaseRoot.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Fonts/FontFamilies.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/BootstrapUIBaseRoot.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
- </Application>
+</Application>
 ```
 
 **Edite el MainWindow.xaml con el siguiente código:**
@@ -37,7 +36,7 @@ The Bootstrap like UI for WPF.
 ```
 <Window
     ...
-    xmlns:bootstrap="http://schemas.softcode.com/WPFBootrapUI"
+    xmlns:bootstrap="http://schemas.rpj.com/WPFBootstrapUI"
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:BootstrapUISample"
     Title="MainWindow"
