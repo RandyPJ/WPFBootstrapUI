@@ -6,7 +6,6 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.src.Controls">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/ColorsDictionary.xaml" />
         <ResourceDictionary>
             <Converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
         </ResourceDictionary>

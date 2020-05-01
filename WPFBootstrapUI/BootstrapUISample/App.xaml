@@ -5,8 +5,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/ColorsDictionary.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Fonts/FontFamilyDictionary.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Fonts/FontFamilies.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/BootstrapUIBaseRoot.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

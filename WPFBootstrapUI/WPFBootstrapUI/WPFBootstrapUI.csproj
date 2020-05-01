@@ -55,7 +55,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PasswordHelper.cs" />
+    <Compile Include="src\PasswordHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,14 +118,13 @@
   <ItemGroup>
     <Folder Include="src\Controls\Button\Implementation\" />
     <Folder Include="src\Controls\TextBox\Implementation\" />
-    <Folder Include="src\Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="src\BootstrapUIBaseRoot.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Colors\ColorsDictionary.xaml">
+    <Page Include="src\Colors\Colors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,7 +168,7 @@
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
-    <Page Include="src\Fonts\FontFamilyDictionary.xaml">
+    <Page Include="src\Fonts\FontFamilies.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
