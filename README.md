@@ -23,7 +23,7 @@ The Bootstrap like UI for WPF.
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/Colors.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Fonts/FontFamilies.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/BootstrapUIBaseRoot.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/BootstrapUI.Base.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
