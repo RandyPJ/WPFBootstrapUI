@@ -36,7 +36,7 @@
                 AllowsTransparency="True"
                 HorizontalOffset="0"
                 IsOpen="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}}"
-                Placement="{Binding PopupPlacement, RelativeSource={RelativeSource TemplatedParent}}"
+                Placement="{TemplateBinding PopupPlacement}"
                 PlacementTarget="{Binding ElementName=OutterBorder}">
 
                 <Border
@@ -54,7 +54,7 @@
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Foreground="{StaticResource DarkSolidColorBrush}"
-                            Text="{Binding PopOverText, RelativeSource={RelativeSource TemplatedParent}}"
+                            Text="{TemplateBinding PopOverText}"
                             TextWrapping="Wrap" />
                     </Grid>
                 </Border>

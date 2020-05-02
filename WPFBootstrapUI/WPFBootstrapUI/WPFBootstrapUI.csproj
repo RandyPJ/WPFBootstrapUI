@@ -83,7 +83,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Page Include="src\BootstrapUI.Base.xaml">
+    <Page Include="src\Controls\BootstrapUI.Base.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

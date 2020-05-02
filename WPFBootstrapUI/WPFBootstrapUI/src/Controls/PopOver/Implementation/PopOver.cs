@@ -17,17 +17,12 @@ namespace WPFBootstrapUI.src.Controls
 
         Popup Popup;
         Grid Container;
-        static PopOver()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(PopOver), new FrameworkPropertyMetadata(typeof(PopOver)));
-        }
 
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
 
             Popup = GetTemplateChild(popupName) as Popup;
-            Container = GetTemplateChild(containerName) as Grid;
 
             if (Popup == null)
                 throw new InvalidOperationException($"El control de tipo: {Popup.GetType().Name} no ha sido encontrado.");
@@ -49,6 +44,6 @@ namespace WPFBootstrapUI.src.Controls
         }
 
         public static readonly DependencyProperty PopupPlacementProperty =
-            DependencyProperty.Register("PopupPlacement", typeof(PlacementMode), typeof(PopOver), new PropertyMetadata(PlacementMode.Relative));
+            DependencyProperty.Register("PopupPlacement", typeof(PlacementMode), typeof(PopOver), new PropertyMetadata(PlacementMode.Bottom));
     }
 }

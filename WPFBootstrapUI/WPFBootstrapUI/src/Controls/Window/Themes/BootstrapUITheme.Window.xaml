@@ -130,6 +130,7 @@
     </ControlTemplate>
 
     <Style x:Key="window-primary" TargetType="{x:Type Window}">
+        <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="BorderThickness" Value="0.8" />
         <Setter Property="UseLayoutRounding" Value="True" />
@@ -148,5 +149,4 @@
         </Setter>
         <Setter Property="Template" Value="{StaticResource MainWindowTemplate}" />
     </Style>
-
 </ResourceDictionary>

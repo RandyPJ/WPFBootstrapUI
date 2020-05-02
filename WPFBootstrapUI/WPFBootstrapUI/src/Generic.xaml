@@ -1,4 +1,15 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:WPFBootstrapUI.src" />
+    xmlns:Controls="clr-namespace:WPFBootstrapUI.src.Controls"
+    xmlns:local="clr-namespace:WPFBootstrapUI.src">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/Badge/Themes/BootstrapUITheme.Badge.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/Alert/Themes/BootstrapUITheme.Alert.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/PopOver/Themes/BootstrapUITheme.PopOver.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style BasedOn="{StaticResource alert-primary}" TargetType="{x:Type Controls:Alert}" />
+    <Style BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}" />
+    <Style BasedOn="{StaticResource popover-primary}" TargetType="{x:Type Controls:PopOver}" />
+</ResourceDictionary>

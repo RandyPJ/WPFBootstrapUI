@@ -14,9 +14,6 @@
     WindowState="Maximized">
 
     <TabControl Margin="5">
-        <TabControl.Resources>
-            <Style BasedOn="{StaticResource tooltip-base}" TargetType="{x:Type ToolTip}" />
-        </TabControl.Resources>
 
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
@@ -711,7 +708,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="PopOver">
+        <!--<TabItem Header="PopOver">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -731,11 +728,10 @@
                     Grid.Row="1"
                     Width="100"
                     Content="Hola"
-                    PopOverText="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-                    PopupPlacement="Right"
-                    Style="{StaticResource popover-primary}" />
+                    PopOverText="Hola"
+                    PopupPlacement="Left" />
             </Grid>
-        </TabItem>
+        </TabItem>-->
 
         <TabItem Header="ListBox">
             <Grid>
