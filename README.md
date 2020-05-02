@@ -6,12 +6,11 @@ The Bootstrap like UI for WPF.
 
 * Estilo moderno.
 * Soporte para .Net Framework >= 4.5.
-* Set de íconos FontAwesome integrados desde [MahApps.Metro.IconPacks](https://github.com/MahApps/MahApps.Metro.IconPacks).
 
 ### **Inicio rápido**
 
 * Crea un nuevo proyecto WPF.
-* Instala el paquete nuget: _Install-Package WPFBootrapUI_   (Coming soon).
+* Instala el paquete nuget: _Install-Package WPFBootstrapUI_.
 * Edita el archivo App.xaml y agrega el siguiente código **XAML**:
 
 ```
