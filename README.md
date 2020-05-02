@@ -19,11 +19,11 @@ The Bootstrap like UI for WPF.
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary>
+         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/Colors.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Fonts/FontFamilies.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Controls/BootstrapUI.Base.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/Colors/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/Fonts/FontFamilies.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/Themes/WPFBootstrapUI.Base.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
