@@ -95,7 +95,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="CheckBoxStyle" TargetType="{x:Type CheckBox}">
+    <Style x:Key="checkbox-secondary" TargetType="{x:Type CheckBox}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource DarkSolidColorBrush}" />
@@ -107,5 +107,5 @@
         <Setter Property="Template" Value="{StaticResource CheckBoxTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource CheckBoxStyle}" TargetType="{x:Type CheckBox}" />
+    <Style BasedOn="{StaticResource checkbox-secondary}" TargetType="{x:Type CheckBox}" />
 </ResourceDictionary>

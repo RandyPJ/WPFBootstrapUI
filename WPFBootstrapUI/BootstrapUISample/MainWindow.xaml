@@ -410,7 +410,6 @@
 
                 <Label
                     Grid.Row="0"
-                    Grid.ColumnSpan="8"
                     Margin="20"
                     HorizontalAlignment="Center"
                     Content="TextBox"

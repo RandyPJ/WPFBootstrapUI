@@ -93,7 +93,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="tooltip-base" TargetType="{x:Type ToolTip}">
+    <Style x:Key="tooltip-dark" TargetType="{x:Type ToolTip}">
         <Setter Property="MinWidth" Value="100" />
         <Setter Property="Panel.ZIndex" Value="2" />
         <Setter Property="Padding" Value="10,5" />
@@ -108,5 +108,5 @@
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style BasedOn="{StaticResource tooltip-base}" TargetType="{x:Type ToolTip}" />
+    <Style BasedOn="{StaticResource tooltip-dark}" TargetType="{x:Type ToolTip}" />
 </ResourceDictionary>

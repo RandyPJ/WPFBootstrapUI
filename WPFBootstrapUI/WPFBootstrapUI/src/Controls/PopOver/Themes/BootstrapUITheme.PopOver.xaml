@@ -29,7 +29,6 @@
             </Border>
 
             <Popup x:Name="Popup"
-                Grid.Row="1"
                 Width="332"
                 Height="Auto"
                 MinWidth="60"
@@ -103,5 +102,4 @@
         <Setter Property="Template" Value="{StaticResource PopOverControlTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource popover-primary}" TargetType="{x:Type Controls:PopOver}" />
 </ResourceDictionary>

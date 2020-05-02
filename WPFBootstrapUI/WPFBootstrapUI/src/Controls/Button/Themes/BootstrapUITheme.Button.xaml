@@ -1040,4 +1040,8 @@
     </Style>
     <!--#endregion-->
 
+
+
+    <Style BasedOn="{StaticResource btn-primary}" TargetType="{x:Type Button}" />
+
 </ResourceDictionary>

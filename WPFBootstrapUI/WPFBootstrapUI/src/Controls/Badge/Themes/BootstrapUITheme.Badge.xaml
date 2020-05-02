@@ -185,6 +185,4 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}" />
-
 </ResourceDictionary>

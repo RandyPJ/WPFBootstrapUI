@@ -491,7 +491,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="ListViewStyle" TargetType="{x:Type ListView}">
+    <Style x:Key="listview-primary" TargetType="{x:Type ListView}">
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="BorderThickness" Value="1" />
@@ -507,6 +507,6 @@
     </Style>
 
     <Style BasedOn="{StaticResource listviewitem-primary}" TargetType="{x:Type ListViewItem}" />
-    <Style BasedOn="{StaticResource ListViewStyle}" TargetType="{x:Type ListView}" />
+    <Style BasedOn="{StaticResource listview-primary}" TargetType="{x:Type ListView}" />
 
 </ResourceDictionary>

@@ -284,7 +284,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="TabItem-Primary" TargetType="{x:Type TabItem}">
+    <Style x:Key="tabitem-primary" TargetType="{x:Type TabItem}">
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
@@ -296,7 +296,7 @@
         <Setter Property="Template" Value="{StaticResource TabItemControlTemplate}" />
     </Style>
 
-    <Style x:Key="TabControl-Primary" TargetType="{x:Type TabControl}">
+    <Style x:Key="tabcontrol-primary" TargetType="{x:Type TabControl}">
         <Setter Property="Padding" Value="4" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -309,8 +309,8 @@
     </Style>
 
 
-    <Style BasedOn="{StaticResource TabControl-Primary}" TargetType="{x:Type TabControl}" />
-    <Style BasedOn="{StaticResource TabItem-Primary}" TargetType="{x:Type TabItem}" />
+    <Style BasedOn="{StaticResource tabcontrol-primary}" TargetType="{x:Type TabControl}" />
+    <Style BasedOn="{StaticResource tabitem-primary}" TargetType="{x:Type TabItem}" />
 
 </ResourceDictionary>
 

@@ -7,7 +7,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Colors/Colors.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/Fonts/FontFamilies.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/BootstrapUIBaseRoot.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFBootstrapUI;component/src/BootstrapUI.Base.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

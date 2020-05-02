@@ -50,32 +50,5 @@ namespace WPFBootstrapUI.src.Controls
 
         public static readonly DependencyProperty PopupPlacementProperty =
             DependencyProperty.Register("PopupPlacement", typeof(PlacementMode), typeof(PopOver), new PropertyMetadata(PlacementMode.Relative));
-
-
-        protected override void OnToggle()
-        {
-            base.OnToggle();
-
-            if (IsChecked.Value)
-            {
-                switch (PopupPlacement)
-                {
-                    case PlacementMode.Left:
-                        Popup.VerticalOffset = -8;
-                        break;
-                    case PlacementMode.Top:
-                        Popup.HorizontalOffset = -(Popup.Width / 3);
-                        break;
-                    case PlacementMode.Right:
-                        Popup.VerticalOffset = -8;
-                        break;
-                    case PlacementMode.Bottom:
-                        Popup.HorizontalOffset = -(Popup.Width / 3);
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
     }
 }

@@ -491,7 +491,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="ListBoxStyle" TargetType="{x:Type ListBox}">
+    <Style x:Key="listbox-primary" TargetType="{x:Type ListBox}">
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="BorderThickness" Value="1" />
@@ -507,6 +507,6 @@
     </Style>
 
     <Style BasedOn="{StaticResource listboxitem-primary}" TargetType="{x:Type ListBoxItem}" />
-    <Style BasedOn="{StaticResource ListBoxStyle}" TargetType="{x:Type ListBox}" />
+    <Style BasedOn="{StaticResource listbox-primary}" TargetType="{x:Type ListBox}" />
 
 </ResourceDictionary>
