@@ -225,6 +225,86 @@
             </Grid>
         </TabItem>
 
+        <TabItem Header="Card">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    Margin="20"
+                    HorizontalAlignment="Center"
+                    Content="Card"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light" />
+
+                <bootstrap:Card
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Width="500">
+                    <bootstrap:Card.Content>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <bootstrap:CardChildPanel
+                                Grid.Row="0"
+                                Style="{StaticResource card-header}">
+                                <bootstrap:CardChildPanel.Content>
+                                    <TextBlock
+                                        Margin="10,10,0,0"
+                                        FontWeight="Bold"
+                                        Text="Card Header" />
+                                </bootstrap:CardChildPanel.Content>
+                            </bootstrap:CardChildPanel>
+
+                            <bootstrap:CardChildPanel
+                                Grid.Row="1"
+                                Style="{StaticResource card-body}">
+                                <bootstrap:CardChildPanel.Content>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel.Content>
+                            </bootstrap:CardChildPanel>
+
+                            <bootstrap:CardChildPanel
+                                Grid.Row="2"
+                                Style="{StaticResource card-footer}">
+                                <bootstrap:CardChildPanel.Content>
+                                    <TextBlock
+                                        Margin="10,10,0,0"
+                                        Text="Card footer" />
+                                </bootstrap:CardChildPanel.Content>
+                            </bootstrap:CardChildPanel>
+
+                        </Grid>
+                    </bootstrap:Card.Content>
+                </bootstrap:Card>
+            </Grid>
+
+        </TabItem>
+
         <TabItem Header="Buttons">
 
             <Grid>
@@ -314,7 +394,6 @@
                     <Button
                         Grid.Row="1"
                         Grid.Column="9"
-                        bootstrap:TextAssist.Text="Link"
                         Style="{StaticResource btn-link}" />
                 </Grid>
 
@@ -708,7 +787,8 @@
             </Grid>
         </TabItem>
 
-        <!--<TabItem Header="PopOver">
+
+        <TabItem Header="PopOver">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -728,10 +808,10 @@
                     Grid.Row="1"
                     Width="100"
                     Content="Hola"
-                    PopOverText="Hola"
-                    PopupPlacement="Left" />
+                    PopOverText="Hola mundo" />
             </Grid>
-        </TabItem>-->
+        </TabItem>
+
 
         <TabItem Header="ListBox">
             <Grid>
@@ -749,6 +829,9 @@
                     ToolTipService.Placement="Bottom" />
 
                 <ListBox Grid.Row="1">
+                    <ListBox.Resources>
+                        <Style BasedOn="{StaticResource listboxitem-success}" TargetType="{x:Type ListBoxItem}" />
+                    </ListBox.Resources>
                     <ListBoxItem>Hola</ListBoxItem>
                     <ListBoxItem>Hola</ListBoxItem>
                     <ListBoxItem>Hola</ListBoxItem>
@@ -764,6 +847,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
+
                 <Label
                     Grid.Row="0"
                     HorizontalAlignment="Center"
@@ -775,11 +859,11 @@
 
                 <ListView x:Name="myListView"
                     Grid.Row="1">
-                    <ListView.ItemTemplate>
-                        <DataTemplate DataType="{x:Type local:Persona}">
-                            <TextBlock Text="{Binding Nombre}" />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
+                    <ListViewItem>Hola</ListViewItem>
+                    <ListViewItem>Hola</ListViewItem>
+                    <ListViewItem>Hola</ListViewItem>
+                    <ListViewItem>Hola</ListViewItem>
+                    <ListViewItem>Hola</ListViewItem>
                 </ListView>
             </Grid>
         </TabItem>

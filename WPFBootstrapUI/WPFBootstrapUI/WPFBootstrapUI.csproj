@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{584D2C24-51F1-4AEE-8779-78DA7EC99152}</ProjectGuid>
     <OutputType>library</OutputType>
@@ -49,7 +49,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\PasswordHelper.cs" />
+    <Compile Include="ControlsAssists\PasswordHelper.cs" />
+    <Compile Include="Controls\Card\Implementation\CardChildPanel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -63,18 +64,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="src\Animations\StoryBoardHelper.cs" />
-    <Compile Include="src\BootstrapTextBoxAssist.cs" />
-    <Compile Include="src\BorderAssist.cs" />
-    <Compile Include="src\Controls\Alert\Implementation\Alert.cs" />
-    <Compile Include="src\Controls\Badge\Implementation\Badge.cs" />
-    <Compile Include="src\Controls\Card\Implementation\Card.cs" />
-    <Compile Include="src\Controls\PopOver\Implementation\PopOver.cs" />
-    <Compile Include="src\Controls\Window\Themes\BootstrapUITheme.Window.xaml.cs">
+    <Compile Include="Animations\StoryBoardHelper.cs" />
+    <Compile Include="ControlsAssists\BootstrapTextBoxAssist.cs" />
+    <Compile Include="ControlsAssists\BorderAssist.cs" />
+    <Compile Include="Controls\Alert\Implementation\Alert.cs" />
+    <Compile Include="Controls\Badge\Implementation\Badge.cs" />
+    <Compile Include="Controls\Card\Implementation\Card.cs" />
+    <Compile Include="Controls\PopOver\Implementation\PopOver.cs" />
+    <Compile Include="Styles\BootstrapUITheme.Window.xaml.cs">
       <DependentUpon>BootstrapUITheme.Window.xaml</DependentUpon>
     </Compile>
-    <Compile Include="src\Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="src\TextAssist.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ControlsAssists\TextAssist.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,89 +84,90 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Page Include="src\Controls\BootstrapUI.Base.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="src\Controls\GroupBox\Themes\BootstrapUITheme.GroupBox.xaml">
+    <Page Include="Styles\BootstrapUITheme.GroupBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\ListBox\Themes\BootstrapUITheme.ListBox.xaml">
+    <Page Include="Styles\BootstrapUITheme.ListBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\ListView\Themes\BootstrapUITheme.ListView.xaml">
+    <Page Include="Styles\BootstrapUITheme.ListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\PopOver\Themes\BootstrapUITheme.PopOver.xaml">
+    <Page Include="Styles\BootstrapUITheme.PopOver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\ProgressBar\Themes\BootstrapUITheme.ProgressBar.xaml">
+    <Page Include="Styles\BootstrapUITheme.ProgressBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\RadioButton\Themes\BootstrapUITheme.RadioButton.xaml">
+    <Page Include="Styles\BootstrapUITheme.RadioButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="src\Generic.xaml">
+    <Page Include="Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\System.Windows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\WPFBootstrapUI.Base.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="src\Controls\Button\Implementation\" />
-    <Folder Include="src\Controls\TextBox\Implementation\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="src\Colors\Colors.xaml">
+    <Page Include="Colors\Colors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\Alert\Themes\BootstrapUITheme.Alert.xaml">
+    <Page Include="Styles\BootstrapUITheme.Alert.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\Badge\Themes\BootstrapUITheme.Badge.xaml">
+    <Page Include="Styles\BootstrapUITheme.Badge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\Button\Themes\BootstrapUITheme.Button.xaml">
+    <Page Include="Styles\BootstrapUITheme.Button.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\Card\Themes\BootstrapUITheme.Card.xaml">
+    <Page Include="Styles\BootstrapUITheme.Card.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\CheckBox\Themes\BootstrapUITheme.CheckBox.xaml">
+    <Page Include="Styles\BootstrapUITheme.CheckBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\ComboBox\Themes\BootstrapUITheme.ComboBox.xaml">
+    <Page Include="Styles\BootstrapUITheme.ComboBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\TabControl\Themes\BootstrapUITheme.TabControl.xaml">
+    <Page Include="Styles\BootstrapUITheme.TabControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="src\Controls\TextBox\Themes\BootstrapUITheme.TextBox.xaml">
+    <Page Include="Styles\BootstrapUITheme.TextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\ToolTip\BootstrapUITheme.ToolTip.xaml">
+    <Page Include="Styles\BootstrapUITheme.ToolTip.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="src\Controls\Window\Themes\BootstrapUITheme.Window.xaml">
+    <Page Include="Styles\BootstrapUITheme.Window.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
-    <Page Include="src\Fonts\FontFamilies.xaml">
+    <Page Include="Fonts\FontFamilies.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,88 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
+    xmlns:iconPack="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Fonts/FontFamilies.xaml" />
+        <ResourceDictionary Source="../Colors/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBoxBase}">
+        <Border x:Name="OutterBorder"
+            BorderBrush="Transparent"
+            BorderThickness="4"
+            CornerRadius="6"
+            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+            UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+            <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                <Border x:Name="InnerBorder"
+                    Height="{TemplateBinding Height}"
+                    Background="Transparent"
+                    BorderBrush="LightGray"
+                    BorderThickness=".6"
+                    CornerRadius="4"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                    UseLayoutRounding="{TemplateBinding UseLayoutRounding}" />
+
+                <ScrollViewer x:Name="PART_ContentHost" />
+
+                <TextBlock x:Name="PART_Placeholder"
+                    Margin="12,0,0,0"
+                    VerticalAlignment="Center"
+                    Foreground="SlateGray"
+                    Text="{TemplateBinding Assist:BootstrapTextBoxAssist.PlaceHolder}"
+                    Visibility="Collapsed" />
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                <Setter TargetName="InnerBorder" Property="Border.BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
+                <Setter TargetName="InnerBorder" Property="Opacity" Value="0.5" />
+            </Trigger>
+
+            <Trigger Property="IsFocused" Value="False">
+                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
+                <Setter TargetName="InnerBorder" Property="Border.BorderBrush" Value="LightGray" />
+                <Setter TargetName="InnerBorder" Property="Opacity" Value="1" />
+            </Trigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
+                    <Condition Property="IsFocused" Value="True" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
+                    <Condition Property="IsFocused" Value="False" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter TargetName="PART_Placeholder" Property="Visibility" Value="Visible" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="textbox-primary" TargetType="{x:Type TextBoxBase}">
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Cursor" Value="IBeam" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Assist:BootstrapTextBoxAssist.IsMonitoring" Value="True" />
+        <Setter Property="Template" Value="{StaticResource TextBoxControlTemplate}" />
+    </Style>
+
+    <Style BasedOn="{StaticResource textbox-primary}" TargetType="{x:Type TextBox}" />
+</ResourceDictionary>

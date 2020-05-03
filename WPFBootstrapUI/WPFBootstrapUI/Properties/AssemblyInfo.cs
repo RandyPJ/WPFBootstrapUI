@@ -16,8 +16,9 @@ using System.Windows.Markup;
 [assembly: AssemblyCulture("")]
 
 
-[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI.src")]
-[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI.src.Controls")]
+[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI")]
+[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI.ControlsAssists")]
+[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI.Controls")]
 [assembly: XmlnsPrefix("http://schemas.rpj.com/WPFBootstrapUI", "bootstrap")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 

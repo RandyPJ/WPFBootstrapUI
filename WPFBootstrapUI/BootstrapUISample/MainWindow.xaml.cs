@@ -11,7 +11,7 @@ namespace BootstrapUISample
         public MainWindow()
         {
             InitializeComponent();
-            myListView.ItemsSource = GetList();
+            //myListView.ItemsSource = GetList();
         }
 
         private List<Persona> GetList()

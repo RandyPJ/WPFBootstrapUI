@@ -16,7 +16,6 @@ C:\Users\usuario\source\repos\WPFBootstrapUI\BootstrapUISample\obj\Debug\Bootstr
 C:\Users\usuario\source\repos\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.exe
 C:\Users\usuario\source\repos\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.pdb
 C:\Users\usuario\source\repos\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.baml
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample_MarkupCompile.cache
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\BootstrapUISample.exe.config
@@ -24,8 +23,6 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\D
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\BootstrapUISample.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.Core.dll
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.dll
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.dll
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.Core.xml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.pdb
@@ -41,4 +38,6 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\D
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.csproj.CopyComplete
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.exe
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.pdb
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.dll
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.pdb
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.baml
