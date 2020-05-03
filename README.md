@@ -42,7 +42,7 @@ The Bootstrap like UI for WPF.
     Width="800"
     Height="450"
     Icon="{iconPacks:FontAwesomeImage Kind=BootstrapBrands, Brush=White}"
-    Style="{StaticResource Window-Primary}"
+    Style="{StaticResource window-primary}"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
      <Grid Margin="10">
@@ -53,7 +53,7 @@ The Bootstrap like UI for WPF.
         <bootstrap:Alert
             Grid.Row="0"
             Content="Hola Mundo"
-            Style="{StaticResource Alert-Primary}" />
+            Style="{StaticResource alert-primary}" />
         <Button
             Grid.Row="1"
             Content="Hello World"
