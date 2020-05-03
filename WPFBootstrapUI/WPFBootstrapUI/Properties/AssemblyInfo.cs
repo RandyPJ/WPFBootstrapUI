@@ -1,7 +1,8 @@
 ﻿using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
-using System.Windows.Markup;
 
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
@@ -9,17 +10,11 @@ using System.Windows.Markup;
 [assembly: AssemblyTitle("WPFBootstrapUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("rpj")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WPFBootstrapUI")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
-
-[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI")]
-[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI.ControlsAssists")]
-[assembly: XmlnsDefinition("http://schemas.rpj.com/WPFBootstrapUI", "WPFBootstrapUI.Controls")]
-[assembly: XmlnsPrefix("http://schemas.rpj.com/WPFBootstrapUI", "bootstrap")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
 // para los componentes COM.  Si es necesario obtener acceso a un tipo en este ensamblado desde 
@@ -37,9 +32,9 @@ using System.Windows.Markup;
 
 
 [assembly: ThemeInfo(
-    ResourceDictionaryLocation.SourceAssembly, //donde se encuentran los diccionarios de recursos específicos del tema
-                                               //(se utiliza si no se encuentra ningún recurso en la página,
-                                               // ni diccionarios de recursos de la aplicación)
+    ResourceDictionaryLocation.None, //donde se encuentran los diccionarios de recursos específicos del tema
+                                     //(se utiliza si no se encuentra ningún recurso en la página,
+                                     // ni diccionarios de recursos de la aplicación)
     ResourceDictionaryLocation.SourceAssembly //donde se encuentra el diccionario de recursos genérico
                                               //(se utiliza si no se encuentra ningún recurso en la página,
                                               // aplicación o diccionarios de recursos específicos del tema)
@@ -56,5 +51,5 @@ using System.Windows.Markup;
 // Puede especificar todos los valores o usar los valores predeterminados de número de compilación y de revisión
 // utilizando el carácter "*", como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.3")]
-[assembly: AssemblyFileVersion("1.0.0.3")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

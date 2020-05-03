@@ -41,3 +41,4 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\D
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.dll
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.baml
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\PlatformCompat.Analyzers.settings

@@ -8,7 +8,7 @@ namespace WPFBootstrapUI.Styles
         {
             InitializeComponent();
         }
-        
+
         private void OnClose(object sender, RoutedEventArgs e)
         {
             var window = (Window)((FrameworkElement)sender).TemplatedParent;
@@ -31,7 +31,5 @@ namespace WPFBootstrapUI.Styles
             else if (window.WindowState == WindowState.Maximized)
                 window.WindowState = WindowState.Normal;
         }
-
-
     }
 }
