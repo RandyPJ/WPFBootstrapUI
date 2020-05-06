@@ -1,0 +1,88 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
+    <!--  Base Colors  -->
+    <Color x:Key="PrimaryColor">#0074d9</Color>
+    <SolidColorBrush x:Key="PrimarySolidColorBrush" Color="{StaticResource PrimaryColor}" />
+
+    <Color x:Key="InfoColor">#17a2b8</Color>
+    <SolidColorBrush x:Key="InfoSolidColorBrush" Color="{StaticResource InfoColor}" />
+
+    <Color x:Key="SuccessColor">#28a745</Color>
+    <SolidColorBrush x:Key="SuccessSolidColorBrush" Color="{StaticResource SuccessColor}" />
+
+    <Color x:Key="WarningColor">#ffc107</Color>
+    <SolidColorBrush x:Key="WarningSolidColorBrush" Color="{StaticResource WarningColor}" />
+
+    <Color x:Key="DangerColor">#dc3545</Color>
+    <SolidColorBrush x:Key="DangerSolidColorBrush" Color="{StaticResource DangerColor}" />
+
+    <Color x:Key="DarkColor">#343a40</Color>
+    <SolidColorBrush x:Key="DarkSolidColorBrush" Color="{StaticResource DarkColor}" />
+
+    <Color x:Key="SecondaryColor">#6c757d</Color>
+    <SolidColorBrush x:Key="SecondarySolidColorBrush" Color="{StaticResource SecondaryColor}" />
+
+    <Color x:Key="LightSolidColor">#f8f9fa</Color>
+    <SolidColorBrush x:Key="LightSolidColorBrush" Color="{StaticResource LightSolidColor}" />
+
+    <Color x:Key="WhiteColor">#ffffff</Color>
+    <SolidColorBrush x:Key="WhiteSolidColorBrush" Color="{StaticResource WhiteColor}" />
+
+    <Color x:Key="AlertPrimaryColor">#CAE6FD</Color>
+    <SolidColorBrush x:Key="AlertPrimarySolidColorBrush" Color="{StaticResource AlertPrimaryColor}" />
+    <SolidColorBrush x:Key="AlertPrimaryForegroundSolidColorBrush" Color="#004281" />
+
+    <SolidColorBrush x:Key="AlertSecondarySolidColorBrush" Color="#E2E3E5" />
+    <SolidColorBrush x:Key="AlertSecondaryForegroundSolidColorBrush" Color="#383D41" />
+
+    <SolidColorBrush x:Key="AlertSuccessSolidColorBrush" Color="#D4EDDA" />
+    <SolidColorBrush x:Key="AlertSuccessForegroundSolidColorBrush" Color="#155724" />
+
+    <SolidColorBrush x:Key="AlertDangerSolidColorBrush" Color="#F8D7DA" />
+    <SolidColorBrush x:Key="AlertDangerForegroundSolidColorBrush" Color="#721C24" />
+
+    <SolidColorBrush x:Key="AlertWarningSolidColorBrush" Color="#FFF3CD" />
+    <SolidColorBrush x:Key="AlertWarningForegroundSolidColorBrush" Color="#856404" />
+
+    <SolidColorBrush x:Key="AlertInfoSolidColorBrush" Color="#D1ECF1" />
+    <SolidColorBrush x:Key="AlertInfoForegroundSolidColorBrush" Color="#0C5460" />
+
+    <SolidColorBrush x:Key="AlertLightSolidColorBrush" Color="#FEFEFE" />
+    <SolidColorBrush x:Key="AlertLightForegroundSolidColorBrush" Color="#8C8C8D" />
+
+    <SolidColorBrush x:Key="AlertDarkSolidColorBrush" Color="#D6D8D9" />
+    <SolidColorBrush x:Key="AlertDarkForegroundSolidColorBrush" Color="#1B1E21" />
+
+
+    <Color x:Key="PrimaryHoveredColor">#0069d9</Color>
+    <SolidColorBrush x:Key="PrimaryHoveredSolidColorBrush" Color="{StaticResource PrimaryHoveredColor}" />
+
+    <Color x:Key="SecondaryHoveredColor">#5a6268</Color>
+    <SolidColorBrush x:Key="SecondaryHoveredSolidColorBrush" Color="{StaticResource SecondaryHoveredColor}" />
+
+    <Color x:Key="SuccessHoveredColor">#218838</Color>
+    <SolidColorBrush x:Key="SuccessHoveredSolidColorBrush" Color="{StaticResource SuccessHoveredColor}" />
+
+    <Color x:Key="DangerHoveredColor">#c82333</Color>
+    <SolidColorBrush x:Key="DangerHoveredSolidColorBrush" Color="{StaticResource DangerHoveredColor}" />
+
+    <Color x:Key="WarningHoveredColor">#d39e00</Color>
+    <SolidColorBrush x:Key="WarningHoveredSolidColorBrush" Color="{StaticResource WarningHoveredColor}" />
+
+    <Color x:Key="InfoHoveredColor">#117a8b</Color>
+    <SolidColorBrush x:Key="InfoHoveredSolidColorBrush" Color="{StaticResource InfoHoveredColor}" />
+
+    <Color x:Key="LightHoveredColor">#dae0e5</Color>
+    <SolidColorBrush x:Key="LightHoveredSolidColorBrush" Color="{StaticResource LightHoveredColor}" />
+
+    <Color x:Key="DarkHoveredColor">#23272b</Color>
+    <SolidColorBrush x:Key="DarkHoveredSolidColorBrush" Color="{StaticResource DarkHoveredColor}" />
+
+    <Color x:Key="LinkButtonForegroundColor">#007bff</Color>
+    <SolidColorBrush x:Key="LinkButtonForegroundSolidColorBrush" Color="{StaticResource LinkButtonForegroundColor}" />
+
+    <Color x:Key="LightBlueControlColor">#7ABFFA</Color>
+    <SolidColorBrush x:Key="LightBlueControlBorderBrush" Color="{StaticResource LightBlueControlColor}" />
+</ResourceDictionary>

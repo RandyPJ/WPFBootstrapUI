@@ -1,0 +1,189 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
+    xmlns:Converters="clr-namespace:WPFBootstrapUI.Converters"
+    xmlns:Helpers="clr-namespace:WPFBootstrapUI"
+    xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
+
+    <Converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+    <ControlTemplate x:Key="BadgeControlTemplate" TargetType="{x:Type Controls:Badge}">
+        <Grid
+            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+            SnapsToDevicePixels="true">
+            <Border x:Name="InnerBorder"
+                Padding="2"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding Background}"
+                BorderThickness="1"
+                CornerRadius="{TemplateBinding CornerRadius}"
+                UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                <TextBlock x:Name="PART_Content"
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Focusable="False"
+                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                    Text="{TemplateBinding Text}" />
+            </Border>
+        </Grid>
+        <ControlTemplate.Triggers />
+    </ControlTemplate>
+
+
+    <Style x:Key="badge-base" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <!--  Normal Badges  -->
+
+    <Style x:Key="badge-primary" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-secondary" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-success" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-danger" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-warning" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-info" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource InfoSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-light" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-dark" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+
+
+    <!--  Pill Badges  -->
+    <Style x:Key="badge-pill-base" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+
+    <Style x:Key="badge-pill-primary" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-pill-secondary" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-pill-success" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-pill-danger" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-pill-warning" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-pill-info" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource InfoSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-pill-light" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+    <Style x:Key="badge-pill-dark" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
+    </Style>
+
+</ResourceDictionary>
