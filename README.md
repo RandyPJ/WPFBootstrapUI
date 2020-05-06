@@ -5,7 +5,7 @@ The Bootstrap like UI for WPF.
 ### **Caracteristicas**
 
 * Estilo moderno.
-* Soporte para .Net Framework >= 4.5.
+* Soporte para .Net Framework >= 4.5 <= 4.8.
 
 ### **Inicio rápido**
 
