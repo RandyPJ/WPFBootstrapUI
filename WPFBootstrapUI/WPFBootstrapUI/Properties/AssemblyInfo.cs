@@ -19,7 +19,7 @@ using System.Windows.Markup;
 
 
 [assembly: ComVisible(true)]
-[assembly: ThemeInfo(ResourceDictionaryLocation.SourceAssembly, ResourceDictionaryLocation.SourceAssembly)]
+[assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
 
 
 [assembly: XmlnsDefinition("http://wpfbootstrapui.com/2019/ui/wpf", "WPFBootstrapUI")]

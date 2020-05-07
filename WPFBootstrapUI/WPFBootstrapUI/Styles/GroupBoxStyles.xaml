@@ -41,7 +41,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="BoostrapUIGroupBox" TargetType="{x:Type GroupBox}">
+    <Style x:Key="groupbox-primary" TargetType="{x:Type GroupBox}">
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="BorderThickness" Value="0,0,0,2" />
@@ -51,5 +51,5 @@
         <Setter Property="Template" Value="{StaticResource GroupBoxTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource BoostrapUIGroupBox}" TargetType="{x:Type GroupBox}" />
+    <Style BasedOn="{StaticResource groupbox-primary}" TargetType="{x:Type GroupBox}" />
 </ResourceDictionary>

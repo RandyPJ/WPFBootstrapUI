@@ -10,13 +10,12 @@
 
         <ResourceDictionary Source="../Styles/AlertStyles.xaml" />
         <ResourceDictionary Source="../Styles/BadgeStyles.xaml" />
-        <ResourceDictionary Source="../Styles/PopoverStyles.xaml" />
+        <ResourceDictionary Source="../Styles/ButtonStyles.xaml" />
         <ResourceDictionary Source="../Styles/CardStyles.xaml" />
-        <ResourceDictionary Source="../Styles/WindowStyles.xaml" />
+        <ResourceDictionary Source="../Styles/CheckBoxStyles.xaml" />
+        <ResourceDictionary Source="../Styles/PopoverStyles.xaml" />
         <ResourceDictionary Source="../Styles/ToolTipStyles.xaml" />
         <ResourceDictionary Source="../Styles/ProgressBarStyles.xaml" />
-        <ResourceDictionary Source="../Styles/ButtonStyles.xaml" />
-        <ResourceDictionary Source="../Styles/CheckBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/RadioButtonStyles.xaml" />
         <ResourceDictionary Source="../Styles/GroupBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/ComboBoxStyles.xaml" />
@@ -24,9 +23,6 @@
         <ResourceDictionary Source="../Styles/TabControlStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListViewStyles.xaml" />
+        <ResourceDictionary Source="../Styles/WindowStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <Style BasedOn="{StaticResource alert-primary}" TargetType="{x:Type Controls:Alert}" />
-    <Style BasedOn="{StaticResource badge-primary}" TargetType="{x:Type Controls:Badge}" />
-    <Style BasedOn="{StaticResource popover-primary}" TargetType="{x:Type Controls:PopOver}" />
 </ResourceDictionary>

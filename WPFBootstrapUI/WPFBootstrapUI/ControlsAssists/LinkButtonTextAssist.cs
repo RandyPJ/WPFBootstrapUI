@@ -2,7 +2,7 @@
 
 namespace WPFBootstrapUI.ControlsAssists
 {
-    public static class TextAssist
+    public static class LinkButtonTextAssist
     {
         public static string GetText(DependencyObject obj)
         {
@@ -14,9 +14,8 @@ namespace WPFBootstrapUI.ControlsAssists
             obj.SetValue(TextProperty, value);
         }
 
-        // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextProperty =
-            DependencyProperty.RegisterAttached("Text", typeof(string), typeof(TextAssist), new PropertyMetadata(string.Empty));
+            DependencyProperty.RegisterAttached("Text", typeof(string), typeof(LinkButtonTextAssist), new PropertyMetadata(string.Empty));
 
 
         public static CornerRadius GetCornerRadius(DependencyObject obj)
@@ -29,8 +28,7 @@ namespace WPFBootstrapUI.ControlsAssists
             obj.SetValue(CornerRadiusProperty, value);
         }
 
-        // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CornerRadiusProperty =
-            DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(TextAssist), new PropertyMetadata(new CornerRadius(2)));
+            DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(LinkButtonTextAssist), new PropertyMetadata(new CornerRadius(2)));
     }
 }

@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:Converters="clr-namespace:WPFBootstrapUI.Converters"
-    xmlns:Helpers="clr-namespace:WPFBootstrapUI"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <Converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
@@ -31,20 +30,12 @@
         <ControlTemplate.Triggers />
     </ControlTemplate>
 
-
-    <Style x:Key="badge-base" TargetType="{x:Type Controls:Badge}">
+    <!--  Normal Badges  -->
+    <Style x:Key="badge-primary" TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
-        <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
-        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
-        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
-    </Style>
-
-    <!--  Normal Badges  -->
-
-    <Style x:Key="badge-primary" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -52,7 +43,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-secondary" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-secondary" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -60,7 +55,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-success" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-success" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -68,7 +67,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-danger" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-danger" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -76,7 +79,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-warning" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-warning" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -84,7 +91,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-info" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-info" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource InfoSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -92,7 +103,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-light" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-light" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -100,29 +115,24 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-dark" BasedOn="{StaticResource badge-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-dark" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
-
-
 
     <!--  Pill Badges  -->
-    <Style x:Key="badge-pill-base" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-primary" TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
-        <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
-        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
-        <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
-    </Style>
-
-
-    <Style x:Key="badge-pill-primary" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -130,7 +140,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-secondary" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-secondary" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -138,7 +152,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-success" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-success" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -146,7 +164,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-danger" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-danger" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -154,7 +176,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-warning" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-warning" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -162,7 +188,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-info" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-info" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource InfoSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -170,7 +200,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-light" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-light" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -178,7 +212,11 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-dark" BasedOn="{StaticResource badge-pill-base}" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-dark" TargetType="{x:Type Controls:Badge}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
@@ -186,4 +224,6 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
+
+    <Style BasedOn="{StaticResource badge-primary}" TargetType="{x:Type Controls:Badge}" />
 </ResourceDictionary>

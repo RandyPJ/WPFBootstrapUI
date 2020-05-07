@@ -18,10 +18,10 @@
   
     <ItemGroup>
       <Compile Include="Animations\StoryBoardHelper.cs" />
-      <Compile Include="ControlsAssists\BootstrapTextBoxAssist.cs" />
+      <Compile Include="ControlsAssists\TextBoxAssist.cs" />
       <Compile Include="ControlsAssists\BorderAssist.cs" />
       <Compile Include="ControlsAssists\PasswordHelper.cs" />
-      <Compile Include="ControlsAssists\TextAssist.cs" />
+      <Compile Include="ControlsAssists\LinkButtonTextAssist.cs" />
       <Compile Include="Controls\Alert\Implementation\Alert.cs" />
       <Compile Include="Controls\Badge\Implementation\Badge.cs" />
       <Compile Include="Controls\Card\Implementation\Card.cs" />

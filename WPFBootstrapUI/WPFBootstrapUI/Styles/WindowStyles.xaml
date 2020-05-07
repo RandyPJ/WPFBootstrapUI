@@ -3,7 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ControlTemplate x:Key="MainWindowTemplate" TargetType="{x:Type Window}">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ButtonStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <ControlTemplate x:Key="WindowTemplate" TargetType="{x:Type Window}">
         <Border x:Name="RootBorder"
             BorderBrush="{StaticResource PrimarySolidColorBrush}"
             BorderThickness="1">
@@ -49,31 +53,30 @@
                         <Button x:Name="MinimizeButton"
                             Grid.Column="3"
                             Click="OnMinimize"
-                            Style="{DynamicResource WindowButtonStyle}">
+                            Style="{StaticResource WindowCommandButtonStyle}">
                             <Viewbox
-                                Width="18"
-                                Height="18">
+                                Width="16"
+                                Height="16">
                                 <Canvas
-                                    Width="18"
-                                    Height="18">
+                                    Width="16"
+                                    Height="16">
                                     <Path
                                         Data="M20,14H4V10H20"
                                         Fill="{Binding ElementName=MinimizeButton, Path=Foreground}" />
                                 </Canvas>
                             </Viewbox>
-
                         </Button>
 
                         <Button x:Name="MaximizeRestoreButton"
                             Grid.Column="4"
                             Click="OnRestoreMaximize"
-                            Style="{DynamicResource WindowButtonStyle}">
+                            Style="{StaticResource WindowCommandButtonStyle}">
                             <Viewbox
-                                Width="18"
-                                Height="18">
+                                Width="16"
+                                Height="16">
                                 <Canvas
-                                    Width="18"
-                                    Height="18">
+                                    Width="16"
+                                    Height="16">
                                     <Path
                                         Data="M4,4H20V20H4V4M6,8V18H18V8H6Z"
                                         Fill="{Binding ElementName=MaximizeRestoreButton, Path=Foreground}" />
@@ -85,20 +88,19 @@
                             Grid.Column="5"
                             VerticalAlignment="Center"
                             Click="OnClose"
-                            Style="{DynamicResource WindowButtonStyle}">
+                            Style="{StaticResource WindowCommandButtonStyle}">
                             <Viewbox
-                                Width="18"
-                                Height="18">
+                                Width="16"
+                                Height="16">
                                 <Canvas
-                                    Width="18"
-                                    Height="18">
+                                    Width="16"
+                                    Height="16">
                                     <Path
                                         Data="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
                                         Fill="{Binding ElementName=CloseButton, Path=Foreground}" />
                                 </Canvas>
                             </Viewbox>
                         </Button>
-
 
                     </Grid>
                 </Grid>
@@ -145,9 +147,6 @@
                     UseAeroCaptionButtons="False" />
             </Setter.Value>
         </Setter>
-        <Setter Property="Template" Value="{StaticResource MainWindowTemplate}" />
+        <Setter Property="Template" Value="{StaticResource WindowTemplate}" />
     </Style>
-
-    <Style BasedOn="{StaticResource window-primary}" TargetType="{x:Type Window}" />
-
 </ResourceDictionary>

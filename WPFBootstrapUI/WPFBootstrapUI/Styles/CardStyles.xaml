@@ -4,7 +4,26 @@
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <Style TargetType="{x:Type Controls:Card}">
+    <ControlTemplate x:Key="CardControlTemplate" TargetType="{x:Type Controls:Card}">
+        <Grid
+            Background="Transparent"
+            SnapsToDevicePixels="True"
+            UseLayoutRounding="True">
+            <Border x:Name="OutterBorder"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="6"
+                SnapsToDevicePixels="True">
+                <ContentPresenter
+                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                    Content="{TemplateBinding Content}" />
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="card" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -13,28 +32,7 @@
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderThickness" Value="1.4" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Controls:Card}">
-                    <Grid
-                        Background="Transparent"
-                        SnapsToDevicePixels="True"
-                        UseLayoutRounding="True">
-                        <Border x:Name="OutterBorder"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="6"
-                            SnapsToDevicePixels="True">
-                            <ContentPresenter
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                Content="{TemplateBinding Content}" />
-                        </Border>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
     <ControlTemplate x:Key="CardChildPanelControlTemplate" TargetType="{x:Type Controls:CardChildPanel}">
@@ -80,5 +78,7 @@
         <Setter Property="TextBlock.Foreground" Value="{StaticResource DarkHoveredSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
+
+    <Style BasedOn="{StaticResource card}" TargetType="{x:Type Controls:Card}" />
 
 </ResourceDictionary>

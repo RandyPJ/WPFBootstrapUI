@@ -11,7 +11,34 @@
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
-    <TabControl Margin="5">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBox
+            Grid.Row="0"
+            bootstrap:TextBoxAssist.PlaceHolder="Hola" />
+
+        <!--<bootstrap:Alert
+            Grid.Row="1"
+            Margin="10"
+            Content="Hola"
+            IsAlertDismissible="True"
+            Style="{StaticResource alert-warning}" />-->
+
+        <!--<Button
+            Grid.Row="2"
+            Margin="10"
+            Content="Hola mundo"
+            Style="{StaticResource btn-danger}" />-->
+
+    </Grid>
+
+    <!--<TabControl Margin="5">
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <Label
@@ -33,7 +60,7 @@
                     Margin="10"
                     Content="Alert Secondary"
                     IsAlertDismissible="True"
-                    Style="{StaticResource alert-secondary}" />
+                    Style="{StaticResource alert-primary}" />
 
                 <bootstrap:Alert
                     Margin="10"
@@ -864,6 +891,6 @@
                 </ListView>
             </Grid>
         </TabItem>
-    </TabControl>
+    </TabControl>-->
 
 </Window>

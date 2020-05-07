@@ -83,7 +83,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="popover-base" TargetType="{x:Type Controls:PopOver}">
+    <Style x:Key="popover-primary" TargetType="{x:Type Controls:PopOver}">
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -93,12 +93,8 @@
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="Height" Value="Auto" />
-    </Style>
-
-    <Style x:Key="popover-primary" BasedOn="{StaticResource popover-base}" TargetType="{x:Type Controls:PopOver}">
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource PopOverControlTemplate}" />
     </Style>
-
 </ResourceDictionary>

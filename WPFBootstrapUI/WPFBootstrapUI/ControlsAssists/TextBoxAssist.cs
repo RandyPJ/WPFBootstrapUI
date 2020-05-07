@@ -1,18 +1,27 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace WPFBootstrapUI.ControlsAssists
 {
-    public static class BootstrapTextBoxAssist
+    public static class TextBoxAssist
     {
         public static readonly DependencyProperty PlaceHolderProperty =
-          DependencyProperty.RegisterAttached("PlaceHolder", typeof(string), typeof(BootstrapTextBoxAssist), new PropertyMetadata(string.Empty));
+          DependencyProperty.RegisterAttached("PlaceHolder", typeof(string), typeof(TextBoxAssist), new PropertyMetadata(string.Empty, OnPlaceHolderPropertyChanged));
+
+        private static void OnPlaceHolderPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)d;
+
+            if (!string.IsNullOrEmpty(e.NewValue.ToString()))
+                SetIsMonitoring(textBox, true);
+        }
 
         public static readonly DependencyProperty HasTextProperty =
-         DependencyProperty.RegisterAttached("HasText", typeof(bool), typeof(BootstrapTextBoxAssist), new PropertyMetadata(false));
+         DependencyProperty.RegisterAttached("HasText", typeof(bool), typeof(TextBoxAssist), new PropertyMetadata(false));
 
         public static readonly DependencyProperty IsMonitoringProperty =
-         DependencyProperty.RegisterAttached("IsMonitoring", typeof(bool), typeof(BootstrapTextBoxAssist), new PropertyMetadata(false, OnIsMonitoringChanged));
+         DependencyProperty.RegisterAttached("IsMonitoring", typeof(bool), typeof(TextBoxAssist), new PropertyMetadata(false, OnIsMonitoringChanged));
 
 
         public static string GetPlaceHolder(DependencyObject obj)
@@ -34,7 +43,6 @@ namespace WPFBootstrapUI.ControlsAssists
         {
             obj.SetValue(HasTextProperty, value);
         }
-
     
         public static bool GetIsMonitoring(DependencyObject obj)
         {
@@ -50,11 +58,11 @@ namespace WPFBootstrapUI.ControlsAssists
         {
             TextBox textbox = (TextBox)d;
 
+            if ((bool)e.NewValue == false)
+                textbox.TextChanged -= Textbox_TextChanged;
+
             if (e.NewValue != e.OldValue)
-            {
-                if ((bool)e.NewValue)
-                    textbox.TextChanged += Textbox_TextChanged;
-            }
+                 textbox.TextChanged += Textbox_TextChanged;
         }
 
         private static void Textbox_TextChanged(object sender, TextChangedEventArgs e)

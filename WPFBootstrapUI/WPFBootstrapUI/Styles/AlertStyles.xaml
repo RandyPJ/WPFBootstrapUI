@@ -72,56 +72,109 @@
         </Grid>
     </ControlTemplate>
 
-    <Style x:Key="alert-base" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-primary" TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
-        <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
         <Setter Property="Height" Value="50" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
+        <Setter Property="Background" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource AlertPrimaryForegroundSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-primary" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
-        <Setter Property="Background" Value="{StaticResource AlertPrimarySolidColorBrush}" />
-        <Setter Property="Foreground" Value="{StaticResource AlertPrimaryForegroundSolidColorBrush}" />
-    </Style>
-
-    <Style x:Key="alert-secondary" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-secondary" TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="20,12" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Background" Value="{StaticResource AlertSecondarySolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertSecondaryForegroundSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-success" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-success" TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="20,12" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Background" Value="{StaticResource AlertSuccessSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertSuccessForegroundSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-danger" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-danger" TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="20,12" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Background" Value="{StaticResource AlertDangerSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertDangerForegroundSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-warning" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-warning" TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="20,12" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Background" Value="{StaticResource AlertWarningSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertWarningForegroundSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-info" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-info" TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="20,12" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Background" Value="{StaticResource AlertInfoSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertInfoForegroundSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-light" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-light" TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="20,12" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Background" Value="{StaticResource AlertLightSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertLightForegroundSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-dark" BasedOn="{StaticResource alert-base}" TargetType="{x:Type AlertControl:Alert}">
+    <Style x:Key="alert-dark" TargetType="{x:Type AlertControl:Alert}">
+        <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
+        <Setter Property="Padding" Value="20,12" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="Background" Value="{StaticResource AlertDarkSolidColorBrush}" />
         <Setter Property="Foreground" Value="{StaticResource AlertDarkForegroundSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
+
+    <Style BasedOn="{StaticResource alert-primary}" TargetType="{x:Type AlertControl:Alert}" />
 </ResourceDictionary>

@@ -1,10 +1,11 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
+    xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
     xmlns:local="clr-namespace:WPFBootstrapUI.STyles">
 
-    <ControlTemplate x:Key="WindowButtonTemplate" TargetType="{x:Type Button}">
+    <!--#region Window commnad button-->
+    <ControlTemplate x:Key="WindowCommandButtonTemplate" TargetType="{x:Type Button}">
         <Grid Background="Transparent">
             <Border x:Name="MouseOverBorder"
                 Background="{TemplateBinding Background}"
@@ -25,7 +26,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="WindowButtonStyle" TargetType="{x:Type Button}">
+    <Style x:Key="WindowCommandButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="Background" Value="Transparent" />
@@ -42,9 +43,10 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template" Value="{StaticResource WindowButtonTemplate}" />
     </Style>
+    <!--#endregion-->
 
     <!--#region Normal Buttons-->
-    <Style x:Key="btn-base" TargetType="{x:Type Button}">
+    <Style x:Key="btn-primary" TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -58,9 +60,6 @@
         <Setter Property="MinHeight" Value="0" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
-    </Style>
-
-    <Style x:Key="btn-primary" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -113,7 +112,20 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-secondary" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-secondary" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -167,7 +179,20 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-success" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-success" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -221,7 +246,20 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-danger" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-danger" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -276,7 +314,19 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-warning" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-warning" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Template">
@@ -332,7 +382,20 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-info" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-info" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -387,9 +450,21 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-light" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-light" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
-        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -443,7 +518,20 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-dark" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-dark" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -498,7 +586,19 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-link" BasedOn="{StaticResource btn-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-link" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="Background" Value="Transparent" />
@@ -517,7 +617,7 @@
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                 Foreground="{TemplateBinding Foreground}"
-                                Text="{TemplateBinding assist:TextAssist.Text}" />
+                                Text="{TemplateBinding Assist:LinkButtonTextAssist.Text}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -544,7 +644,8 @@
     <!--#endregion-->
 
     <!--#region Outline Buttons-->
-    <Style x:Key="btn-outline-base" TargetType="{x:Type Button}">
+
+    <Style x:Key="btn-outline-primary" TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -556,9 +657,6 @@
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="MinHeight" Value="0" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
-    </Style>
-
-    <Style x:Key="btn-outline-primary" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -626,7 +724,18 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-secondary" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-outline-secondary" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -696,7 +805,18 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-success" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-outline-success" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -765,7 +885,18 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-danger" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-outline-danger" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -834,7 +965,18 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-warning" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-outline-warning" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -904,7 +1046,18 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-info" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-outline-info" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -973,7 +1126,18 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-dark" BasedOn="{StaticResource btn-outline-base}" TargetType="{x:Type Button}">
+    <Style x:Key="btn-outline-dark" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Height" Value="Auto" />
+        <Setter Property="Width" Value="Auto" />
+        <Setter Property="MaxHeight" Value="Infinity" />
+        <Setter Property="MaxWidth" Value="Infinity" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>
@@ -1042,8 +1206,5 @@
     </Style>
     <!--#endregion-->
 
-
-
-    <Style BasedOn="{StaticResource btn-primary}" TargetType="{x:Type Button}" />
 
 </ResourceDictionary>
