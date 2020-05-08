@@ -7,34 +7,32 @@
     Title="MainWindow"
     Width="800"
     Height="450"
-    Style="{StaticResource window-primary}"
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBox
+        <TextBox x:Name="txtPrueba"
             Grid.Row="0"
             bootstrap:TextBoxAssist.PlaceHolder="Hola" />
 
-        <!--<bootstrap:Alert
+        <bootstrap:Alert
             Grid.Row="1"
             Margin="10"
             Content="Hola"
-            IsAlertDismissible="True"
-            Style="{StaticResource alert-warning}" />-->
+            IsAlertDismissible="True" />
 
-        <!--<Button
+        <Button
             Grid.Row="2"
             Margin="10"
-            Content="Hola mundo"
-            Style="{StaticResource btn-danger}" />-->
+            Content="Hola mundo" />
+
+        <bootstrap:Badge Text="Hola" />
 
     </Grid>
 

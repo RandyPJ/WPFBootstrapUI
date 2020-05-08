@@ -23,6 +23,6 @@
         <ResourceDictionary Source="../Styles/TabControlStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListViewStyles.xaml" />
-        <ResourceDictionary Source="../Styles/WindowStyles.xaml" />
+        <!--<ResourceDictionary Source="../Styles/WindowStyles.xaml" />-->
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

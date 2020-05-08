@@ -4,47 +4,6 @@
     xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
     xmlns:local="clr-namespace:WPFBootstrapUI.STyles">
 
-    <!--#region Window commnad button-->
-    <ControlTemplate x:Key="WindowCommandButtonTemplate" TargetType="{x:Type Button}">
-        <Grid Background="Transparent">
-            <Border x:Name="MouseOverBorder"
-                Background="{TemplateBinding Background}"
-                Opacity="0" />
-            <ContentPresenter x:Name="ContentPresenter"
-                Margin="{TemplateBinding Padding}"
-                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                Content="{TemplateBinding Content}"
-                ContentTemplate="{TemplateBinding ContentTemplate}" />
-        </Grid>
-
-        <ControlTemplate.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter TargetName="MouseOverBorder" Property="Opacity" Value="1" />
-                <Setter TargetName="MouseOverBorder" Property="Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
-            </Trigger>
-        </ControlTemplate.Triggers>
-    </ControlTemplate>
-
-    <Style x:Key="WindowCommandButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="Height" Value="Auto" />
-        <Setter Property="Width" Value="Auto" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
-        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Padding" Value="10,5,10,8" />
-        <Setter Property="IsTabStop" Value="False" />
-        <Setter Property="Focusable" Value="False" />
-        <Setter Property="FontSize" Value="12" />
-        <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-        <Setter Property="Template" Value="{StaticResource WindowButtonTemplate}" />
-    </Style>
-    <!--#endregion-->
-
     <!--#region Normal Buttons-->
     <Style x:Key="btn-primary" TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
@@ -1206,5 +1165,5 @@
     </Style>
     <!--#endregion-->
 
-
+    <Style BasedOn="{StaticResource btn-primary}" TargetType="{x:Type Button}" />
 </ResourceDictionary>

@@ -16,7 +16,6 @@ namespace WPFBootstrapUI.Controls
             set { SetValue(TextProperty, value); }
         }
         
-        // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextProperty =
             DependencyProperty.Register("Text", typeof(string), typeof(Badge), new FrameworkPropertyMetadata(string.Empty));
 
@@ -27,11 +26,7 @@ namespace WPFBootstrapUI.Controls
             set { SetValue(CornerRadiusProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CornerRadiusProperty =
             DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(Badge), new PropertyMetadata(new CornerRadius(0,0,0,0)));
-
-
-
     }
 }

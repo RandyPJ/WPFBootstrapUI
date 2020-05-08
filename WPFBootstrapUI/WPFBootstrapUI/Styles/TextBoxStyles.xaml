@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
 
-    <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBox}">
+    <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBoxBase}">
         <Border x:Name="OutterBorder"
             BorderBrush="Transparent"
             BorderThickness="4"
@@ -28,26 +28,26 @@
                     Margin="12,0,0,0"
                     VerticalAlignment="Center"
                     Foreground="SlateGray"
-                    Text="{TemplateBinding Assist:BootstrapTextBoxAssist.PlaceHolder}"
+                    Text="{TemplateBinding Assist:TextBoxAssist.PlaceHolder}"
                     Visibility="Collapsed" />
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsFocused" Value="True">
-                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
-                <Setter TargetName="InnerBorder" Property="Border.BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
+                <Setter TargetName="OutterBorder" Property="BorderBrush" Value="{StaticResource AlertPrimarySolidColorBrush}" />
+                <Setter TargetName="InnerBorder" Property="BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
                 <Setter TargetName="InnerBorder" Property="Opacity" Value="0.5" />
             </Trigger>
 
             <Trigger Property="IsFocused" Value="False">
-                <Setter TargetName="OutterBorder" Property="Border.BorderBrush" Value="Transparent" />
-                <Setter TargetName="InnerBorder" Property="Border.BorderBrush" Value="LightGray" />
+                <Setter TargetName="OutterBorder" Property="BorderBrush" Value="Transparent" />
+                <Setter TargetName="InnerBorder" Property="BorderBrush" Value="LightGray" />
                 <Setter TargetName="InnerBorder" Property="Opacity" Value="1" />
             </Trigger>
 
             <MultiTrigger>
                 <MultiTrigger.Conditions>
-                    <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
+                    <Condition Property="Assist:TextBoxAssist.HasText" Value="False" />
                     <Condition Property="IsFocused" Value="True" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
@@ -57,7 +57,7 @@
 
             <MultiTrigger>
                 <MultiTrigger.Conditions>
-                    <Condition Property="Assist:BootstrapTextBoxAssist.HasText" Value="False" />
+                    <Condition Property="Assist:TextBoxAssist.HasText" Value="False" />
                     <Condition Property="IsFocused" Value="False" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
@@ -67,7 +67,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="textbox-primary" TargetType="{x:Type TextBox}">
+    <Style x:Key="textbox-primary" TargetType="{x:Type TextBoxBase}">
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Padding" Value="10" />
@@ -75,7 +75,7 @@
         <Setter Property="Height" Value="Auto" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
-        <Setter Property="Assist:TextBox.IsMonitoring" Value="True" />
+        <Setter Property="Assist:TextBoxAssist.IsMonitoring" Value="True" />
         <Setter Property="Template" Value="{StaticResource TextBoxControlTemplate}" />
     </Style>
 

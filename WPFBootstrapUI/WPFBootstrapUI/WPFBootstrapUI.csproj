@@ -22,11 +22,12 @@
       <Compile Include="ControlsAssists\BorderAssist.cs" />
       <Compile Include="ControlsAssists\PasswordHelper.cs" />
       <Compile Include="ControlsAssists\LinkButtonTextAssist.cs" />
-      <Compile Include="Controls\Alert\Implementation\Alert.cs" />
-      <Compile Include="Controls\Badge\Implementation\Badge.cs" />
-      <Compile Include="Controls\Card\Implementation\Card.cs" />
-      <Compile Include="Controls\Card\Implementation\CardChildPanel.cs" />
-      <Compile Include="Controls\PopOver\Implementation\PopOver.cs" />
+      <Compile Include="Controls\Alert.cs" />
+      <Compile Include="Controls\Badge.cs" />
+      <Compile Include="Controls\BootstrapWindow.cs" />
+      <Compile Include="Controls\Card.cs" />
+      <Compile Include="Controls\CardChildPanel.cs" />
+      <Compile Include="Controls\PopOver.cs" />
       <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
       <Compile Include="Properties\AssemblyInfo.cs" />
       <Compile Include="Properties\Resources.Designer.cs" />

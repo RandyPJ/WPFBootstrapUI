@@ -8,15 +8,7 @@ namespace WPFBootstrapUI.ControlsAssists
     {
         public static readonly DependencyProperty PlaceHolderProperty =
           DependencyProperty.RegisterAttached("PlaceHolder", typeof(string), typeof(TextBoxAssist), new PropertyMetadata(string.Empty, OnPlaceHolderPropertyChanged));
-
-        private static void OnPlaceHolderPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            TextBox textBox = (TextBox)d;
-
-            if (!string.IsNullOrEmpty(e.NewValue.ToString()))
-                SetIsMonitoring(textBox, true);
-        }
-
+       
         public static readonly DependencyProperty HasTextProperty =
          DependencyProperty.RegisterAttached("HasText", typeof(bool), typeof(TextBoxAssist), new PropertyMetadata(false));
 
@@ -53,7 +45,15 @@ namespace WPFBootstrapUI.ControlsAssists
         {
             obj.SetValue(IsMonitoringProperty, value);
         }
-     
+
+        private static void OnPlaceHolderPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            TextBox textBox = (TextBox)d;
+
+            if (!string.IsNullOrEmpty(e.NewValue.ToString()))
+                SetIsMonitoring(textBox, true);
+        }
+
         private static void OnIsMonitoringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             TextBox textbox = (TextBox)d;
