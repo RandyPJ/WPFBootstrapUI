@@ -20,5 +20,20 @@ namespace WPFBootstrapUI.Animations
 
             storyboard.Children.Add(animation);
         }
+
+        //public static void SlideToRight(this Storyboard storyboard, long seconds, float offset, float decelerationRatio, bool keepMargin)
+        //{
+        //    ThicknessAnimation animation = new ThicknessAnimation()
+        //    {
+        //        Duration = new Duration(new TimeSpan(seconds)),
+        //        From = new Thickness(0),
+        //        To = new Thickness(-offset, keepMargin ? offset : 0, 0, 0),
+        //        DecelerationRatio = decelerationRatio
+        //    };
+
+        //    Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+
+        //    storyboard.Children.Add(animation);
+        //}
     }
 }

@@ -4,6 +4,10 @@
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <ControlTemplate x:Key="CardControlTemplate" TargetType="{x:Type Controls:Card}">
         <Grid
             Background="Transparent"

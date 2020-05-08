@@ -4,6 +4,10 @@
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <ControlTemplate x:Key="PopOverControlTemplate" TargetType="{x:Type Controls:PopOver}">
         <Grid x:Name="Container"
             Width="{TemplateBinding Width}"
@@ -97,4 +101,6 @@
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource PopOverControlTemplate}" />
     </Style>
+
+    <Style BasedOn="{StaticResource popover-primary}" TargetType="{x:Type Controls:PopOver}" />
 </ResourceDictionary>

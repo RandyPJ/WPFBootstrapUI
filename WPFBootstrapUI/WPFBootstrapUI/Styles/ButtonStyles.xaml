@@ -4,6 +4,11 @@
     xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
     xmlns:local="clr-namespace:WPFBootstrapUI.STyles">
 
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <!--#region Normal Buttons-->
     <Style x:Key="btn-primary" TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
@@ -422,7 +427,7 @@
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="MinHeight" Value="0" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
-        <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Padding" Value="10,8" />
         <Setter Property="Template">
             <Setter.Value>

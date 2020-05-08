@@ -9,7 +9,7 @@ using System.Windows.Markup;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("WPFBootstrapUI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("The Bootstrap UI like for WPF.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WPFBootstrapUI")]

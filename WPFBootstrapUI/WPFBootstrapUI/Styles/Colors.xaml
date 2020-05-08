@@ -2,6 +2,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
+  
+    
     <!--  Base Colors  -->
     <Color x:Key="PrimaryColor">#0074d9</Color>
     <SolidColorBrush x:Key="PrimarySolidColorBrush" Color="{StaticResource PrimaryColor}" />

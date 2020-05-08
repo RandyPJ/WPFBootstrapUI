@@ -11,9 +11,13 @@
       <!--Nuget Information-->
       <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
       <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
-      <Authors>rpj</Authors>
+      <Authors>.Randy</Authors>
       <RepositoryUrl>https://github.com/RandyPJ/WPFBootstrapUI</RepositoryUrl>
       <PackageTags>Bootstrap UI WPF</PackageTags>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <PackageReleaseNotes>Stable and recommended version.  Some bugs fixed.</PackageReleaseNotes>
+      <PackageVersion>1.0.0.6</PackageVersion>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
   
     <ItemGroup>
@@ -31,10 +35,20 @@
       <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
       <Compile Include="Properties\AssemblyInfo.cs" />
       <Compile Include="Properties\Resources.Designer.cs" />
-      <Compile Include="Properties\Settings.Designer.cs" />
+      <Compile Include="Properties\Settings.Designer.cs">
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Settings.settings</DependentUpon>
+      </Compile>
       <Compile Include="Styles\WindowStyles.xaml.cs" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="Properties\Resources.resx" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Update="Properties\Settings.settings">
+        <Generator>SettingsSingleFileGenerator</Generator>
+        <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      </None>
     </ItemGroup>
 </Project>

@@ -10,33 +10,7 @@
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-
-        <TextBox x:Name="txtPrueba"
-            Grid.Row="0"
-            bootstrap:TextBoxAssist.PlaceHolder="Hola" />
-
-        <bootstrap:Alert
-            Grid.Row="1"
-            Margin="10"
-            Content="Hola"
-            IsAlertDismissible="True" />
-
-        <Button
-            Grid.Row="2"
-            Margin="10"
-            Content="Hola mundo" />
-
-        <bootstrap:Badge Text="Hola" />
-
-    </Grid>
-
-    <!--<TabControl Margin="5">
+    <TabControl Margin="5">
         <TabItem Header="Alerts">
             <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <Label
@@ -58,7 +32,7 @@
                     Margin="10"
                     Content="Alert Secondary"
                     IsAlertDismissible="True"
-                    Style="{StaticResource alert-primary}" />
+                    Style="{StaticResource alert-secondary}" />
 
                 <bootstrap:Alert
                     Margin="10"
@@ -517,11 +491,11 @@
 
                 <TextBox
                     Grid.Row="1"
-                    bootstrap:BootstrapTextBoxAssist.PlaceHolder="Nombre" />
+                    bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
 
                 <TextBox
                     Grid.Row="2"
-                    bootstrap:BootstrapTextBoxAssist.PlaceHolder="Apellido" />
+                    bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
             </Grid>
         </TabItem>
 
@@ -712,11 +686,11 @@
 
                         <TextBox
                             Grid.Row="0"
-                            bootstrap:BootstrapTextBoxAssist.PlaceHolder="Nombre" />
+                            bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
 
                         <TextBox
                             Grid.Row="1"
-                            bootstrap:BootstrapTextBoxAssist.PlaceHolder="Apellido" />
+                            bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
 
                         <CheckBox
                             Grid.Row="2"
@@ -830,7 +804,8 @@
                     Grid.Row="1"
                     Width="100"
                     Content="Hola"
-                    PopOverText="Hola mundo" />
+                    PopOverText="Hola mundo"
+                    Style="{StaticResource popover-primary}" />
             </Grid>
         </TabItem>
 
@@ -889,6 +864,5 @@
                 </ListView>
             </Grid>
         </TabItem>
-    </TabControl>-->
-
+    </TabControl>
 </Window>

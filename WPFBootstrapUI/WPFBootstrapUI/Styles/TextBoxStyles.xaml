@@ -4,6 +4,9 @@
     xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBoxBase}">
         <Border x:Name="OutterBorder"

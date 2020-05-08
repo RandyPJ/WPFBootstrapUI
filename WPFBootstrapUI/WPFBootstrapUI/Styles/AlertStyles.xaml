@@ -5,6 +5,10 @@
     xmlns:Converters="clr-namespace:WPFBootstrapUI.Converters"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Styles/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
     <Converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
     <ControlTemplate x:Key="AlertControlTemplate" TargetType="{x:Type AlertControl:Alert}">
