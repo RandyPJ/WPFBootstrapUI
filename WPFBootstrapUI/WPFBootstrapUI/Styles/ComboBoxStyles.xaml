@@ -92,7 +92,7 @@
                     <Canvas
                         Width="15"
                         Height="15"
-                        Margin="0,-6,10,0"
+                        Margin="0,-8,14,0"
                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
                         <Path
                             Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
