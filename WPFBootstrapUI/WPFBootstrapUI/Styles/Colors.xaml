@@ -58,7 +58,7 @@
     <SolidColorBrush x:Key="AlertDarkForegroundSolidColorBrush" Color="#1B1E21" />
 
 
-    <Color x:Key="PrimaryHoveredColor">#0069d9</Color>
+    <Color x:Key="PrimaryHoveredColor">#006CD3</Color>
     <SolidColorBrush x:Key="PrimaryHoveredSolidColorBrush" Color="{StaticResource PrimaryHoveredColor}" />
 
     <Color x:Key="SecondaryHoveredColor">#5a6268</Color>
