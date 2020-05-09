@@ -2,16 +2,17 @@
 
 The Bootstrap like UI for WPF.
 
-### **Caracteristicas**
+### **Features**
 
-* Estilo moderno.
-* Soporte para .Net Framework >= 4.5.
+* Modern styles.
+* Targets .Net Framework >= 4.5.
+* No packages dependencies.
 
-### **Inicio rápido**
+### **Quick start**
 
-* Crea un nuevo proyecto WPF.
-* Instala el paquete nuget: _Install-Package WPFBootstrapUI_.
-* Edita el archivo App.xaml y agrega el siguiente código **XAML**:
+* Create a new WPF app.
+* Install from nuget: _Install-Package WPFBootstrapUI_.
+* Edit the App.xaml to following:
 
 ```
 <Application x:Class="BootstrapUISample.App"
@@ -30,7 +31,7 @@ The Bootstrap like UI for WPF.
 </Application>
 ```
 
-**Edite el MainWindow.xaml con el siguiente código:**
+**Edit the MainWindow.xaml to following:**
 
 ```
 <Window
@@ -58,6 +59,6 @@ The Bootstrap like UI for WPF.
  </Window>
 ```
 
-Más información en el [wiki](https://github.com/RandyPJ/WPFBootstrapUI/wiki/Inicio)
+More information in the [wiki](https://github.com/RandyPJ/WPFBootstrapUI/wiki/Inicio)
 
 
