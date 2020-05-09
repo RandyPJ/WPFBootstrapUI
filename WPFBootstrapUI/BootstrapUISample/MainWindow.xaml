@@ -1,5 +1,4 @@
-﻿<Window
-    x:Class="BootstrapUISample.MainWindow"
+﻿<Window x:Class="BootstrapUISample.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:bootstrap="http://wpfbootstrapui.com/2019/ui/wpf"
@@ -1244,9 +1243,7 @@
 
                 <ListBox Grid.Row="1">
                     <ListBox.Resources>
-                        <Style
-                            BasedOn="{StaticResource listboxitem-success}"
-                            TargetType="{x:Type ListBoxItem}" />
+                        <Style BasedOn="{StaticResource listboxitem-success}" TargetType="{x:Type ListBoxItem}" />
                     </ListBox.Resources>
                     <ListBoxItem>Hola</ListBoxItem>
                     <ListBoxItem>Hola</ListBoxItem>
@@ -1273,8 +1270,7 @@
                     FontWeight="Light"
                     ToolTipService.Placement="Bottom" />
 
-                <ListView
-                    x:Name="myListView"
+                <ListView x:Name="myListView"
                     Grid.Row="1">
                     <ListViewItem>Hola</ListViewItem>
                     <ListViewItem>Hola</ListViewItem>
