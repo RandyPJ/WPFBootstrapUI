@@ -3,6 +3,8 @@ using System.Windows.Controls;
 
 namespace WPFBootstrapUI.Controls
 {
+    [TemplatePart( Name = "InnerBorder", Type = typeof(Border))]
+    [TemplatePart(Name = "PART_Content", Type = typeof(TextBlock))]
     public class Badge : Control
     {
         static Badge()

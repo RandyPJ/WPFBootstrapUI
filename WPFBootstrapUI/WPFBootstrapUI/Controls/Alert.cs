@@ -8,7 +8,7 @@ namespace WPFBootstrapUI.Controls
     [TemplatePart(Name = "PART_DismissButton", Type = typeof(Button))]
     public class Alert : ContentControl
     {
-        private readonly string part_DismissButton = "PART_DismissButton";
+        private const string _dismissButtonName = "PART_DismissButton";
 
         private Button DismissButton;
 
@@ -19,16 +19,16 @@ namespace WPFBootstrapUI.Controls
 
         public override void OnApplyTemplate()
         {
-            DismissButton = GetTemplateChild(part_DismissButton) as Button;
+            DismissButton = GetTemplateChild(_dismissButtonName) as Button;
 
             if (DismissButton == null)
-                throw new InvalidOperationException($"Control {part_DismissButton} not found in the template.");
-
-            SetAlertDismissButtonForeground(DismissButton, this.Foreground);
+                throw new InvalidOperationException($"Control {_dismissButtonName} not found in the template.");
 
             DismissButton.Click -= DismissButton_Click;
 
             base.OnApplyTemplate();
+
+            SetAlertDismissButtonForeground(DismissButton, this.Foreground);
 
             DismissButton.Click += DismissButton_Click;
         }
