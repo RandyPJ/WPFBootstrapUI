@@ -4,24 +4,26 @@
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
-    <ControlTemplate x:Key="PopOverControlTemplate" TargetType="{x:Type Controls:PopOver}">
-        <Grid x:Name="Container"
+    <ControlTemplate
+        x:Key="PopOverControlTemplate"
+        TargetType="{x:Type Controls:PopOver}">
+        <Grid
+            x:Name="Container"
             Width="{TemplateBinding Width}"
             Height="{TemplateBinding Height}"
             RenderOptions.EdgeMode="Aliased">
-            <Border x:Name="OutterBorder"
+            <Border
+                x:Name="OutterBorder"
                 BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
                 BorderThickness="4"
                 CornerRadius="6">
-                <Border x:Name="InnerBorder"
+                <Border
+                    x:Name="InnerBorder"
                     Background="{TemplateBinding Background}"
                     BorderBrush="{x:Null}"
                     CornerRadius="4">
-                    <ContentPresenter x:Name="PART_Content"
+                    <ContentPresenter
+                        x:Name="PART_Content"
                         Margin="{TemplateBinding Padding}"
                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -31,27 +33,29 @@
                 </Border>
             </Border>
 
-            <Popup x:Name="Popup"
-                Width="332"
+            <Popup
+                x:Name="Popup"
+                Width="Auto"
                 Height="Auto"
                 MinWidth="60"
-                MaxWidth="400"
+                MaxWidth="330"
+                MaxHeight="80"
                 AllowsTransparency="True"
                 HorizontalOffset="0"
                 IsOpen="{Binding IsClicked, RelativeSource={RelativeSource TemplatedParent}}"
                 Placement="{TemplateBinding PopupPlacement}"
                 PlacementTarget="{Binding ElementName=OutterBorder}">
-
                 <Border
-                    Padding="4,8"
+                    Padding="20,15"
                     Background="{StaticResource WhiteSolidColorBrush}"
                     BorderBrush="LightGray"
                     BorderThickness="1.4"
                     CornerRadius="6">
-                    <Grid x:Name="PopupContainer"
+                    <Grid
+                        x:Name="PopupContainer"
                         Background="Transparent">
                         <Border
-                            Padding="60,20,60,20"
+                            Padding="2"
                             CornerRadius="6" />
                         <TextBlock
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -61,7 +65,6 @@
                             TextWrapping="Wrap" />
                     </Grid>
                 </Border>
-
             </Popup>
         </Grid>
         <ControlTemplate.Triggers>
@@ -87,7 +90,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="popover-primary" TargetType="{x:Type Controls:PopOver}">
+    <Style
+        x:Key="popover-primary"
+        TargetType="{x:Type Controls:PopOver}">
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -102,5 +107,7 @@
         <Setter Property="Template" Value="{StaticResource PopOverControlTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource popover-primary}" TargetType="{x:Type Controls:PopOver}" />
+    <Style
+        BasedOn="{StaticResource popover-primary}"
+        TargetType="{x:Type Controls:PopOver}" />
 </ResourceDictionary>

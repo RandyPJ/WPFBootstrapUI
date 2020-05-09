@@ -3,13 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
     <BorderGapMaskConverter x:Key="BorderGapMaskConverter" />
 
-    <ControlTemplate x:Key="GroupBoxTemplate" TargetType="{x:Type GroupBox}">
+    <ControlTemplate
+        x:Key="GroupBoxTemplate"
+        TargetType="{x:Type GroupBox}">
         <Grid
             SnapsToDevicePixels="true"
             TextBlock.FontFamily="{TemplateBinding FontFamily}">
@@ -17,11 +15,13 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Border x:Name="PART_Border"
+            <Border
+                x:Name="PART_Border"
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 IsHitTestVisible="True" />
-            <Border x:Name="PART_Header"
+            <Border
+                x:Name="PART_Header"
                 Grid.Row="0"
                 Padding="0,0,0,4"
                 BorderBrush="{TemplateBinding BorderBrush}"
@@ -34,7 +34,8 @@
                     TextBlock.FontWeight="SemiBold"
                     TextBlock.Foreground="{TemplateBinding Foreground}" />
             </Border>
-            <ContentPresenter x:Name="Content"
+            <ContentPresenter
+                x:Name="Content"
                 Grid.Row="1"
                 Margin="{TemplateBinding Padding}" />
         </Grid>
@@ -45,7 +46,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="groupbox-primary" TargetType="{x:Type GroupBox}">
+    <Style
+        x:Key="groupbox-primary"
+        TargetType="{x:Type GroupBox}">
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="BorderThickness" Value="0,0,0,2" />
@@ -55,5 +58,7 @@
         <Setter Property="Template" Value="{StaticResource GroupBoxTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource groupbox-primary}" TargetType="{x:Type GroupBox}" />
+    <Style
+        BasedOn="{StaticResource groupbox-primary}"
+        TargetType="{x:Type GroupBox}" />
 </ResourceDictionary>

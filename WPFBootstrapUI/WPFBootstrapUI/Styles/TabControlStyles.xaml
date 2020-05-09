@@ -3,30 +3,33 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
-    <ControlTemplate x:Key="TabControlTemplate" TargetType="{x:Type TabControl}">
-        <Grid x:Name="templateRoot"
+    <ControlTemplate
+        x:Key="TabControlTemplate"
+        TargetType="{x:Type TabControl}">
+        <Grid
+            x:Name="templateRoot"
             ClipToBounds="true"
             KeyboardNavigation.TabNavigation="Local"
             SnapsToDevicePixels="true">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="ColumnDefinition0" />
-                <ColumnDefinition x:Name="ColumnDefinition1"
+                <ColumnDefinition
+                    x:Name="ColumnDefinition1"
                     Width="0" />
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition x:Name="RowDefinition0"
+                <RowDefinition
+                    x:Name="RowDefinition0"
                     Height="Auto" />
-                <RowDefinition x:Name="RowDefinition1"
+                <RowDefinition
+                    x:Name="RowDefinition1"
                     Height="*" />
             </Grid.RowDefinitions>
 
-            <TabPanel x:Name="headerPanel"
+            <TabPanel
+                x:Name="headerPanel"
                 Grid.Row="0"
                 Grid.Column="0"
                 Margin="2,2,2,0"
@@ -35,7 +38,8 @@
                 IsItemsHost="True"
                 KeyboardNavigation.TabIndex="1" />
 
-            <Border x:Name="contentPanel"
+            <Border
+                x:Name="contentPanel"
                 Grid.Row="1"
                 Grid.Column="0"
                 Background="{TemplateBinding Background}"
@@ -45,7 +49,8 @@
                 KeyboardNavigation.TabIndex="2"
                 KeyboardNavigation.TabNavigation="Local">
 
-                <ContentPresenter x:Name="PART_SelectedContentHost"
+                <ContentPresenter
+                    x:Name="PART_SelectedContentHost"
                     Margin="{TemplateBinding Padding}"
                     ContentSource="SelectedContent"
                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
@@ -89,16 +94,21 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <ControlTemplate x:Key="TabItemControlTemplate" TargetType="{x:Type TabItem}">
-        <Grid x:Name="templateRoot"
+    <ControlTemplate
+        x:Key="TabItemControlTemplate"
+        TargetType="{x:Type TabItem}">
+        <Grid
+            x:Name="templateRoot"
             SnapsToDevicePixels="true">
-            <Border x:Name="mainBorder"
+            <Border
+                x:Name="mainBorder"
                 Margin="0"
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="1,1,1,0"
                 CornerRadius="4,4,0,0">
-                <Border x:Name="innerBorder"
+                <Border
+                    x:Name="innerBorder"
                     Margin="-1"
                     Background="{StaticResource WhiteSolidColorBrush}"
                     BorderBrush="{StaticResource PrimarySolidColorBrush}"
@@ -106,7 +116,8 @@
                     CornerRadius="{Binding ElementName=mainBorder, Path=CornerRadius}"
                     Opacity="0" />
             </Border>
-            <ContentPresenter x:Name="contentPresenter"
+            <ContentPresenter
+                x:Name="contentPresenter"
                 Margin="{TemplateBinding Padding}"
                 HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
                 VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
@@ -288,7 +299,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="tabitem-primary" TargetType="{x:Type TabItem}">
+    <Style
+        x:Key="tabitem-primary"
+        TargetType="{x:Type TabItem}">
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
@@ -300,7 +313,9 @@
         <Setter Property="Template" Value="{StaticResource TabItemControlTemplate}" />
     </Style>
 
-    <Style x:Key="tabcontrol-primary" TargetType="{x:Type TabControl}">
+    <Style
+        x:Key="tabcontrol-primary"
+        TargetType="{x:Type TabControl}">
         <Setter Property="Padding" Value="4" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -313,8 +328,12 @@
     </Style>
 
 
-    <Style BasedOn="{StaticResource tabcontrol-primary}" TargetType="{x:Type TabControl}" />
-    <Style BasedOn="{StaticResource tabitem-primary}" TargetType="{x:Type TabItem}" />
+    <Style
+        BasedOn="{StaticResource tabcontrol-primary}"
+        TargetType="{x:Type TabControl}" />
+    <Style
+        BasedOn="{StaticResource tabitem-primary}"
+        TargetType="{x:Type TabItem}" />
 
 </ResourceDictionary>
 

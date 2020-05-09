@@ -3,19 +3,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
-    <ControlTemplate x:Key="CheckBoxTemplate" TargetType="{x:Type CheckBox}">
-        <Grid x:Name="templateRoot"
+    <ControlTemplate
+        x:Key="CheckBoxTemplate"
+        TargetType="{x:Type CheckBox}">
+        <Grid
+            x:Name="templateRoot"
             Background="Transparent"
             SnapsToDevicePixels="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Border x:Name="checkBoxBorder"
+            <Border
+                x:Name="checkBoxBorder"
                 Margin="1"
                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -23,21 +23,25 @@
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 CornerRadius="2">
-                <Grid x:Name="markGrid"
+                <Grid
+                    x:Name="markGrid"
                     Margin="1">
-                    <Path x:Name="optionMark"
+                    <Path
+                        x:Name="optionMark"
                         Margin="1"
                         Data="F1 M 9.97498,1.22334L 4.6983,9.09834L 4.52164,9.09834L 0,5.19331L 1.27664,3.52165L 4.255,6.08833L 8.33331,1.52588e-005L 9.97498,1.22334 Z "
                         Fill="{StaticResource WhiteSolidColorBrush}"
                         Opacity="0"
                         Stretch="None" />
-                    <Rectangle x:Name="indeterminateMark"
+                    <Rectangle
+                        x:Name="indeterminateMark"
                         Margin="2"
                         Fill="{StaticResource WhiteSolidColorBrush}"
                         Opacity="0" />
                 </Grid>
             </Border>
-            <Border x:Name="FocusBorder"
+            <Border
+                x:Name="FocusBorder"
                 Grid.Column="0"
                 Width="{Binding ElementName=checkBoxBorder, Path=ActualWidth}"
                 Height="{Binding ElementName=checkBoxBorder, Path=ActualHeight}"
@@ -48,7 +52,8 @@
                 BorderThickness="1"
                 CornerRadius="2"
                 Visibility="Collapsed" />
-            <ContentPresenter x:Name="contentPresenter"
+            <ContentPresenter
+                x:Name="contentPresenter"
                 Grid.Column="1"
                 Margin="{TemplateBinding Padding}"
                 HorizontalAlignment="Left"
@@ -99,7 +104,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="checkbox-secondary" TargetType="{x:Type CheckBox}">
+    <Style
+        x:Key="checkbox-secondary"
+        TargetType="{x:Type CheckBox}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource DarkSolidColorBrush}" />
@@ -111,5 +118,7 @@
         <Setter Property="Template" Value="{StaticResource CheckBoxTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource checkbox-secondary}" TargetType="{x:Type CheckBox}" />
+    <Style
+        BasedOn="{StaticResource checkbox-secondary}"
+        TargetType="{x:Type CheckBox}" />
 </ResourceDictionary>

@@ -5,25 +5,25 @@
     xmlns:Converters="clr-namespace:WPFBootstrapUI.Converters"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
     <Converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
-    <ControlTemplate x:Key="BadgeControlTemplate" TargetType="{x:Type Controls:Badge}">
+    <ControlTemplate
+        x:Key="BadgeControlTemplate"
+        TargetType="{x:Type Controls:Badge}">
         <Grid
             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
             SnapsToDevicePixels="true">
-            <Border x:Name="InnerBorder"
+            <Border
+                x:Name="InnerBorder"
                 Padding="2"
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding Background}"
                 BorderThickness="1"
                 CornerRadius="{TemplateBinding CornerRadius}"
                 UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-                <TextBlock x:Name="PART_Content"
+                <TextBlock
+                    x:Name="PART_Content"
                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                     Focusable="False"
@@ -35,7 +35,9 @@
     </ControlTemplate>
 
     <!--  Normal Badges  -->
-    <Style x:Key="badge-primary" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-primary"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -47,7 +49,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-secondary" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-secondary"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -59,7 +63,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-success" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-success"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -71,7 +77,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-danger" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-danger"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -83,7 +91,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-warning" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-warning"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -95,7 +105,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-info" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-info"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -107,7 +119,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-light" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-light"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -119,7 +133,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-dark" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-dark"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="5" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -132,7 +148,9 @@
     </Style>
 
     <!--  Pill Badges  -->
-    <Style x:Key="badge-pill-primary" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-primary"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -144,7 +162,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-secondary" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-secondary"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -156,7 +176,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-success" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-success"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -168,7 +190,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-danger" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-danger"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -180,7 +204,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-warning" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-warning"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -192,7 +218,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-info" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-info"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -204,7 +232,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-light" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-light"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -216,7 +246,9 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-dark" TargetType="{x:Type Controls:Badge}">
+    <Style
+        x:Key="badge-pill-dark"
+        TargetType="{x:Type Controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -229,5 +261,7 @@
     </Style>
 
 
-    <Style BasedOn="{StaticResource badge-primary}" TargetType="{x:Type Controls:Badge}" />
+    <Style
+        BasedOn="{StaticResource badge-primary}"
+        TargetType="{x:Type Controls:Badge}" />
 </ResourceDictionary>

@@ -3,10 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
     <Style x:Key="FocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -37,7 +33,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="radiobutton-secondary" TargetType="{x:Type RadioButton}">
+    <Style
+        x:Key="radiobutton-secondary"
+        TargetType="{x:Type RadioButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource DarkSolidColorBrush}" />
@@ -48,7 +46,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Grid x:Name="templateRoot"
+                    <Grid
+                        x:Name="templateRoot"
                         Margin="2"
                         Background="Transparent"
                         SnapsToDevicePixels="True">
@@ -56,7 +55,8 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Border x:Name="radioButtonBorder"
+                        <Border
+                            x:Name="radioButtonBorder"
                             Margin="2"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -64,16 +64,19 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="100">
-                            <Grid x:Name="markGrid"
+                            <Grid
+                                x:Name="markGrid"
                                 Margin="2">
-                                <Ellipse x:Name="optionMark"
+                                <Ellipse
+                                    x:Name="optionMark"
                                     MinWidth="10"
                                     MinHeight="10"
                                     Fill="{StaticResource DarkSolidColorBrush}"
                                     Opacity="0" />
                             </Grid>
                         </Border>
-                        <ContentPresenter x:Name="contentPresenter"
+                        <ContentPresenter
+                            x:Name="contentPresenter"
                             Grid.Column="1"
                             Margin="{TemplateBinding Padding}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -113,5 +116,7 @@
         </Setter>
     </Style>
 
-    <Style BasedOn="{StaticResource radiobutton-secondary}" TargetType="{x:Type RadioButton}" />
+    <Style
+        BasedOn="{StaticResource radiobutton-secondary}"
+        TargetType="{x:Type RadioButton}" />
 </ResourceDictionary>

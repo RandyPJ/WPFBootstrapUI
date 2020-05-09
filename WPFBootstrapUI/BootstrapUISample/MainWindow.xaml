@@ -276,26 +276,24 @@
                             <bootstrap:CardChildPanel
                                 Grid.Row="1"
                                 Style="{StaticResource card-body-primary}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
 
-                                        <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                    <TextBlock
+                                        Grid.Row="0"
+                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                        TextWrapping="Wrap" />
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-light}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
+                                    <Button
+                                        Grid.Row="1"
+                                        Margin="0,10,0,0"
+                                        HorizontalAlignment="Left"
+                                        Content="Go somewhere"
+                                        Style="{StaticResource btn-light}" />
+                                </Grid>
                             </bootstrap:CardChildPanel>
                         </Grid>
                     </bootstrap:Card.Content>
@@ -1222,7 +1220,8 @@
                     Grid.Row="1"
                     Width="100"
                     Content="Hola"
-                    PopOverText="Hola mundo"
+                    PopOverText="Holadsafasdfasdf asdfa sfasd fasdfa sdasd f mundo"
+                    PopupPlacement="Bottom"
                     Style="{StaticResource popover-primary}" />
             </Grid>
         </TabItem>

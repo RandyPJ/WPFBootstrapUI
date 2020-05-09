@@ -5,20 +5,19 @@
     xmlns:Converters="clr-namespace:WPFBootstrapUI.Converters"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
     <Converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
-    <ControlTemplate x:Key="AlertControlTemplate" TargetType="{x:Type AlertControl:Alert}">
+    <ControlTemplate
+        x:Key="AlertControlTemplate"
+        TargetType="{x:Type AlertControl:Alert}">
         <Grid>
             <Border
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 CornerRadius="{Binding Path=(AlertControl:Alert.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
 
-            <ContentPresenter x:Name="PART_ContentHost"
+            <ContentPresenter
+                x:Name="PART_ContentHost"
                 Margin="20,0,0,0"
                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -46,13 +45,15 @@
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
                                     <Grid>
-                                        <Border x:Name="MyBorder"
+                                        <Border
+                                            x:Name="MyBorder"
                                             Padding="20"
                                             Background="Transparent"
                                             BorderBrush="Transparent"
                                             BorderThickness="0" />
 
-                                        <ContentPresenter x:Name="Presenter"
+                                        <ContentPresenter
+                                            x:Name="Presenter"
                                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                             Content="{TemplateBinding Content}"
@@ -76,7 +77,9 @@
         </Grid>
     </ControlTemplate>
 
-    <Style x:Key="alert-primary" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-primary"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -89,7 +92,9 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-secondary" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-secondary"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -102,7 +107,9 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-success" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-success"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -115,7 +122,9 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-danger" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-danger"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -128,7 +137,9 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-warning" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-warning"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -141,7 +152,9 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-info" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-info"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -154,7 +167,9 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-light" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-light"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -167,7 +182,9 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style x:Key="alert-dark" TargetType="{x:Type AlertControl:Alert}">
+    <Style
+        x:Key="alert-dark"
+        TargetType="{x:Type AlertControl:Alert}">
         <Setter Property="AlertControl:Alert.CornerRadius" Value="4" />
         <Setter Property="Padding" Value="20,12" />
         <Setter Property="Height" Value="50" />
@@ -180,5 +197,7 @@
         <Setter Property="Template" Value="{StaticResource AlertControlTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource alert-primary}" TargetType="{x:Type AlertControl:Alert}" />
+    <Style
+        BasedOn="{StaticResource alert-primary}"
+        TargetType="{x:Type AlertControl:Alert}" />
 </ResourceDictionary>

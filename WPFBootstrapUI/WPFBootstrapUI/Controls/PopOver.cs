@@ -13,14 +13,17 @@ namespace WPFBootstrapUI.Controls
     public class PopOver : ButtonBase
     {
         private const string PopupName = "Popup";
+        private const string OutterBorderName = "OutterBorder";
 
         private Popup _popup;
+        private Border _outterBorder;
 
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
 
             _popup = GetTemplateChild(PopupName) as Popup;
+            _outterBorder = GetTemplateChild(OutterBorderName) as Border;
         }
 
         protected override void OnClick()
@@ -44,7 +47,7 @@ namespace WPFBootstrapUI.Controls
             get { return (PlacementMode)GetValue(PopupPlacementProperty); }
             set { SetValue(PopupPlacementProperty, value); }
         }
-                public static readonly DependencyProperty PopupPlacementProperty =
+        public static readonly DependencyProperty PopupPlacementProperty =
             DependencyProperty.Register("PopupPlacement", typeof(PlacementMode), typeof(PopOver), new PropertyMetadata(PlacementMode.Bottom));
 
         public bool IsClicked
@@ -52,7 +55,6 @@ namespace WPFBootstrapUI.Controls
             get { return (bool)GetValue(IsClickedProperty); }
             set { SetValue(IsClickedProperty, value); }
         }
-
         public static readonly DependencyProperty IsClickedProperty =
             DependencyProperty.Register("IsClicked", typeof(bool), typeof(PopOver), new PropertyMetadata(false));
     }

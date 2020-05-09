@@ -5,9 +5,6 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Themes">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-        <ResourceDictionary Source="../Styles/Fonts.xaml" />
-
         <ResourceDictionary Source="../Styles/AlertStyles.xaml" />
         <ResourceDictionary Source="../Styles/BadgeStyles.xaml" />
         <ResourceDictionary Source="../Styles/ButtonStyles.xaml" />
@@ -23,6 +20,7 @@
         <ResourceDictionary Source="../Styles/TabControlStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListViewStyles.xaml" />
+
         <!--<ResourceDictionary Source="../Styles/WindowStyles.xaml" />-->
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -4,19 +4,19 @@
     xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
-    <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBoxBase}">
-        <Border x:Name="OutterBorder"
+    <ControlTemplate
+        x:Key="TextBoxControlTemplate"
+        TargetType="{x:Type TextBoxBase}">
+        <Border
+            x:Name="OutterBorder"
             BorderBrush="Transparent"
             BorderThickness="4"
             CornerRadius="6"
             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
             UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
             <Grid SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                <Border x:Name="InnerBorder"
+                <Border
+                    x:Name="InnerBorder"
                     Height="{TemplateBinding Height}"
                     Background="Transparent"
                     BorderBrush="LightGray"
@@ -27,7 +27,8 @@
 
                 <ScrollViewer x:Name="PART_ContentHost" />
 
-                <TextBlock x:Name="PART_Placeholder"
+                <TextBlock
+                    x:Name="PART_Placeholder"
                     Margin="12,0,0,0"
                     VerticalAlignment="Center"
                     Foreground="SlateGray"
@@ -70,7 +71,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="textbox-primary" TargetType="{x:Type TextBoxBase}">
+    <Style
+        x:Key="textbox-primary"
+        TargetType="{x:Type TextBoxBase}">
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Padding" Value="10" />
@@ -82,5 +85,7 @@
         <Setter Property="Template" Value="{StaticResource TextBoxControlTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource textbox-primary}" TargetType="{x:Type TextBox}" />
+    <Style
+        BasedOn="{StaticResource textbox-primary}"
+        TargetType="{x:Type TextBox}" />
 </ResourceDictionary>

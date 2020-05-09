@@ -4,13 +4,10 @@
     xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
     xmlns:local="clr-namespace:WPFBootstrapUI.STyles">
 
-
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
     <!--#region Normal Buttons-->
-    <Style x:Key="btn-primary" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-primary"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -32,15 +29,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource PrimarySolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -76,7 +76,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-secondary" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-secondary"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -98,15 +100,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertSecondarySolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource SecondarySolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -143,7 +148,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-success" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-success"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -165,15 +172,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertSuccessSolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource SuccessSolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -210,7 +220,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-danger" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-danger"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -232,15 +244,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertDangerSolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource DangerSolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -278,7 +293,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-warning" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-warning"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -300,15 +317,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertWarningSolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource WarningSolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -346,7 +366,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-info" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-info"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -368,15 +390,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertInfoSolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource InfoSolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -414,7 +439,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-light" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-light"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -436,15 +463,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertLightSolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource LightSolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -482,7 +512,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-dark" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-dark"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -504,15 +536,18 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         RenderOptions.EdgeMode="Aliased">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderBrush="{StaticResource AlertDarkSolidColorBrush}"
                             BorderThickness="4"
                             CornerRadius="6">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="{StaticResource DarkSolidColorBrush}"
                                 BorderBrush="{x:Null}"
                                 CornerRadius="4">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -550,7 +585,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-link" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-link"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Margin" Value="0" />
         <Setter Property="FontSize" Value="16" />
@@ -570,13 +607,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="OutterBorder"
+                    <Border
+                        x:Name="OutterBorder"
                         CornerRadius="6">
                         <Grid>
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 BorderThickness="1"
                                 CornerRadius="4" />
-                            <TextBlock x:Name="txtLink"
+                            <TextBlock
+                                x:Name="txtLink"
                                 Padding="{TemplateBinding Padding}"
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -608,8 +648,9 @@
     <!--#endregion-->
 
     <!--#region Outline Buttons-->
-
-    <Style x:Key="btn-outline-primary" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-outline-primary"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -629,18 +670,21 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         SnapsToDevicePixels="true">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderThickness="4"
                             CornerRadius="6"
                             RenderOptions.EdgeMode="Aliased"
                             SnapsToDevicePixels="True">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource PrimarySolidColorBrush}"
                                 BorderThickness="1"
                                 CornerRadius="4"
                                 SnapsToDevicePixels="True">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -688,7 +732,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-secondary" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-outline-secondary"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -708,18 +754,21 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         SnapsToDevicePixels="true">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderThickness="4"
                             CornerRadius="6"
                             RenderOptions.EdgeMode="Aliased"
                             SnapsToDevicePixels="True">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource SecondarySolidColorBrush}"
                                 BorderThickness="1"
                                 CornerRadius="4"
                                 SnapsToDevicePixels="True">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -769,7 +818,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-success" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-outline-success"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -789,18 +840,21 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         SnapsToDevicePixels="true">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderThickness="4"
                             CornerRadius="6"
                             RenderOptions.EdgeMode="Aliased"
                             SnapsToDevicePixels="True">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource SuccessSolidColorBrush}"
                                 BorderThickness="1"
                                 CornerRadius="4"
                                 SnapsToDevicePixels="True">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -849,7 +903,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-danger" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-outline-danger"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -869,18 +925,21 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         SnapsToDevicePixels="true">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderThickness="4"
                             CornerRadius="6"
                             RenderOptions.EdgeMode="Aliased"
                             SnapsToDevicePixels="True">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource DangerSolidColorBrush}"
                                 BorderThickness="1"
                                 CornerRadius="4"
                                 SnapsToDevicePixels="True">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -929,7 +988,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-warning" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-outline-warning"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -949,18 +1010,21 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         SnapsToDevicePixels="true">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderThickness="4"
                             CornerRadius="6"
                             RenderOptions.EdgeMode="Aliased"
                             SnapsToDevicePixels="True">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource WarningSolidColorBrush}"
                                 BorderThickness="1"
                                 CornerRadius="4"
                                 SnapsToDevicePixels="True">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -1010,7 +1074,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-info" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-outline-info"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -1030,18 +1096,21 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         SnapsToDevicePixels="true">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderThickness="4"
                             CornerRadius="6"
                             RenderOptions.EdgeMode="Aliased"
                             SnapsToDevicePixels="True">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource InfoSolidColorBrush}"
                                 BorderThickness="1"
                                 CornerRadius="4"
                                 SnapsToDevicePixels="True">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -1090,7 +1159,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="btn-outline-dark" TargetType="{x:Type Button}">
+    <Style
+        x:Key="btn-outline-dark"
+        TargetType="{x:Type Button}">
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="FontSize" Value="16" />
         <Setter Property="Height" Value="Auto" />
@@ -1110,18 +1181,21 @@
                         Width="{TemplateBinding Width}"
                         Height="{TemplateBinding Height}"
                         SnapsToDevicePixels="true">
-                        <Border x:Name="OutterBorder"
+                        <Border
+                            x:Name="OutterBorder"
                             BorderThickness="4"
                             CornerRadius="6"
                             RenderOptions.EdgeMode="Aliased"
                             SnapsToDevicePixels="True">
-                            <Border x:Name="InnerBorder"
+                            <Border
+                                x:Name="InnerBorder"
                                 Background="Transparent"
                                 BorderBrush="{StaticResource DarkSolidColorBrush}"
                                 BorderThickness="1"
                                 CornerRadius="4"
                                 SnapsToDevicePixels="True">
-                                <ContentPresenter x:Name="PART_Content"
+                                <ContentPresenter
+                                    x:Name="PART_Content"
                                     Margin="{TemplateBinding Padding}"
                                     HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                     VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -1170,5 +1244,7 @@
     </Style>
     <!--#endregion-->
 
-    <Style BasedOn="{StaticResource btn-primary}" TargetType="{x:Type Button}" />
+    <Style
+        BasedOn="{StaticResource btn-primary}"
+        TargetType="{x:Type Button}" />
 </ResourceDictionary>

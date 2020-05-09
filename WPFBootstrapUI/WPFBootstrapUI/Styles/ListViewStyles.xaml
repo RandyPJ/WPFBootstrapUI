@@ -3,10 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="../Styles/Colors.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-
     <Style x:Key="FocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -22,7 +18,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="listviewitem-primary" TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="listviewitem-primary"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
@@ -37,14 +35,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Border x:Name="Bd"
+                    <Border
+                        x:Name="Bd"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="2"
                         SnapsToDevicePixels="true">
-                        <ContentPresenter x:Name="ContentPresenter"
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -86,7 +86,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="listviewitem-secondary" TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="listviewitem-secondary"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
@@ -101,14 +103,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Border x:Name="Bd"
+                    <Border
+                        x:Name="Bd"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="2"
                         SnapsToDevicePixels="true">
-                        <ContentPresenter x:Name="ContentPresenter"
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -150,7 +154,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="listviewitem-success" TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="listviewitem-success"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
@@ -165,14 +171,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Border x:Name="Bd"
+                    <Border
+                        x:Name="Bd"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="2"
                         SnapsToDevicePixels="true">
-                        <ContentPresenter x:Name="ContentPresenter"
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -214,7 +222,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="listviewitem-danger" TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="listviewitem-danger"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
@@ -229,14 +239,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Border x:Name="Bd"
+                    <Border
+                        x:Name="Bd"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="2"
                         SnapsToDevicePixels="true">
-                        <ContentPresenter x:Name="ContentPresenter"
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -278,7 +290,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="listviewitem-warning" TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="listviewitem-warning"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
@@ -293,14 +307,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Border x:Name="Bd"
+                    <Border
+                        x:Name="Bd"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="2"
                         SnapsToDevicePixels="true">
-                        <ContentPresenter x:Name="ContentPresenter"
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -342,7 +358,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="listviewitem-info" TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="listviewitem-info"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
@@ -357,14 +375,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Border x:Name="Bd"
+                    <Border
+                        x:Name="Bd"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="2"
                         SnapsToDevicePixels="true">
-                        <ContentPresenter x:Name="ContentPresenter"
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -406,7 +426,9 @@
         </Setter>
     </Style>
 
-    <Style x:Key="listviewitem-dark" TargetType="{x:Type ListViewItem}">
+    <Style
+        x:Key="listviewitem-dark"
+        TargetType="{x:Type ListViewItem}">
         <Setter Property="FontSize" Value="18" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
@@ -421,14 +443,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
-                    <Border x:Name="Bd"
+                    <Border
+                        x:Name="Bd"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="2"
                         SnapsToDevicePixels="true">
-                        <ContentPresenter x:Name="ContentPresenter"
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -470,8 +494,11 @@
         </Setter>
     </Style>
 
-    <ControlTemplate x:Key="ListViewControlTemplate" TargetType="{x:Type ListView}">
-        <Border x:Name="Bd"
+    <ControlTemplate
+        x:Key="ListViewControlTemplate"
+        TargetType="{x:Type ListView}">
+        <Border
+            x:Name="Bd"
             Padding="1"
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
@@ -500,7 +527,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="listview-primary" TargetType="{x:Type ListView}">
+    <Style
+        x:Key="listview-primary"
+        TargetType="{x:Type ListView}">
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="BorderThickness" Value="1" />
@@ -515,7 +544,11 @@
         <Setter Property="Template" Value="{StaticResource ListViewControlTemplate}" />
     </Style>
 
-    <Style BasedOn="{StaticResource listview-primary}" TargetType="{x:Type ListView}" />
-    <Style BasedOn="{StaticResource listviewitem-primary}" TargetType="{x:Type ListViewItem}" />
+    <Style
+        BasedOn="{StaticResource listview-primary}"
+        TargetType="{x:Type ListView}" />
+    <Style
+        BasedOn="{StaticResource listviewitem-primary}"
+        TargetType="{x:Type ListViewItem}" />
 
 </ResourceDictionary>

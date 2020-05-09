@@ -26,9 +26,11 @@ namespace WPFBootstrapUI.Controls
 
             SetAlertDismissButtonForeground(DismissButton, this.Foreground);
 
-            DismissButton.Click += DismissButton_Click;
+            DismissButton.Click -= DismissButton_Click;
 
-            base.OnApplyTemplate(); 
+            base.OnApplyTemplate();
+
+            DismissButton.Click += DismissButton_Click;
         }
 
         private void DismissButton_Click(object sender, RoutedEventArgs e)
