@@ -31,7 +31,7 @@ The Bootstrap like UI for WPF.
 </Application>
 ```
 
-**Edit the MainWindow.xaml whit following:**
+**Edit the MainWindow.xaml to following:**
 
 ```
 <Window
