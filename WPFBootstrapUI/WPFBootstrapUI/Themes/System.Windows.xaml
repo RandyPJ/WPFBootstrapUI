@@ -10,17 +10,16 @@
         <ResourceDictionary Source="../Styles/ButtonStyles.xaml" />
         <ResourceDictionary Source="../Styles/CardStyles.xaml" />
         <ResourceDictionary Source="../Styles/CheckBoxStyles.xaml" />
+        <ResourceDictionary Source="../Styles/ComboBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/PopoverStyles.xaml" />
+        <ResourceDictionary Source="../Styles/PasswordBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/ToolTipStyles.xaml" />
         <ResourceDictionary Source="../Styles/ProgressBarStyles.xaml" />
         <ResourceDictionary Source="../Styles/RadioButtonStyles.xaml" />
         <ResourceDictionary Source="../Styles/GroupBoxStyles.xaml" />
-        <ResourceDictionary Source="../Styles/ComboBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/TextBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/TabControlStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListViewStyles.xaml" />
-
-        <!--<ResourceDictionary Source="../Styles/WindowStyles.xaml" />-->
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

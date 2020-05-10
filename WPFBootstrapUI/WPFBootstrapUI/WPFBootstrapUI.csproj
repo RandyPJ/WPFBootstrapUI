@@ -22,9 +22,9 @@
   
     <ItemGroup>
       <Compile Include="Animations\StoryBoardHelper.cs" />
+      <Compile Include="ControlsAssists\PasswordBoxAssist.cs" />
       <Compile Include="ControlsAssists\TextBoxAssist.cs" />
       <Compile Include="ControlsAssists\BorderAssist.cs" />
-      <Compile Include="ControlsAssists\PasswordHelper.cs" />
       <Compile Include="ControlsAssists\LinkButtonTextAssist.cs" />
       <Compile Include="Controls\Alert.cs" />
       <Compile Include="Controls\Badge.cs" />
