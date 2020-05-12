@@ -9,13 +9,16 @@ namespace WPFBootstrapUI.Controls
     public class Alert : ContentControl
     {
         private const string _dismissButtonName = "PART_DismissButton";
-
         private Button DismissButton;
 
         static Alert()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Alert), new FrameworkPropertyMetadata(typeof(Alert)));
         }
+        
+        public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(Alert), new PropertyMetadata(new CornerRadius(2.0)));
+        public static readonly DependencyProperty IsAlertDismissibleProperty = DependencyProperty.Register("IsAlertDismissible", typeof(bool), typeof(Alert), new PropertyMetadata(false));
+        public static readonly DependencyProperty AlertDismissButtonForegroundProperty = DependencyProperty.RegisterAttached("AlertDismissButtonForeground", typeof(Brush), typeof(Alert), new PropertyMetadata(Brushes.Transparent, OnAlertAssistDismissForegroundChanged));
 
         public override void OnApplyTemplate()
         {
@@ -47,21 +50,13 @@ namespace WPFBootstrapUI.Controls
         {
             obj.SetValue(CornerRadiusProperty, value);
         }
-
-        public static readonly DependencyProperty CornerRadiusProperty =
-            DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(Alert), new PropertyMetadata(new CornerRadius(2.0)));
-
+       
         public bool IsAlertDismissible
         {
             get { return (bool)GetValue(IsAlertDismissibleProperty); }
             set { SetValue(IsAlertDismissibleProperty, value); }
         }
-
-
-        public static readonly DependencyProperty IsAlertDismissibleProperty =
-            DependencyProperty.Register("IsAlertDismissible", typeof(bool), typeof(Alert), new PropertyMetadata(false));
-
-
+      
         public static Brush GetAlertDismissButtonForeground(DependencyObject obj)
         {
             return (Brush)obj.GetValue(AlertDismissButtonForegroundProperty);
@@ -71,11 +66,7 @@ namespace WPFBootstrapUI.Controls
         {
             obj.SetValue(AlertDismissButtonForegroundProperty, value);
         }
-
-
-        public static readonly DependencyProperty AlertDismissButtonForegroundProperty =
-            DependencyProperty.RegisterAttached("AlertDismissButtonForeground", typeof(Brush), typeof(Alert), new PropertyMetadata(Brushes.Transparent,OnAlertAssistDismissForegroundChanged));
-
+     
         private static void OnAlertAssistDismissForegroundChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             Button button = (Button)d;
