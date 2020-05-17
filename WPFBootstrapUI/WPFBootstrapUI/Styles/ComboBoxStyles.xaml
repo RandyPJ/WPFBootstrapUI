@@ -4,9 +4,12 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <!--#region ComboBoxItemStyle-->
-    <ControlTemplate x:Key="ComboBoxItemTemplate" TargetType="{x:Type ComboBoxItem}">
+    <ControlTemplate
+        x:Key="ComboBoxItemTemplate"
+        TargetType="{x:Type ComboBoxItem}">
         <Grid>
-            <Border x:Name="Bd"
+            <Border
+                x:Name="Bd"
                 Padding="{TemplateBinding Padding}"
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
@@ -46,7 +49,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="ComboBoxItemStyle" TargetType="{x:Type ComboBoxItem}">
+    <Style
+        x:Key="ComboBoxItemStyle"
+        TargetType="{x:Type ComboBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,1" />
         <Setter Property="Foreground" Value="{StaticResource DarkHoveredSolidColorBrush}" />
@@ -61,15 +66,19 @@
     <!--#endregion-->
 
     <!--#region Toggle Button-->
-    <ControlTemplate x:Key="BootstrapUIComboBoxToggleButtonTemplate" TargetType="{x:Type ToggleButton}">
+    <ControlTemplate
+        x:Key="BootstrapUIComboBoxToggleButtonTemplate"
+        TargetType="{x:Type ToggleButton}">
         <Grid SnapsToDevicePixels="True">
-            <Border x:Name="OutterBorder"
+            <Border
+                x:Name="OutterBorder"
                 Background="{StaticResource WhiteSolidColorBrush}"
                 BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
                 BorderThickness="4"
                 CornerRadius="6"
                 SnapsToDevicePixels="true">
-                <Border x:Name="InnerBorder"
+                <Border
+                    x:Name="InnerBorder"
                     Background="{StaticResource WhiteSolidColorBrush}"
                     BorderBrush="LightGray"
                     BorderThickness="1"
@@ -105,7 +114,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="BootstrapUIComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+    <Style
+        x:Key="BootstrapUIComboBoxToggleButton"
+        TargetType="{x:Type ToggleButton}">
         <Setter Property="IsTabStop" Value="false" />
         <Setter Property="Focusable" Value="false" />
         <Setter Property="ClickMode" Value="Press" />
@@ -116,8 +127,11 @@
     <!--#endregion-->
 
     <!--#region ComboBox Editable-->
-    <ControlTemplate x:Key="ComboBoxEditableTemplate" TargetType="{x:Type ComboBox}">
-        <Grid x:Name="templateRoot"
+    <ControlTemplate
+        x:Key="ComboBoxEditableTemplate"
+        TargetType="{x:Type ComboBox}">
+        <Grid
+            x:Name="templateRoot"
             SnapsToDevicePixels="true">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -126,30 +140,36 @@
                     MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
             </Grid.ColumnDefinitions>
 
-            <Popup x:Name="PART_Popup"
+            <Popup
+                x:Name="PART_Popup"
                 Grid.ColumnSpan="2"
                 AllowsTransparency="true"
                 IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
                 Placement="Bottom"
                 PopupAnimation="Slide">
-                <Border x:Name="dropDownBorder"
+                <Border
+                    x:Name="dropDownBorder"
                     Background="{StaticResource WhiteSolidColorBrush}"
                     BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
                     BorderThickness="1.4">
                     <ScrollViewer x:Name="DropDownScrollViewer">
-                        <Grid x:Name="grid"
+                        <Grid
+                            x:Name="grid"
                             RenderOptions.ClearTypeHint="Enabled">
-                            <Canvas x:Name="canvas"
+                            <Canvas
+                                x:Name="canvas"
                                 Width="0"
                                 Height="0"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Top">
-                                <Rectangle x:Name="opaqueRect"
+                                <Rectangle
+                                    x:Name="opaqueRect"
                                     Width="{Binding ActualWidth, ElementName=dropDownBorder}"
                                     Height="{Binding ActualHeight, ElementName=dropDownBorder}"
                                     Fill="{Binding Background, ElementName=dropDownBorder}" />
                             </Canvas>
-                            <ItemsPresenter x:Name="ItemsPresenter"
+                            <ItemsPresenter
+                                x:Name="ItemsPresenter"
                                 KeyboardNavigation.DirectionalNavigation="Contained"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </Grid>
@@ -158,7 +178,8 @@
             </Popup>
 
 
-            <ToggleButton x:Name="toggleButton"
+            <ToggleButton
+                x:Name="toggleButton"
                 Grid.ColumnSpan="2"
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
@@ -166,10 +187,12 @@
                 IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
                 Style="{StaticResource BootstrapUIComboBoxToggleButton}" />
 
-            <Border x:Name="border"
+            <Border
+                x:Name="border"
                 Margin="{TemplateBinding BorderThickness}"
                 Background="{TemplateBinding Background}">
-                <TextBox x:Name="PART_EditableTextBox"
+                <TextBox
+                    x:Name="PART_EditableTextBox"
                     Margin="{TemplateBinding Padding}"
                     HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                     VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -203,7 +226,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="ComboBoxEditableTextBox" TargetType="{x:Type TextBox}">
+    <Style
+        x:Key="ComboBoxEditableTextBox"
+        TargetType="{x:Type TextBox}">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="AllowDrop" Value="true" />
         <Setter Property="MinWidth" Value="0" />
@@ -214,7 +239,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <ScrollViewer x:Name="PART_ContentHost"
+                    <ScrollViewer
+                        x:Name="PART_ContentHost"
                         Background="Transparent"
                         Focusable="false"
                         HorizontalScrollBarVisibility="Hidden"
@@ -226,8 +252,11 @@
     <!--#endregion-->
 
     <!--#region ComboBox-->
-    <ControlTemplate x:Key="ComboBoxTemplate" TargetType="{x:Type ComboBox}">
-        <Grid x:Name="templateRoot"
+    <ControlTemplate
+        x:Key="ComboBoxTemplate"
+        TargetType="{x:Type ComboBox}">
+        <Grid
+            x:Name="templateRoot"
             SnapsToDevicePixels="true">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -235,7 +264,8 @@
                     Width="Auto"
                     MinWidth="20" />
             </Grid.ColumnDefinitions>
-            <Popup x:Name="PART_Popup"
+            <Popup
+                x:Name="PART_Popup"
                 Grid.ColumnSpan="2"
                 Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid}}"
                 Margin="1"
@@ -243,24 +273,29 @@
                 IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
                 Placement="Bottom"
                 PopupAnimation="Slide">
-                <Border x:Name="dropDownBorder"
+                <Border
+                    x:Name="dropDownBorder"
                     Background="{StaticResource WhiteSolidColorBrush}"
                     BorderBrush="{StaticResource LightHoveredSolidColorBrush}"
                     BorderThickness="1.4">
                     <ScrollViewer x:Name="DropDownScrollViewer">
-                        <Grid x:Name="grid"
+                        <Grid
+                            x:Name="grid"
                             RenderOptions.ClearTypeHint="Enabled">
-                            <Canvas x:Name="canvas"
+                            <Canvas
+                                x:Name="canvas"
                                 Width="0"
                                 Height="0"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Top">
-                                <Rectangle x:Name="opaqueRect"
+                                <Rectangle
+                                    x:Name="opaqueRect"
                                     Width="{Binding ActualWidth, ElementName=dropDownBorder}"
                                     Height="{Binding ActualHeight, ElementName=dropDownBorder}"
                                     Fill="{Binding Background, ElementName=dropDownBorder}" />
                             </Canvas>
-                            <ItemsPresenter x:Name="ItemsPresenter"
+                            <ItemsPresenter
+                                x:Name="ItemsPresenter"
                                 KeyboardNavigation.DirectionalNavigation="Contained"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </Grid>
@@ -268,14 +303,16 @@
                 </Border>
             </Popup>
 
-            <ToggleButton x:Name="toggleButton"
+            <ToggleButton
+                x:Name="toggleButton"
                 Grid.ColumnSpan="2"
                 Margin="0"
                 HorizontalContentAlignment="Right"
                 IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
                 Style="{StaticResource BootstrapUIComboBoxToggleButton}" />
 
-            <ContentPresenter x:Name="contentPresenter"
+            <ContentPresenter
+                x:Name="contentPresenter"
                 Margin="{TemplateBinding Padding}"
                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -304,7 +341,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
+    <Style
+        x:Key="ComboBoxStyle"
+        TargetType="{x:Type ComboBox}">
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="Foreground" Value="{StaticResource DarkHoveredSolidColorBrush}" />
@@ -327,7 +366,11 @@
 
     <!--#endregion-->
 
-    <Style BasedOn="{StaticResource ComboBoxItemStyle}" TargetType="{x:Type ComboBoxItem}" />
-    <Style BasedOn="{StaticResource ComboBoxStyle}" TargetType="{x:Type ComboBox}" />
+    <Style
+        BasedOn="{StaticResource ComboBoxItemStyle}"
+        TargetType="{x:Type ComboBoxItem}" />
+    <Style
+        BasedOn="{StaticResource ComboBoxStyle}"
+        TargetType="{x:Type ComboBox}" />
 
 </ResourceDictionary>

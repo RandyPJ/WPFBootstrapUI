@@ -14,12 +14,13 @@ namespace WPFBootstrapUI.ControlsAssists
     /// <summary>
     /// The PasswordBox control's assistant
     /// </summary>
-    public class PasswordBoxAssist
+    public class PasswordBoxAssist : DependencyObject
     {
-        private static PasswordBox PasswordBox;
-        public PasswordBoxAssist()
+        private readonly PasswordBox _passwordBox;
+
+        public PasswordBoxAssist(PasswordBox passwordBox)
         {
-            PasswordBox = new PasswordBox();
+            _passwordBox = passwordBox;
         }
 
         public static readonly DependencyProperty AttachProperty = DependencyProperty.RegisterAttached("Attach", typeof(bool), typeof(PasswordBoxAssist), new PropertyMetadata(false,OnAttachChanged));
@@ -29,7 +30,6 @@ namespace WPFBootstrapUI.ControlsAssists
         public static readonly DependencyProperty CanShowPasswordProperty = DependencyProperty.RegisterAttached("CanShowPassword", typeof(bool), typeof(PasswordBoxAssist), new PropertyMetadata(false));
         public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.RegisterAttached("PlaceHolder", typeof(string), typeof(PasswordBoxAssist), new PropertyMetadata(string.Empty));
         public static readonly DependencyProperty AttachHelperButtonProperty = DependencyProperty.RegisterAttached("AttachHelperButton", typeof(bool), typeof(PasswordBoxAssist), new PropertyMetadata(false, OnAttachedChanged));
-
 
         public static bool GetAttach(DependencyObject obj)
         {
@@ -60,26 +60,6 @@ namespace WPFBootstrapUI.ControlsAssists
         {
             obj.SetValue(TextProperty, value);
         }
-
-        private static void OnTextPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            PasswordBox passwordBox = (PasswordBox)d;
-
-            passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
-
-            string newValue = (string)e.NewValue;
-
-            if (!(bool)GetIsMonitoring(passwordBox))
-            {
-                passwordBox.Password = newValue;
-            }
-            passwordBox.PasswordChanged += PasswordBox_PasswordChanged;
-
-            SetHasText(passwordBox, passwordBox.Password.Length > 0);
-            SetCanShowPassword(passwordBox, passwordBox.Password.Length < 0);
-            ToggleShowPasswordButtonContent = !(passwordBox.Password.Length > 0);
-        }
-
 
         public static bool GetHasText(DependencyObject obj)
         {
@@ -123,17 +103,17 @@ namespace WPFBootstrapUI.ControlsAssists
 
         private static void OnAttachChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            PasswordBox = (PasswordBox)d;
+            PasswordBox passwordBox = (PasswordBox)d;
 
-            if (PasswordBox == null)
+            if (passwordBox == null)
                 return;
 
             if ((bool)e.OldValue)
-                PasswordBox.PasswordChanged -= PasswordBox_PasswordChanged;
+                passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
 
 
             if ((bool)e.NewValue)
-                PasswordBox.PasswordChanged += PasswordBox_PasswordChanged;
+                passwordBox.PasswordChanged += PasswordBox_PasswordChanged;
         }
 
         private static void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
@@ -144,12 +124,36 @@ namespace WPFBootstrapUI.ControlsAssists
             SetText(passwordBox, passwordBox.Password);
             SetIsMonitoring(passwordBox, false);
         }
-     
+
+        private static void OnTextPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            PasswordBox passwordBox = (PasswordBox)d;
+
+            passwordBox.PasswordChanged -= PasswordBox_PasswordChanged;
+
+            string newValue = (string)e.NewValue;
+
+            if (!(bool)GetIsMonitoring(passwordBox))
+            {
+                passwordBox.Password = newValue;
+            }
+
+            SetHasText(passwordBox, passwordBox.Password.Length > 0);
+            SetCanShowPassword(passwordBox, passwordBox.Password.Length < 0);
+            ToggleShowPasswordButtonContent = !(passwordBox.Password.Length > 0);
+
+            passwordBox.PasswordChanged += PasswordBox_PasswordChanged;
+        }
+
         private static void OnAttachedChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             Button button = (Button)d;
 
-            button.Click -= ButtonClicked;
+            if (button == null)
+                return;
+
+            if ((bool)e.NewValue)
+                button.Click -= ButtonClicked;
 
             if ((bool)e.NewValue)
                 button.Click += ButtonClicked;
@@ -161,10 +165,15 @@ namespace WPFBootstrapUI.ControlsAssists
 
         private static void ButtonClicked(object sender, RoutedEventArgs e)
         {
-            ToggleShowPasswordButtonContent ^= true; 
+            Button button = (Button)sender;
 
-            if (GetHasText(PasswordBox))
-                SetCanShowPassword(PasswordBox, ToggleShowPasswordButtonContent);
+            ToggleShowPasswordButtonContent ^= true;
+
+            if (button.TemplatedParent is PasswordBox passwordBox)
+            {
+                if (GetHasText(passwordBox))
+                    SetCanShowPassword(passwordBox, ToggleShowPasswordButtonContent);
+            }
         }
     }
 }

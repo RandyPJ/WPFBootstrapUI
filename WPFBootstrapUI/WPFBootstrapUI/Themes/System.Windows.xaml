@@ -21,5 +21,8 @@
         <ResourceDictionary Source="../Styles/TabControlStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListBoxStyles.xaml" />
         <ResourceDictionary Source="../Styles/ListViewStyles.xaml" />
+        <ResourceDictionary Source="../Styles/SeparatorStyles.xaml" />
+        <ResourceDictionary Source="../Styles/JumbotronStyles.xaml" />
+        <ResourceDictionary Source="../Styles/ModalStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

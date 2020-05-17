@@ -327,7 +327,6 @@
         <Setter Property="Template" Value="{StaticResource TabControlTemplate}" />
     </Style>
 
-
     <Style
         BasedOn="{StaticResource tabcontrol-primary}"
         TargetType="{x:Type TabControl}" />

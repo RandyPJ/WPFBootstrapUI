@@ -1,12 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-    <PropertyGroup>
-      <TargetFrameworks>net45;net451;net46;net471;net472;net48</TargetFrameworks>
+ 
+	<PropertyGroup>
+      <TargetFrameworks>net45;net451;net46;net461;net471;net472;net48</TargetFrameworks>
       <UseWPF>true</UseWPF>
       <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
       <RootNamespace>WPFBootstrapUI</RootNamespace>
       <AssemblyName>WPFBootstrapUI</AssemblyName>
       <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
       <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+	    <LangVersion>8.0</LangVersion>
 
       <!--Nuget Information-->
       <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +33,7 @@
       <Compile Include="Controls\BootstrapWindow.cs" />
       <Compile Include="Controls\Card.cs" />
       <Compile Include="Controls\CardChildPanel.cs" />
+      <Compile Include="Controls\Modal.cs" />
       <Compile Include="Controls\PopOver.cs" />
       <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
       <Compile Include="Properties\AssemblyInfo.cs" />

@@ -3,7 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ControlTemplate x:Key="ToolTipControlTemplate" TargetType="{x:Type ToolTip}">
+    <ControlTemplate
+        x:Key="ToolTipControlTemplate"
+        TargetType="{x:Type ToolTip}">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -17,7 +19,8 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <Path x:Name="TopPath"
+            <Path
+                x:Name="TopPath"
                 Grid.Row="0"
                 Grid.ColumnSpan="3"
                 Margin="0"
@@ -27,7 +30,8 @@
                 Stroke="{TemplateBinding BorderBrush}"
                 Visibility="Collapsed" />
 
-            <Border x:Name="mainborder"
+            <Border
+                x:Name="mainborder"
                 Grid.Row="1"
                 Grid.Column="1"
                 Margin="0"
@@ -38,12 +42,14 @@
                 CornerRadius="5"
                 DockPanel.Dock="Right"
                 UseLayoutRounding="True">
-                <ContentPresenter x:Name="Content"
+                <ContentPresenter
+                    x:Name="Content"
                     HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                     VerticalAlignment="{TemplateBinding VerticalAlignment}" />
             </Border>
 
-            <Path x:Name="LeftPath"
+            <Path
+                x:Name="LeftPath"
                 Grid.Row="1"
                 Grid.Column="0"
                 Margin="0"
@@ -53,7 +59,8 @@
                 Stroke="{TemplateBinding BorderBrush}"
                 Visibility="Collapsed" />
 
-            <Path x:Name="RightPath"
+            <Path
+                x:Name="RightPath"
                 Grid.Row="1"
                 Grid.Column="2"
                 Margin="0"
@@ -63,7 +70,8 @@
                 Stroke="{TemplateBinding BorderBrush}"
                 Visibility="Collapsed" />
 
-            <Path x:Name="BottomPath"
+            <Path
+                x:Name="BottomPath"
                 Grid.Row="2"
                 Grid.ColumnSpan="3"
                 Margin="0"
@@ -93,7 +101,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="tooltip-dark" TargetType="{x:Type ToolTip}">
+    <Style
+        x:Key="tooltip-dark"
+        TargetType="{x:Type ToolTip}">
         <Setter Property="MinWidth" Value="100" />
         <Setter Property="Panel.ZIndex" Value="2" />
         <Setter Property="Padding" Value="10,5" />
@@ -109,5 +119,7 @@
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style BasedOn="{StaticResource tooltip-dark}" TargetType="{x:Type ToolTip}" />
+    <Style
+        BasedOn="{StaticResource tooltip-dark}"
+        TargetType="{x:Type ToolTip}" />
 </ResourceDictionary>

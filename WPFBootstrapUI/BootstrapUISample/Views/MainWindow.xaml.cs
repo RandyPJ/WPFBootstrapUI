@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
+using WPFBootstrapUI.Controls;
 
 namespace BootstrapUISample
 {

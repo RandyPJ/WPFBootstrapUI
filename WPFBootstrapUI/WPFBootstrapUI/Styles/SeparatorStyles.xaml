@@ -1,0 +1,95 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
+
+    <ControlTemplate
+        x:Key="SeparatorControlTemplate"
+        TargetType="{x:Type Separator}">
+        <Border
+            Height="1"
+            Background="{TemplateBinding Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+            SnapsToDevicePixels="true" />
+    </ControlTemplate>
+
+    <Style
+        x:Key="separator-primary"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+    <Style
+        x:Key="separator-secondary"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource SecondaryHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+    <Style
+        x:Key="separator-success"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource SuccessHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+    <Style
+        x:Key="separator-danger"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource DangerHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+    <Style
+        x:Key="separator-warning"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource WarningHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+    <Style
+        x:Key="separator-info"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource InfoHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+    <Style
+        x:Key="separator-dark"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource DarkHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+    <Style
+        x:Key="separator-light"
+        TargetType="{x:Type Separator}">
+        <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
+        <Setter Property="Margin" Value="0,2,0,2" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template" Value="{StaticResource SeparatorControlTemplate}" />
+    </Style>
+
+
+
+    <Style
+        BasedOn="{StaticResource separator-light}"
+        TargetType="{x:Type Separator}" />
+
+</ResourceDictionary>

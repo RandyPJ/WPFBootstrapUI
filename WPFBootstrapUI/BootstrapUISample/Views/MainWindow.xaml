@@ -720,7 +720,6 @@
         </TabItem>
 
         <TabItem Header="Button">
-
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -1021,12 +1020,11 @@
                     ToolTipService.Placement="Bottom" />
 
                 <ComboBox Grid.Row="1">
-                    <ComboBoxItem Content="1adlsabfldsafblsahdfsadf" />
-                    <ComboBoxItem Content="2 asdfasdfasdfasdfasd" />
-                    <ComboBoxItem Content="3 asdfasdfasdfasdf" />
-                    <ComboBoxItem Content="4 asdfasdfasdf" />
-                    <ComboBoxItem Content="5 adsfasdfsafd" />
-                    <ComboBoxItem Content="6 asdfasdfsadf" />
+                    <ComboBoxItem Content="First item" />
+                    <ComboBoxItem Content="Second item" />
+                    <ComboBoxItem Content="Third item" />
+                    <ComboBoxItem Content="Forth item" />
+                    <ComboBoxItem Content="Fifth item" />
                 </ComboBox>
             </Grid>
 
@@ -1247,7 +1245,7 @@
                     Grid.Row="1"
                     Width="100"
                     Content="Hola"
-                    PopOverText="Holadsafasdfasdf asdfa sfasd fasdfa sdasd f mundo"
+                    PopOverText="This is a simple popover"
                     PopupPlacement="Bottom"
                     Style="{StaticResource popover-primary}" />
             </Grid>
@@ -1308,6 +1306,33 @@
                     <ListViewItem>Hola</ListViewItem>
                     <ListViewItem>Hola</ListViewItem>
                 </ListView>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Modal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Content="Modal"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <bootstrap:Modal
+                    x:Name="MyModal"
+                    Title="Modal title"
+                    Grid.Row="1"
+                    AcceptButtonText="Aceptar"
+                    CancelButtonText="Cancelar"
+                    Message="My message"
+                    Show="False" />
             </Grid>
         </TabItem>
     </TabControl>
