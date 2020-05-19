@@ -33,7 +33,9 @@
       <Compile Include="Controls\BootstrapWindow.cs" />
       <Compile Include="Controls\Card.cs" />
       <Compile Include="Controls\CardChildPanel.cs" />
-      <Compile Include="Controls\Modal.cs" />
+      <Compile Include="Controls\Modals\Modal.cs" />
+      <Compile Include="Controls\Modals\ModalMananger.cs" />
+      <Compile Include="Controls\Modals\ModalResult.cs" />
       <Compile Include="Controls\PopOver.cs" />
       <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
       <Compile Include="Properties\AssemblyInfo.cs" />

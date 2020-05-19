@@ -1325,14 +1325,11 @@
                     FontWeight="Light"
                     ToolTipService.Placement="Bottom" />
 
-                <bootstrap:Modal
-                    x:Name="MyModal"
-                    Title="Modal title"
+                <Button
                     Grid.Row="1"
-                    AcceptButtonText="Aceptar"
-                    CancelButtonText="Cancelar"
-                    Message="My message"
-                    Show="False" />
+                    Width="140"
+                    Click="Button_Click"
+                    Content="Show Modal" />
             </Grid>
         </TabItem>
     </TabControl>

@@ -67,7 +67,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="WPFBootstrapUI, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WPFBootstrapUI\bin\Release\net472\WPFBootstrapUI.dll</HintPath>
+      <HintPath>..\WPFBootstrapUI\bin\Debug\net472\WPFBootstrapUI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

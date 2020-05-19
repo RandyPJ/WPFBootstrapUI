@@ -158,7 +158,6 @@
         x:Key="LightBlueControlBorderBrush"
         Color="{StaticResource LightBlueControlColor}" />
 
-
     <Color x:Key="JumbotronColor">#E9ECEF</Color>
     <SolidColorBrush
         x:Key="JumbotronSolidColorBrush"

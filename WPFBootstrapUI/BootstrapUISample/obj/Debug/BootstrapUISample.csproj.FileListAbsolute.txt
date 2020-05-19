@@ -19,7 +19,6 @@ C:\Users\usuario\source\repos\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.bam
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\BootstrapUISample.exe.config
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\BootstrapUISample.exe
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\BootstrapUISample.pdb
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.dll
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample_MarkupCompile.cache
@@ -46,3 +45,4 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\D
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\Views\MainWindow.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\Views\MainWindow.baml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.dll

@@ -4,7 +4,6 @@
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="ButtonStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
@@ -31,14 +30,14 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="6" />
+                            CornerRadius="4" />
                         <ContentPresenter
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                             Content="{TemplateBinding Content}" />
                     </Grid>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
+                        <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="MainBorder" Property="BorderBrush" Value="{StaticResource DarkSolidColorBrush}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -50,15 +49,15 @@
     <Style TargetType="{x:Type Controls:Modal}">
         <Setter Property="BorderBrush" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
+        <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Controls:Modal}">
                     <Border
                         x:Name="MainBorder"
-                        MinWidth="400"
-                        MinHeight="500"
-                        MaxWidth="1000"
-                        MaxHeight="Infinity"
+                        Background="{TemplateBinding Background}"
                         BorderBrush="LightGray"
                         BorderThickness="1"
                         CornerRadius="6">
@@ -66,37 +65,45 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition
                                     x:Name="HeaderRow"
-                                    Height="Auto" />
+                                    Height="Auto"
+                                    MaxHeight="75" />
                                 <RowDefinition
                                     x:Name="BodyRow"
-                                    Height="Auto" />
+                                    Height="*" />
                                 <RowDefinition
                                     x:Name="FooterRow"
                                     Height="Auto" />
                             </Grid.RowDefinitions>
+
                             <Border
                                 x:Name="PART_HeaderBorder"
-                                Grid.Row="0"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="0,0,0,1.2">
-                                <Grid>
+                                <Grid
+                                    Grid.Row="0"
+                                    Height="75"
+                                    MaxHeight="75">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
+
                                     <TextBlock
                                         x:Name="PART_Title"
                                         Grid.Column="0"
                                         Margin="10,0,0,0"
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Center"
-                                        FontFamily="{StaticResource SegoeUI}"
-                                        FontSize="{StaticResource Font.Size.Title}"
+                                        FontFamily="{TemplateBinding FontFamily}"
+                                        FontSize="20"
                                         FontWeight="SemiBold"
                                         Text="{TemplateBinding Title}" />
+
                                     <Button
                                         x:Name="PART_CloseButton"
                                         Grid.Column="1"
+                                        Height="70"
+                                        VerticalAlignment="Top"
                                         Foreground="{TemplateBinding Foreground}"
                                         Style="{StaticResource ModalCloseButton}">
                                         <Button.Content>
@@ -113,7 +120,8 @@
                             <ScrollViewer
                                 x:Name="PART_MessageScrollViewer"
                                 Grid.Row="1"
-                                MinHeight="90"
+                                Height="116"
+                                MinHeight="116"
                                 FocusVisualStyle="{x:Null}"
                                 Focusable="False"
                                 HorizontalScrollBarVisibility="Disabled"
@@ -121,6 +129,8 @@
                                 <TextBlock
                                     x:Name="PART_TextBlockMessage"
                                     Margin="10,5"
+                                    FontFamily="{TemplateBinding FontFamily}"
+                                    FontSize="{StaticResource Font.Size.Content}"
                                     Text="{Binding Message, RelativeSource={RelativeSource TemplatedParent}}"
                                     TextWrapping="Wrap" />
                             </ScrollViewer>
@@ -130,19 +140,29 @@
                                 Grid.Row="2"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="0,1.2,0,0">
-                                <StackPanel
+                                <Grid
                                     Margin="10"
                                     HorizontalAlignment="Right"
-                                    Orientation="Horizontal">
+                                    VerticalAlignment="Bottom">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
                                     <Button
                                         x:Name="PART_AcceptButton"
+                                        Grid.Column="0"
+                                        VerticalAlignment="Center"
                                         Content="{Binding AcceptButtonText, RelativeSource={RelativeSource TemplatedParent}}"
                                         Style="{StaticResource btn-primary}" />
+
                                     <Button
                                         x:Name="PART_CancelButton"
+                                        Grid.Column="1"
+                                        VerticalAlignment="Center"
                                         Content="{Binding CancelButtonText, RelativeSource={RelativeSource TemplatedParent}}"
                                         Style="{StaticResource btn-secondary}" />
-                                </StackPanel>
+                                </Grid>
                             </Border>
                         </Grid>
                     </Border>
