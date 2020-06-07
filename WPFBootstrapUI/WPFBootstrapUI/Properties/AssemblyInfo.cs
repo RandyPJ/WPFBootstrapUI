@@ -11,7 +11,7 @@ using System.Windows.Markup;
 [assembly: AssemblyTitle("WPFBootstrapUI")]
 [assembly: AssemblyDescription("The Bootstrap UI like for WPF.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany(".Randy")]
 [assembly: AssemblyProduct("WPFBootstrapUI")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
@@ -30,5 +30,5 @@ using System.Windows.Markup;
 [assembly: XmlnsPrefix("http://wpfbootstrapui.com/2019/ui/wpf", "bootstrap")]
 
 
-[assembly: AssemblyVersion("1.0.0.6")]
-[assembly: AssemblyFileVersion("1.0.0.6")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

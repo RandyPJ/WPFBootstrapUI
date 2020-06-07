@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
-using WPFBootstrapUI.Controls;
 using WPFBootstrapUI.Controls.Modals;
 
 namespace BootstrapUISample
@@ -13,103 +12,22 @@ namespace BootstrapUISample
         public MainWindow()
         {
             InitializeComponent();
-            //myListView.ItemsSource = GetList();
         }
 
         private List<Persona> GetList()
         {
             return new List<Persona>() 
             {
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" },
-                new Persona() { Nombre = "Randy Manuel Pena Jimenez" }
+                new Persona() { Nombre = "Steve Jobbs" },
+                new Persona() { Nombre = "Bill Gates" },
+                new Persona() { Nombre = "Mark Zuckerberg" },
+                new Persona() { Nombre = "Scott Hanshelman" }
             };
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           ModalMananger.ShowModal(this,"Modal","Mensajesasadfbdsaf asdf asdfas dasd f" +
-               "asdf asdfa sdfasdf asdfas asd asdf asdfas dafsdf asdfasd asdf asdf asd" +
-               "asd fasdf asdfa sdasdf asdf asdfa sdfas fasd fasdf a sfa sdasd fasd fasdf asdf" +
-               "asd fasdf asdf asd fasdfasdfadsf sahdfasdfisadfkhsadbfkhsadfksadbfkjsadbfkjsadfsadfsadf" +
-               "asdfasdfasdfasdfasdfsadfasdfsadfasgsadgsadgfasdfasdfasdfasdfasdfasdfasdfasdfsadfsadf.dsafdsafasdf" +
-               "asdfsadfsadfasdfasdfasdfasdfasdfsadfbsaidbfsadf" +
-               "sadfasd" +
-               "fsa" +
-               "dfa" +
-               "sdf" +
-               "sad" +
-               "fsadfsadfsad" +
-               "fsad" +
-               "f" +
-               "sadf" +
-               "sad" +
-               "fas" +
-               "df" +
-               "sad" +
-               "fsa" +
-               "df" +
-               "ads" +
-               "fas" +
-               "df" +
-               "asd" +
-               "f" +
-               "sadf" +
-               "sad" +
-               "fsa" +
-               "df" +
-               "asd" +
-               "fsa" +
-               "df" +
-               "sad" +
-               "fasd" +
-               "f" +
-               "sadf" +
-               "sa" +
-               "df" +
-               "sad" +
-               "fdsa" +
-               "f" +
-               "sadf" +
-               "sad" +
-               "fa" +
-               "sdf" +
-               "asd" +
-               "fa" +
-               "sdf" +
-               "sa" +
-               "df" +
-               "sadf" +
-               "asd" +
-               "fa" +
-               "dsf" +
-               "asd" +
-               "fa" +
-               "sdf" +
-               "sad" +
-               "fa" +
-               "sdf" +
-               "asd" +
-               "fa" +
-               "sdf" +
-               "sad" +
-               "fa" +
-               "sdf" +
-               "sad" +
-               "f" +
-               "dsfsadfsadfasdfasdfasdfasdgafdsgsdfgdsfgdsfg" +
-               "sdfgsdfgdsfgsdfgdsfgsdfgsdfgdsfgsdfgsdfg" +
-               "sdfgdsfgdsfgsdfgdsfgdsfgdsfgsdfgdsfgdsfgsdfgsdfg" +
-               "sdfgdsfgdsfgdsfgsdfgsdfgsdfgsdfgdsfgdsfgerewrgerg" +
-               "sfdgsdfgdsfgsdfgsdfgdsfgdsfgdsfgdsfgdsfgdsfgdsfgdsfg" +
-               "sdfgsdfgdsfgdsfgsdfgdsfgdsfgdsfgsdfgdsfgdsfgdsfgdsfgsdfgdf" +
-               "sdafsadfasdfasdfasdf","Aceptar","Cancelar");
+            ModalResult resultado = ModalService.ShowModal(this, "Modal", "This is a modal", "Aceptar", "Cancelar", true);
         }
     }
 }

@@ -89,9 +89,7 @@
                     FontSize="60"
                     FontWeight="Light" />
 
-                <StackPanel
-                    Grid.Row="1"
-                    Orientation="Horizontal">
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
                     <bootstrap:Badge
                         Grid.Row="1"
                         Margin="3"
@@ -159,9 +157,7 @@
                     FontFamily="{StaticResource SegoeUI}"
                     FontSize="60"
                     FontWeight="Light" />
-                <StackPanel
-                    Grid.Row="3"
-                    Orientation="Horizontal">
+                <StackPanel Grid.Row="3" Orientation="Horizontal">
                     <bootstrap:Badge
                         Grid.Row="1"
                         Margin="3"
@@ -275,9 +271,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-primary}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-primary}">
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
@@ -327,9 +321,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-secondary}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-secondary}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -381,9 +373,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-success}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-success}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -435,9 +425,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-danger}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-danger}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -489,9 +477,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-warning}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-warning}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -543,9 +529,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-info}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-info}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -597,9 +581,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-dark}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-dark}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -651,9 +633,7 @@
                                 </bootstrap:CardChildPanel.Content>
                             </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-light}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -688,9 +668,7 @@
                     Style="{StaticResource card-light}">
                     <bootstrap:Card.Content>
                         <Grid>
-                            <bootstrap:CardChildPanel
-                                Grid.Row="1"
-                                Style="{StaticResource card-body-light}">
+                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
                                 <bootstrap:CardChildPanel.Content>
                                     <Grid>
                                         <Grid.RowDefinitions>
@@ -725,9 +703,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Grid
-                    Grid.Row="0"
-                    HorizontalAlignment="Center">
+                <Grid Grid.Row="0" HorizontalAlignment="Center">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
@@ -906,13 +882,9 @@
                     FontSize="60"
                     FontWeight="Light" />
 
-                <TextBox
-                    Grid.Row="1"
-                    bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
+                <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
 
-                <TextBox
-                    Grid.Row="2"
-                    bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
+                <TextBox Grid.Row="2" bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
             </Grid>
         </TabItem>
 
@@ -1126,22 +1098,16 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <TextBox
-                            Grid.Row="0"
-                            bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
+                        <TextBox Grid.Row="0" bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
 
-                        <TextBox
-                            Grid.Row="1"
-                            bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
+                        <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
 
                         <CheckBox
                             Grid.Row="2"
                             HorizontalAlignment="Left"
                             Content="Activo" />
 
-                        <StackPanel
-                            Grid.Row="3"
-                            Orientation="Horizontal">
+                        <StackPanel Grid.Row="3" Orientation="Horizontal">
                             <Button
                                 HorizontalAlignment="Left"
                                 Content="Guardar"
@@ -1268,9 +1234,7 @@
 
                 <ListBox Grid.Row="1">
                     <ListBox.Resources>
-                        <Style
-                            BasedOn="{StaticResource listboxitem-success}"
-                            TargetType="{x:Type ListBoxItem}" />
+                        <Style BasedOn="{StaticResource listboxitem-success}" TargetType="{x:Type ListBoxItem}" />
                     </ListBox.Resources>
                     <ListBoxItem>Hola</ListBoxItem>
                     <ListBoxItem>Hola</ListBoxItem>
@@ -1297,9 +1261,7 @@
                     FontWeight="Light"
                     ToolTipService.Placement="Bottom" />
 
-                <ListView
-                    x:Name="myListView"
-                    Grid.Row="1">
+                <ListView x:Name="myListView" Grid.Row="1">
                     <ListViewItem>Hola</ListViewItem>
                     <ListViewItem>Hola</ListViewItem>
                     <ListViewItem>Hola</ListViewItem>

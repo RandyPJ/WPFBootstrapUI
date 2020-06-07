@@ -2,15 +2,16 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
+    xmlns:Converter="clr-namespace:WPFBootstrapUI.Converters"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="ButtonStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style
-        x:Key="ModalCloseButton"
-        TargetType="{x:Type Button}">
+    <Converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+    <Style x:Key="ModalCloseButton" TargetType="{x:Type Button}">
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
@@ -67,22 +68,15 @@
                                     x:Name="HeaderRow"
                                     Height="Auto"
                                     MaxHeight="75" />
-                                <RowDefinition
-                                    x:Name="BodyRow"
-                                    Height="*" />
-                                <RowDefinition
-                                    x:Name="FooterRow"
-                                    Height="Auto" />
+                                <RowDefinition x:Name="BodyRow" Height="*" />
+                                <RowDefinition x:Name="FooterRow" Height="Auto" />
                             </Grid.RowDefinitions>
 
                             <Border
                                 x:Name="PART_HeaderBorder"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="0,0,0,1.2">
-                                <Grid
-                                    Grid.Row="0"
-                                    Height="75"
-                                    MaxHeight="75">
+                                <Grid Grid.Row="0">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
@@ -120,8 +114,6 @@
                             <ScrollViewer
                                 x:Name="PART_MessageScrollViewer"
                                 Grid.Row="1"
-                                Height="116"
-                                MinHeight="116"
                                 FocusVisualStyle="{x:Null}"
                                 Focusable="False"
                                 HorizontalScrollBarVisibility="Disabled"
@@ -161,7 +153,8 @@
                                         Grid.Column="1"
                                         VerticalAlignment="Center"
                                         Content="{Binding CancelButtonText, RelativeSource={RelativeSource TemplatedParent}}"
-                                        Style="{StaticResource btn-secondary}" />
+                                        Style="{StaticResource btn-secondary}"
+                                        Visibility="{Binding IsDesition, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BooleanToVisibilityConverter}}" />
                                 </Grid>
                             </Border>
                         </Grid>

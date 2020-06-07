@@ -13,13 +13,16 @@
       <!--Nuget Information-->
       <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
       <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
-      <Authors>.Randy</Authors>
-      <RepositoryUrl>https://github.com/RandyPJ/WPFBootstrapUI</RepositoryUrl>
-      <PackageTags>Bootstrap UI WPF</PackageTags>
-      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-      <PackageReleaseNotes>Stable and recommended version.  Some bugs fixed.</PackageReleaseNotes>
-      <PackageVersion>1.0.0.6</PackageVersion>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Title>WPFBootstrapUI</Title>
+	  <PackageVersion>1.0.0.7</PackageVersion>
+	  <Description>The Bootstrap UI like for WPF.</Description>
+      <PackageProjectUrl>https://github.com/RandyPJ/WPFBootstrapUI</PackageProjectUrl>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <RepositoryUrl>https://github.com/RandyPJ/WPFBootstrapUI</RepositoryUrl>
+      <RepositoryType>Public</RepositoryType>
+      <PackageTags>WPF .NET Bootstrap Desktop</PackageTags>
+      <PackageReleaseNotes>New controls: PasswordBox and Modal dialog.</PackageReleaseNotes>
     </PropertyGroup>
   
     <ItemGroup>
@@ -34,7 +37,7 @@
       <Compile Include="Controls\Card.cs" />
       <Compile Include="Controls\CardChildPanel.cs" />
       <Compile Include="Controls\Modals\Modal.cs" />
-      <Compile Include="Controls\Modals\ModalMananger.cs" />
+      <Compile Include="Controls\Modals\ModalService.cs" />
       <Compile Include="Controls\Modals\ModalResult.cs" />
       <Compile Include="Controls\PopOver.cs" />
       <Compile Include="Converters\BooleanToVisibilityConverter.cs" />

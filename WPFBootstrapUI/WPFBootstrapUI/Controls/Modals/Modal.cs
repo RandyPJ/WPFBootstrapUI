@@ -42,7 +42,7 @@ namespace WPFBootstrapUI.Controls
             this.Height = 280;
 
             this.Owner = ownerWindow;
-            this.WindowStartupLocation = ownerWindow.WindowStartupLocation;
+            this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             this.WindowStyle = WindowStyle.None;
             this.AllowsTransparency = true;
         }
@@ -55,9 +55,12 @@ namespace WPFBootstrapUI.Controls
             this.AcceptButton = GetTemplateChild(acceptButtonName) as Button;
             this.CancelButton = GetTemplateChild(cancelButtonName) as Button;
 
-            this.CloseButton.Click += CloseButton_Click;
-            this.AcceptButton.Click += AcceptButton_Click;
-            this.CancelButton.Click += CancelButton_Click;
+            UnHookHandlers();
+
+            if (CloseButton != null && AcceptButton != null && CancelButton != null)
+                HookUpHandlers();
+            else
+                throw new InvalidOperationException("An error occured while applying the template to the modal control.");
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
@@ -80,10 +83,21 @@ namespace WPFBootstrapUI.Controls
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Owner.Dispatcher.Invoke(new Action(() => { this.Close(); }));
+            this.Owner.Dispatcher.Invoke(new Action(() => 
+            {
+                this.ModalResult = ModalResult.None;
+                this.Close(); }
+            ));
         }
 
-        private void CleanUpHandlers()
+        private void HookUpHandlers()
+        {
+            this.CloseButton.Click += CloseButton_Click;
+            this.AcceptButton.Click += AcceptButton_Click;
+            this.CancelButton.Click += CancelButton_Click;
+        }
+
+        private void UnHookHandlers()
         {
             this.CloseButton.Click -= CloseButton_Click;
             this.AcceptButton.Click -= AcceptButton_Click;
@@ -118,5 +132,14 @@ namespace WPFBootstrapUI.Controls
         
         public static readonly DependencyProperty CancelButtonTextProperty =
             DependencyProperty.Register("CancelButtonText", typeof(string), typeof(Modal), new PropertyMetadata(string.Empty));
+
+        public bool IsDesition
+        {
+            get { return (bool)GetValue(IsDesitionProperty); }
+            set { SetValue(IsDesitionProperty, value); }
+        }
+
+        public static readonly DependencyProperty IsDesitionProperty =
+            DependencyProperty.Register("IsDesition", typeof(bool), typeof(Modal), new PropertyMetadata(false));
     }
 }

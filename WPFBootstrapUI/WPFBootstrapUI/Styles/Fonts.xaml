@@ -9,7 +9,7 @@
     <System:Double x:Key="Font.Size.Title">30</System:Double>
     <System:Double x:Key="Font.Size.SubHeader">25</System:Double>
     <System:Double x:Key="Font.Size.Default">14</System:Double>
-    <System:Double x:Key="Font.Size.Content">13</System:Double>
+    <System:Double x:Key="Font.Size.Content">14</System:Double>
     <System:Double x:Key="Font.Size.TabItem">26.67</System:Double>
     <System:Double x:Key="Font.Size.Button">10</System:Double>
     <System:Double x:Key="Font.Size.Control">18</System:Double>

@@ -44,5 +44,5 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\D
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\System.ValueTuple.xml
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\Views\MainWindow.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\Views\MainWindow.baml
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.csprojAssemblyReference.cache
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.dll
+C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.csprojAssemblyReference.cache
