@@ -5,9 +5,7 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <!--  Card  -->
-    <ControlTemplate
-        x:Key="CardControlTemplate"
-        TargetType="{x:Type Controls:Card}">
+    <ControlTemplate x:Key="CardControlTemplate" TargetType="{x:Type Controls:Card}">
         <Grid
             Background="Transparent"
             SnapsToDevicePixels="True"
@@ -27,9 +25,7 @@
         </Grid>
     </ControlTemplate>
 
-    <Style
-        x:Key="card-white"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-white" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -41,9 +37,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-light"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-light" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -55,9 +49,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-primary"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-primary" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -69,9 +61,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-secondary"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-secondary" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -83,9 +73,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-success"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-success" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -97,9 +85,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-danger"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-danger" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -111,9 +97,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-warning"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-warning" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -125,9 +109,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-info"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-info" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -139,9 +121,7 @@
         <Setter Property="Template" Value="{StaticResource CardControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-dark"
-        TargetType="{x:Type Controls:Card}">
+    <Style x:Key="card-dark" TargetType="{x:Type Controls:Card}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -156,9 +136,7 @@
 
 
     <!--  CardChildPanel  -->
-    <ControlTemplate
-        x:Key="CardChildPanelControlTemplate"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <ControlTemplate x:Key="CardChildPanelControlTemplate" TargetType="{x:Type Controls:CardChildPanel}">
         <Grid SnapsToDevicePixels="True">
             <Border
                 Background="{TemplateBinding Background}"
@@ -171,9 +149,7 @@
         </Grid>
     </ControlTemplate>
 
-    <Style
-        x:Key="card-header-light"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-light" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
@@ -184,22 +160,18 @@
         <Setter Property="TextBlock.Foreground" Value="{StaticResource DarkHoveredSolidColorBrush}" />
     </Style>
 
-    <Style
-        x:Key="card-header-primary"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-primary" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
-        <Setter Property="BorderBrush" Value="{StaticResource PrimaryHoveredSolidColorBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryDarkHoveredSolidColorBrush}" />
         <Setter Property="BorderThickness" Value="0,0,0,1.4" />
         <Setter Property="Height" Value="58" />
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
         <Setter Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style
-        x:Key="card-header-secondary"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-secondary" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
@@ -210,9 +182,7 @@
         <Setter Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style
-        x:Key="card-header-success"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-success" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
@@ -223,9 +193,7 @@
         <Setter Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style
-        x:Key="card-header-danger"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-danger" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
@@ -236,9 +204,7 @@
         <Setter Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style
-        x:Key="card-header-warning"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-warning" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
@@ -249,9 +215,7 @@
         <Setter Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style
-        x:Key="card-header-info"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-info" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource InfoSolidColorBrush}" />
@@ -262,9 +226,7 @@
         <Setter Property="TextBlock.Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style
-        x:Key="card-header-dark"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-header-dark" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
@@ -277,9 +239,7 @@
 
 
 
-    <Style
-        x:Key="card-body-white"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-white" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -289,9 +249,7 @@
     </Style>
 
 
-    <Style
-        x:Key="card-body-light"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-light" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -300,9 +258,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-body-primary"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-primary" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -311,9 +267,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-body-secondary"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-secondary" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -322,9 +276,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-body-success"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-success" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -333,9 +285,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-body-danger"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-danger" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -344,9 +294,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-body-warning"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-warning" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -355,9 +303,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-body-info"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-info" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -366,9 +312,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-body-dark"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-body-dark" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Top" />
         <Setter Property="Margin" Value="10" />
@@ -384,9 +328,7 @@
 
 
 
-    <Style
-        x:Key="card-footer-light"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-light" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -397,9 +339,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-footer-primary"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-primary" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -410,9 +350,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-footer-secondary"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-secondary" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -423,9 +361,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-footer-success"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-success" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -436,9 +372,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-footer-danger"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-danger" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -449,9 +383,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-footer-warning"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-warning" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -462,9 +394,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-footer-info"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-info" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -475,9 +405,7 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="card-footer-dark"
-        TargetType="{x:Type Controls:CardChildPanel}">
+    <Style x:Key="card-footer-dark" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Height" Value="58" />
@@ -488,7 +416,5 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource card-light}"
-        TargetType="{x:Type Controls:Card}" />
+    <Style BasedOn="{StaticResource card-light}" TargetType="{x:Type Controls:Card}" />
 </ResourceDictionary>

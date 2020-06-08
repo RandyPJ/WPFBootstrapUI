@@ -15,61 +15,64 @@
 
     <TabControl Margin="5">
         <TabItem Header="Alert">
-            <StackPanel ScrollViewer.VerticalScrollBarVisibility="Auto">
-                <Label
-                    HorizontalAlignment="Center"
-                    Content="Alerts"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTip="Hola"
-                    ToolTipService.Placement="Bottom" />
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Label
+                        HorizontalAlignment="Center"
+                        Content="Alerts"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTip="Hola"
+                        ToolTipService.Placement="Bottom" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Primary"
-                    IsAlertDismissible="True"
-                    Style="{StaticResource alert-primary}" />
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Primary"
+                        IsAlertDismissible="True"
+                        Style="{StaticResource alert-primary}" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Secondary"
-                    IsAlertDismissible="True"
-                    Style="{StaticResource alert-secondary}" />
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Secondary"
+                        IsAlertDismissible="True"
+                        Style="{StaticResource alert-secondary}" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Success"
-                    IsAlertDismissible="True"
-                    Style="{StaticResource alert-success}" />
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Success"
+                        IsAlertDismissible="True"
+                        Style="{StaticResource alert-success}" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Danger"
-                    IsAlertDismissible="True"
-                    Style="{StaticResource alert-danger}" />
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Danger"
+                        IsAlertDismissible="True"
+                        Style="{StaticResource alert-danger}" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Warning"
-                    IsAlertDismissible="True"
-                    Style="{StaticResource alert-warning}" />
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Warning"
+                        IsAlertDismissible="True"
+                        Style="{StaticResource alert-warning}" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Info"
-                    Style="{StaticResource alert-info}" />
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Info"
+                        Style="{StaticResource alert-info}" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Light"
-                    Style="{StaticResource alert-light}" />
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Light"
+                        Style="{StaticResource alert-light}" />
 
-                <bootstrap:Alert
-                    Margin="10"
-                    Content="Alert Dark"
-                    Style="{StaticResource alert-dark}" />
-            </StackPanel>
+                    <bootstrap:Alert
+                        Margin="10"
+                        Content="Alert Dark"
+                        Style="{StaticResource alert-dark}" />
+                </StackPanel>
+            </ScrollViewer>
+
         </TabItem>
 
         <TabItem Header="Badge">
@@ -221,108 +224,58 @@
         </TabItem>
 
         <TabItem Header="Card">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
-                <Label
-                    Grid.Row="0"
-                    Grid.ColumnSpan="3"
-                    Margin="20"
-                    HorizontalAlignment="Center"
-                    Content="Card"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light" />
+                    <Label
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        Margin="20"
+                        HorizontalAlignment="Center"
+                        Content="Card"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light" />
 
-                <bootstrap:Card
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-primary}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                    <bootstrap:Card
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-primary}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-primary}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-primary}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-primary}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
-
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-light}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
-
-                <bootstrap:Card
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-secondary}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-secondary}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-secondary}">
-                                <bootstrap:CardChildPanel.Content>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-primary}">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
@@ -341,359 +294,411 @@
                                             Content="Go somewhere"
                                             Style="{StaticResource btn-light}" />
                                     </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
 
-                <bootstrap:Card
-                    Grid.Row="3"
-                    Grid.Column="0"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-success}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                    <bootstrap:Card
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-secondary}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-success}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-success}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-secondary}">
+                                    <bootstrap:CardChildPanel.Content>
                                         <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-light}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-secondary}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
 
-                <bootstrap:Card
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-danger}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-danger}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-light}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
 
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-danger}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                    <bootstrap:Card
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-success}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-success}">
+                                    <bootstrap:CardChildPanel.Content>
                                         <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-light}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-success}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
 
-                <bootstrap:Card
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-warning}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-warning}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-light}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
 
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-warning}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                    <bootstrap:Card
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-danger}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-danger}">
+                                    <bootstrap:CardChildPanel.Content>
                                         <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-light}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-danger}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
 
-                <bootstrap:Card
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-info}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-info}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-light}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
 
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-info}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                    <bootstrap:Card
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-warning}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-warning}">
+                                    <bootstrap:CardChildPanel.Content>
                                         <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-light}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-warning}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
 
-                <bootstrap:Card
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-dark}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-dark}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-light}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
 
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-dark}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                    <bootstrap:Card
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-info}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-info}">
+                                    <bootstrap:CardChildPanel.Content>
                                         <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-light}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-info}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
 
-                <bootstrap:Card
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-light}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
 
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-light}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-light}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
 
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                    <bootstrap:Card
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-dark}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-dark}">
+                                    <bootstrap:CardChildPanel.Content>
                                         <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-primary}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-dark}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
 
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
 
-                <bootstrap:Card
-                    Grid.Row="3"
-                    Grid.Column="2"
-                    Width="500"
-                    Margin="10"
-                    Style="{StaticResource card-light}">
-                    <bootstrap:Card.Content>
-                        <Grid>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-light}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
 
+                    <bootstrap:Card
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-light}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-light}">
+                                    <bootstrap:CardChildPanel.Content>
                                         <TextBlock
-                                            Grid.Row="0"
-                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                            TextWrapping="Wrap" />
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
 
-                                        <Button
-                                            Grid.Row="1"
-                                            Margin="0,10,0,0"
-                                            HorizontalAlignment="Left"
-                                            Content="Go somewhere"
-                                            Style="{StaticResource btn-primary}" />
-                                    </Grid>
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                        </Grid>
-                    </bootstrap:Card.Content>
-                </bootstrap:Card>
-            </Grid>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
+
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-primary}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
+
+
+                    <bootstrap:Card
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Width="500"
+                        Margin="10"
+                        Style="{StaticResource card-light}">
+                        <bootstrap:Card.Content>
+                            <Grid>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock
+                                                Grid.Row="0"
+                                                Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                                TextWrapping="Wrap" />
+
+                                            <Button
+                                                Grid.Row="1"
+                                                Margin="0,10,0,0"
+                                                HorizontalAlignment="Left"
+                                                Content="Go somewhere"
+                                                Style="{StaticResource btn-primary}" />
+                                        </Grid>
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                            </Grid>
+                        </bootstrap:Card.Content>
+                    </bootstrap:Card>
+                </Grid>
+            </ScrollViewer>
 
         </TabItem>
 

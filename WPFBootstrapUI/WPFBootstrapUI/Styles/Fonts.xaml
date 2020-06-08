@@ -12,7 +12,7 @@
     <System:Double x:Key="Font.Size.Content">14</System:Double>
     <System:Double x:Key="Font.Size.TabItem">26.67</System:Double>
     <System:Double x:Key="Font.Size.Button">10</System:Double>
-    <System:Double x:Key="Font.Size.Control">18</System:Double>
+    <System:Double x:Key="Font.Size.Control">14</System:Double>
     <System:Double x:Key="Font.Size.Tooltip">12</System:Double>
     <System:Double x:Key="Font.Size.Menu">14</System:Double>
     <System:Double x:Key="Font.Size.ContextMenu">14</System:Double>

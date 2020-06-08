@@ -4,9 +4,7 @@
     xmlns:Assist="clr-namespace:WPFBootstrapUI.ControlsAssists"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ControlTemplate
-        x:Key="TextBoxControlTemplate"
-        TargetType="{x:Type TextBoxBase}">
+    <ControlTemplate x:Key="TextBoxControlTemplate" TargetType="{x:Type TextBoxBase}">
         <Border
             x:Name="OutterBorder"
             BorderBrush="Transparent"
@@ -71,11 +69,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="textbox-primary"
-        TargetType="{x:Type TextBoxBase}">
+    <Style x:Key="textbox-primary" TargetType="{x:Type TextBoxBase}">
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
-        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontSize" Value="{StaticResource Font.Size.Control}" />
         <Setter Property="Padding" Value="10" />
         <Setter Property="Cursor" Value="IBeam" />
         <Setter Property="Height" Value="Auto" />
@@ -85,7 +81,5 @@
         <Setter Property="Template" Value="{StaticResource TextBoxControlTemplate}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource textbox-primary}"
-        TargetType="{x:Type TextBox}" />
+    <Style BasedOn="{StaticResource textbox-primary}" TargetType="{x:Type TextBox}" />
 </ResourceDictionary>

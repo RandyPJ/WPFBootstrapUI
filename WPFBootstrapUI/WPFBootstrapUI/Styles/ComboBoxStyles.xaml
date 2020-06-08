@@ -4,9 +4,7 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <!--#region ComboBoxItemStyle-->
-    <ControlTemplate
-        x:Key="ComboBoxItemTemplate"
-        TargetType="{x:Type ComboBoxItem}">
+    <ControlTemplate x:Key="ComboBoxItemTemplate" TargetType="{x:Type ComboBoxItem}">
         <Grid>
             <Border
                 x:Name="Bd"
@@ -49,11 +47,10 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="ComboBoxItemStyle"
-        TargetType="{x:Type ComboBoxItem}">
+    <Style x:Key="ComboBoxItemStyle" TargetType="{x:Type ComboBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,1" />
+        <Setter Property="FontSize" Value="{StaticResource Font.Size.Control}" />
         <Setter Property="Foreground" Value="{StaticResource DarkHoveredSolidColorBrush}" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -66,9 +63,7 @@
     <!--#endregion-->
 
     <!--#region Toggle Button-->
-    <ControlTemplate
-        x:Key="BootstrapUIComboBoxToggleButtonTemplate"
-        TargetType="{x:Type ToggleButton}">
+    <ControlTemplate x:Key="BootstrapUIComboBoxToggleButtonTemplate" TargetType="{x:Type ToggleButton}">
         <Grid SnapsToDevicePixels="True">
             <Border
                 x:Name="OutterBorder"
@@ -90,9 +85,7 @@
                         Height="15"
                         Margin="0,-8,14,0"
                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
-                        <Path
-                            Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                            Fill="Black" />
+                        <Path Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" Fill="Black" />
                     </Canvas>
                 </Border>
             </Border>
@@ -114,9 +107,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="BootstrapUIComboBoxToggleButton"
-        TargetType="{x:Type ToggleButton}">
+    <Style x:Key="BootstrapUIComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
         <Setter Property="IsTabStop" Value="false" />
         <Setter Property="Focusable" Value="false" />
         <Setter Property="ClickMode" Value="Press" />
@@ -127,17 +118,11 @@
     <!--#endregion-->
 
     <!--#region ComboBox Editable-->
-    <ControlTemplate
-        x:Key="ComboBoxEditableTemplate"
-        TargetType="{x:Type ComboBox}">
-        <Grid
-            x:Name="templateRoot"
-            SnapsToDevicePixels="true">
+    <ControlTemplate x:Key="ComboBoxEditableTemplate" TargetType="{x:Type ComboBox}">
+        <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition
-                    Width="0"
-                    MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
+                <ColumnDefinition Width="0" MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
             </Grid.ColumnDefinitions>
 
             <Popup
@@ -153,9 +138,7 @@
                     BorderBrush="{StaticResource AlertPrimarySolidColorBrush}"
                     BorderThickness="1.4">
                     <ScrollViewer x:Name="DropDownScrollViewer">
-                        <Grid
-                            x:Name="grid"
-                            RenderOptions.ClearTypeHint="Enabled">
+                        <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
                             <Canvas
                                 x:Name="canvas"
                                 Width="0"
@@ -226,13 +209,12 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="ComboBoxEditableTextBox"
-        TargetType="{x:Type TextBox}">
+    <Style x:Key="ComboBoxEditableTextBox" TargetType="{x:Type TextBox}">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="AllowDrop" Value="true" />
         <Setter Property="MinWidth" Value="0" />
         <Setter Property="MinHeight" Value="0" />
+        <Setter Property="FontSize" Value="{StaticResource Font.Size.Control}" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
         <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
@@ -252,17 +234,11 @@
     <!--#endregion-->
 
     <!--#region ComboBox-->
-    <ControlTemplate
-        x:Key="ComboBoxTemplate"
-        TargetType="{x:Type ComboBox}">
-        <Grid
-            x:Name="templateRoot"
-            SnapsToDevicePixels="true">
+    <ControlTemplate x:Key="ComboBoxTemplate" TargetType="{x:Type ComboBox}">
+        <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition
-                    Width="Auto"
-                    MinWidth="20" />
+                <ColumnDefinition Width="Auto" MinWidth="20" />
             </Grid.ColumnDefinitions>
             <Popup
                 x:Name="PART_Popup"
@@ -279,9 +255,7 @@
                     BorderBrush="{StaticResource LightHoveredSolidColorBrush}"
                     BorderThickness="1.4">
                     <ScrollViewer x:Name="DropDownScrollViewer">
-                        <Grid
-                            x:Name="grid"
-                            RenderOptions.ClearTypeHint="Enabled">
+                        <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
                             <Canvas
                                 x:Name="canvas"
                                 Width="0"
@@ -341,9 +315,8 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="ComboBoxStyle"
-        TargetType="{x:Type ComboBox}">
+    <Style x:Key="ComboBoxStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="FontSize" Value="{StaticResource Font.Size.Control}" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="Foreground" Value="{StaticResource DarkHoveredSolidColorBrush}" />
@@ -366,11 +339,7 @@
 
     <!--#endregion-->
 
-    <Style
-        BasedOn="{StaticResource ComboBoxItemStyle}"
-        TargetType="{x:Type ComboBoxItem}" />
-    <Style
-        BasedOn="{StaticResource ComboBoxStyle}"
-        TargetType="{x:Type ComboBox}" />
+    <Style BasedOn="{StaticResource ComboBoxItemStyle}" TargetType="{x:Type ComboBoxItem}" />
+    <Style BasedOn="{StaticResource ComboBoxStyle}" TargetType="{x:Type ComboBox}" />
 
 </ResourceDictionary>
