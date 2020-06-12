@@ -42,8 +42,7 @@
                                     <DoubleAnimation
                                         RepeatBehavior="Forever"
                                         Storyboard.TargetName="rotation"
-                                        Storyboard.TargetProperty="(RotateTransform.Angle)"
-                                        From="0"
+                                        Storyboard.TargetProperty="Angle"
                                         To="360"
                                         Duration="0:0:0.9" />
                                 </Storyboard>
@@ -122,27 +121,41 @@
                     Fill="{TemplateBinding Background}"
                     IsHitTestVisible="False"
                     RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <ScaleTransform x:Name="scaling" CenterX="0" CenterY="0" ScaleX="0" ScaleY="0" />
+                    </Ellipse.RenderTransform>
                     <Ellipse.Triggers>
                         <EventTrigger RoutedEvent="Loaded">
                             <BeginStoryboard>
                                 <Storyboard>
                                     <DoubleAnimation
+                                        RepeatBehavior="Forever"
+                                        Storyboard.TargetName="scaling"
+                                        Storyboard.TargetProperty="ScaleX"
+                                        To="1.02"
+                                        Duration="0:0:0.73" />
+
+                                    <DoubleAnimation
+                                        RepeatBehavior="Forever"
+                                        Storyboard.TargetName="scaling"
+                                        Storyboard.TargetProperty="ScaleY"
+                                        To="1.02"
+                                        Duration="0:0:0.73" />
+
+                                    <DoubleAnimation
                                         AccelerationRatio="0.4"
-                                        AutoReverse="True"
                                         DecelerationRatio="0.4"
                                         RepeatBehavior="Forever"
                                         Storyboard.TargetName="myellipse"
                                         Storyboard.TargetProperty="Opacity"
                                         From="1"
                                         To="0"
-                                        Duration="0:0:0.3" />
+                                        Duration="0:0:0.73" />
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
                     </Ellipse.Triggers>
                 </Ellipse>
-
-
             </Canvas>
         </Grid>
     </ControlTemplate>
@@ -158,6 +171,41 @@
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource SpinnerGrowingControlTemplate}" />
+    </Style>
+
+    <Style x:Key="spinner-danger-grow" TargetType="{x:Type Controls:Spinner}">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource SpinnerGrowingControlTemplate}" />
+    </Style>
+
+    <Style x:Key="spinner-success-grow" TargetType="{x:Type Controls:Spinner}">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource SpinnerGrowingControlTemplate}" />
+    </Style>
+
+    <Style x:Key="spinner-warning-grow" TargetType="{x:Type Controls:Spinner}">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource SpinnerGrowingControlTemplate}" />
+    </Style>
+
+    <Style x:Key="spinner-light-grow" TargetType="{x:Type Controls:Spinner}">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource SpinnerGrowingControlTemplate}" />
+    </Style>
+
+    <Style x:Key="spinner-dark-grow" TargetType="{x:Type Controls:Spinner}">
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource SpinnerGrowingControlTemplate}" />
     </Style>
 

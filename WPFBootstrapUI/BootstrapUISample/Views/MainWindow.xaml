@@ -1181,6 +1181,11 @@
                     Orientation="Horizontal">
                     <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-primary-grow}" />
                     <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-secondary-grow}" />
+                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-danger-grow}" />
+                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-success-grow}" />
+                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-warning-grow}" />
+                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-light-grow}" />
+                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-dark-grow}" />
                 </StackPanel>
             </Grid>
         </TabItem>
