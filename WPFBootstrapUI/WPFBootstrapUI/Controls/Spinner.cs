@@ -13,7 +13,6 @@ namespace WPFBootstrapUI.Controls
         public static readonly DependencyProperty DoSpinProperty =
            DependencyProperty.Register("DoSpin", typeof(bool), typeof(Spinner), new PropertyMetadata(false));
 
-        
         public static readonly DependencyProperty StrokeThicknessProperty =
            DependencyProperty.Register("StrokeThickness", typeof(double), typeof(Spinner), new PropertyMetadata(0d));
 

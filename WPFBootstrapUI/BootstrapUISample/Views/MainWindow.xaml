@@ -1139,10 +1139,11 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <Label
-                    x:Name="mylabel"
                     Grid.Row="0"
                     HorizontalAlignment="Center"
                     Content="Spinner"
@@ -1163,6 +1164,23 @@
                     <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-warning}" />
                     <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-light}" />
                     <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-dark}" />
+                </StackPanel>
+
+                <Label
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    Content="Spinner grow"
+                    FontFamily="{StaticResource SegoeUI}"
+                    FontSize="60"
+                    FontWeight="Light"
+                    ToolTipService.Placement="Bottom" />
+
+                <StackPanel
+                    Grid.Row="3"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-primary-grow}" />
+                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-secondary-grow}" />
                 </StackPanel>
             </Grid>
         </TabItem>
