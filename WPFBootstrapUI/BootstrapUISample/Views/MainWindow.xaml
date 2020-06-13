@@ -1175,6 +1175,7 @@
                     FontWeight="Light"
                     ToolTipService.Placement="Bottom" />
 
+
                 <StackPanel
                     Grid.Row="3"
                     HorizontalAlignment="Center"
