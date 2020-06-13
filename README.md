@@ -1,6 +1,6 @@
 # WPFBootstrapUI
 
-The Bootstrap like UI for WPF.
+The Bootstrap UI for WPF.
 
 ### **Features**
 
