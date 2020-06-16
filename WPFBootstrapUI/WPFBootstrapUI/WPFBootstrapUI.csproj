@@ -15,14 +15,15 @@
       <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <Title>WPFBootstrapUI</Title>
-	  <PackageVersion>1.0.0.7</PackageVersion>
-	  <Description>The Bootstrap UI like for WPF.</Description>
+	  <PackageVersion>1.0.0.8</PackageVersion>
+	  <Description>The Bootstrap UI for WPF.</Description>
       <PackageProjectUrl>https://github.com/RandyPJ/WPFBootstrapUI</PackageProjectUrl>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <RepositoryUrl>https://github.com/RandyPJ/WPFBootstrapUI</RepositoryUrl>
       <RepositoryType>Public</RepositoryType>
       <PackageTags>WPF .NET Bootstrap Desktop</PackageTags>
-      <PackageReleaseNotes>New controls: PasswordBox and Modal dialog.</PackageReleaseNotes>
+      <PackageReleaseNotes>New control: Spinner. Border improvements to (card, button and other controls).</PackageReleaseNotes>
+      <Authors>.Randy</Authors>
     </PropertyGroup>
   
     <ItemGroup>

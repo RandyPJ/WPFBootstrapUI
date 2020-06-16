@@ -5,54 +5,90 @@
     xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
+    <!--#region Animations-->
+    <!--  Rotation animation  -->
+    <Storyboard x:Key="Rotation">
+        <DoubleAnimation
+            RepeatBehavior="Forever"
+            Storyboard.TargetName="rotation"
+            Storyboard.TargetProperty="Angle"
+            To="360"
+            Duration="0:0:0.9" />
+    </Storyboard>
+
+    <!--  Growing animation  -->
+    <Storyboard x:Key="Growing">
+        <DoubleAnimation
+            RepeatBehavior="Forever"
+            Storyboard.TargetName="scaling"
+            Storyboard.TargetProperty="ScaleX"
+            To="1.02"
+            Duration="0:0:0.73" />
+
+        <DoubleAnimation
+            RepeatBehavior="Forever"
+            Storyboard.TargetName="scaling"
+            Storyboard.TargetProperty="ScaleY"
+            To="1.02"
+            Duration="0:0:0.73" />
+
+        <DoubleAnimation
+            AccelerationRatio="0.4"
+            DecelerationRatio="0.4"
+            RepeatBehavior="Forever"
+            Storyboard.TargetName="myellipse"
+            Storyboard.TargetProperty="Opacity"
+            From="1"
+            To="0"
+            Duration="0:0:0.73" />
+    </Storyboard>
+
+
+    <!--#endregion-->
+
+
+
     <!--  Normal Spinners  -->
     <ControlTemplate x:Key="SpinnerControlTemplate" TargetType="{x:Type Controls:Spinner}">
         <Grid Margin="0">
-            <Viewbox Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
-                <Path
-                    Margin="0"
-                    RenderTransformOrigin="0.5,0.5"
-                    Stroke="{TemplateBinding Background}"
-                    StrokeThickness="{TemplateBinding StrokeThickness}">
-                    <Path.RenderTransform>
-                        <RotateTransform x:Name="rotation" />
-                    </Path.RenderTransform>
-                    <Path.Data>
-                        <PathGeometry PresentationOptions:Freeze="True">
-                            <PathGeometry.Figures>
-                                <PathFigure IsClosed="False" StartPoint="50,0">
-                                    <PathFigure.Segments>
-                                        <ArcSegment
-                                            IsLargeArc="True"
-                                            Point="10,10"
-                                            Size="50,50"
-                                            SweepDirection="Clockwise" />
-                                    </PathFigure.Segments>
-                                </PathFigure>
-                            </PathGeometry.Figures>
-                        </PathGeometry>
-                    </Path.Data>
-                    <Path.Triggers>
-                        <EventTrigger RoutedEvent="Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <DoubleAnimation
-                                        RepeatBehavior="Forever"
-                                        Storyboard.TargetName="rotation"
-                                        Storyboard.TargetProperty="Angle"
-                                        To="360"
-                                        Duration="0:0:0.9" />
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Path.Triggers>
-                </Path>
-            </Viewbox>
+            <Path
+                Margin="0"
+                RenderTransformOrigin="0.5,0.5"
+                Stretch="Uniform"
+                Stroke="{TemplateBinding Background}"
+                StrokeThickness="{TemplateBinding StrokeThickness}">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="rotation" Angle="0" CenterX="0" CenterY="0" />
+                </Path.RenderTransform>
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigure IsClosed="False" StartPoint="50,0">
+                                <PathFigure.Segments>
+                                    <ArcSegment
+                                        IsLargeArc="True"
+                                        Point="10,10"
+                                        Size="50,50"
+                                        SweepDirection="Clockwise" />
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard x:Name="BeginRotation" Storyboard="{StaticResource Rotation}" />
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="Unloaded">
+                        <RemoveStoryboard BeginStoryboardName="BeginRotation" />
+                    </EventTrigger>
+                </Path.Triggers>
+            </Path>
         </Grid>
     </ControlTemplate>
 
     <Style x:Key="spinner-primary" TargetType="{x:Type Controls:Spinner}">
-        <Setter Property="StrokeThickness" Value="14" />
+        <Setter Property="StrokeThickness" Value="5" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
@@ -60,7 +96,7 @@
     </Style>
 
     <Style x:Key="spinner-secondary" TargetType="{x:Type Controls:Spinner}">
-        <Setter Property="StrokeThickness" Value="14" />
+        <Setter Property="StrokeThickness" Value="5" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
@@ -68,7 +104,7 @@
     </Style>
 
     <Style x:Key="spinner-danger" TargetType="{x:Type Controls:Spinner}">
-        <Setter Property="StrokeThickness" Value="14" />
+        <Setter Property="StrokeThickness" Value="5" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
@@ -76,7 +112,7 @@
     </Style>
 
     <Style x:Key="spinner-success" TargetType="{x:Type Controls:Spinner}">
-        <Setter Property="StrokeThickness" Value="14" />
+        <Setter Property="StrokeThickness" Value="5" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
@@ -84,7 +120,7 @@
     </Style>
 
     <Style x:Key="spinner-warning" TargetType="{x:Type Controls:Spinner}">
-        <Setter Property="StrokeThickness" Value="14" />
+        <Setter Property="StrokeThickness" Value="5" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
@@ -92,7 +128,7 @@
     </Style>
 
     <Style x:Key="spinner-light" TargetType="{x:Type Controls:Spinner}">
-        <Setter Property="StrokeThickness" Value="14" />
+        <Setter Property="StrokeThickness" Value="5" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
@@ -100,7 +136,7 @@
     </Style>
 
     <Style x:Key="spinner-dark" TargetType="{x:Type Controls:Spinner}">
-        <Setter Property="StrokeThickness" Value="14" />
+        <Setter Property="StrokeThickness" Value="5" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="40" />
         <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
@@ -115,7 +151,6 @@
                     x:Name="myellipse"
                     Width="{TemplateBinding Height}"
                     Height="{TemplateBinding Width}"
-                    PresentationOptions:Freeze="True"
                     Fill="{TemplateBinding Background}"
                     IsHitTestVisible="False"
                     RenderTransformOrigin="0.5,0.5">
@@ -124,33 +159,10 @@
                     </Ellipse.RenderTransform>
                     <Ellipse.Triggers>
                         <EventTrigger RoutedEvent="Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <DoubleAnimation
-                                        RepeatBehavior="Forever"
-                                        Storyboard.TargetName="scaling"
-                                        Storyboard.TargetProperty="ScaleX"
-                                        To="1.02"
-                                        Duration="0:0:0.73" />
-
-                                    <DoubleAnimation
-                                        RepeatBehavior="Forever"
-                                        Storyboard.TargetName="scaling"
-                                        Storyboard.TargetProperty="ScaleY"
-                                        To="1.02"
-                                        Duration="0:0:0.73" />
-
-                                    <DoubleAnimation
-                                        AccelerationRatio="0.4"
-                                        DecelerationRatio="0.4"
-                                        RepeatBehavior="Forever"
-                                        Storyboard.TargetName="myellipse"
-                                        Storyboard.TargetProperty="Opacity"
-                                        From="1"
-                                        To="0"
-                                        Duration="0:0:0.73" />
-                                </Storyboard>
-                            </BeginStoryboard>
+                            <BeginStoryboard x:Name="BeginGrowing" Storyboard="{StaticResource Growing}" />
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Unloaded">
+                            <RemoveStoryboard BeginStoryboardName="BeginGrowing" />
                         </EventTrigger>
                     </Ellipse.Triggers>
                 </Ellipse>
