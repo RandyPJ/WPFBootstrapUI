@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace WPFBootstrapUI.ControlsAssists
@@ -46,12 +45,10 @@ namespace WPFBootstrapUI.ControlsAssists
             obj.SetValue(IsMonitoringProperty, value);
         }
 
-        private static void OnPlaceHolderPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnPlaceHolderPropertyChanged(DependencyObject element, DependencyPropertyChangedEventArgs e)
         {
-            TextBox textBox = (TextBox)d;
-
             if (!string.IsNullOrEmpty(e.NewValue.ToString()))
-                SetIsMonitoring(textBox, true);
+                SetIsMonitoring(((TextBox)element), true);
         }
 
         private static void OnIsMonitoringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -67,7 +64,7 @@ namespace WPFBootstrapUI.ControlsAssists
 
         private static void Textbox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
+            TextBox textBox = sender as TextBox;
             SetHasText(textBox, textBox.Text.Length > 0);
         }
     }

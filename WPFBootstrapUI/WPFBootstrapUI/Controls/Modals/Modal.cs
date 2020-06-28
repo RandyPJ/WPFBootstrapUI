@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Effects;
-using System.Windows.Threading;
 using WPFBootstrapUI.Controls.Modals;
 
 namespace WPFBootstrapUI.Controls
@@ -112,7 +104,6 @@ namespace WPFBootstrapUI.Controls
 
         public static readonly DependencyProperty MessageProperty =
             DependencyProperty.Register("Message", typeof(string), typeof(Modal), new PropertyMetadata(string.Empty));
-
 
         public string AcceptButtonText
         {

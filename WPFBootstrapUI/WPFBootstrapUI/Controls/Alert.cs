@@ -67,11 +67,10 @@ namespace WPFBootstrapUI.Controls
             obj.SetValue(AlertDismissButtonForegroundProperty, value);
         }
      
-        private static void OnAlertAssistDismissForegroundChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnAlertAssistDismissForegroundChanged(DependencyObject element, DependencyPropertyChangedEventArgs e)
         {
-            Button button = (Button)d;
             if (e.NewValue != e.OldValue)
-                button.Foreground = (Brush)e.NewValue;
+                ((Button)element).Foreground = (Brush)e.NewValue;
         }
     }
 }

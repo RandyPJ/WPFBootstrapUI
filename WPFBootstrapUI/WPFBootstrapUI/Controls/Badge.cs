@@ -14,8 +14,6 @@ namespace WPFBootstrapUI.Controls
 
         public static readonly DependencyProperty TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(Badge), new FrameworkPropertyMetadata(string.Empty));
         public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(Badge), new PropertyMetadata(new CornerRadius(0, 0, 0, 0)));
-        
-        
         public string Text
         {
             get { return (string)GetValue(TextProperty); }
