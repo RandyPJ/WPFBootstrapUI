@@ -37,6 +37,7 @@
       <Compile Include="Controls\BootstrapWindow.cs" />
       <Compile Include="Controls\Card.cs" />
       <Compile Include="Controls\CardChildPanel.cs" />
+      <Compile Include="Controls\Carousel.cs" />
       <Compile Include="Controls\Modals\Modal.cs" />
       <Compile Include="Controls\Modals\ModalService.cs" />
       <Compile Include="Controls\Modals\ModalResult.cs" />

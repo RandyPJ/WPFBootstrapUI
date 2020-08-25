@@ -33,9 +33,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="radiobutton-secondary"
-        TargetType="{x:Type RadioButton}">
+    <Style x:Key="radiobutton-secondary" TargetType="{x:Type RadioButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource DarkSolidColorBrush}" />
@@ -64,9 +62,7 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="100">
-                            <Grid
-                                x:Name="markGrid"
-                                Margin="2">
+                            <Grid x:Name="markGrid" Margin="2">
                                 <Ellipse
                                     x:Name="optionMark"
                                     MinWidth="10"
@@ -116,7 +112,5 @@
         </Setter>
     </Style>
 
-    <Style
-        BasedOn="{StaticResource radiobutton-secondary}"
-        TargetType="{x:Type RadioButton}" />
+    <Style BasedOn="{StaticResource radiobutton-secondary}" TargetType="{x:Type RadioButton}" />
 </ResourceDictionary>

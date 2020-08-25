@@ -3,9 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ControlTemplate
-        x:Key="TabControlTemplate"
-        TargetType="{x:Type TabControl}">
+    <ControlTemplate x:Key="TabControlTemplate" TargetType="{x:Type TabControl}">
         <Grid
             x:Name="templateRoot"
             ClipToBounds="true"
@@ -14,18 +12,12 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="ColumnDefinition0" />
-                <ColumnDefinition
-                    x:Name="ColumnDefinition1"
-                    Width="0" />
+                <ColumnDefinition x:Name="ColumnDefinition1" Width="0" />
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition
-                    x:Name="RowDefinition0"
-                    Height="Auto" />
-                <RowDefinition
-                    x:Name="RowDefinition1"
-                    Height="*" />
+                <RowDefinition x:Name="RowDefinition0" Height="Auto" />
+                <RowDefinition x:Name="RowDefinition1" Height="*" />
             </Grid.RowDefinitions>
 
             <TabPanel
@@ -94,12 +86,8 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <ControlTemplate
-        x:Key="TabItemControlTemplate"
-        TargetType="{x:Type TabItem}">
-        <Grid
-            x:Name="templateRoot"
-            SnapsToDevicePixels="true">
+    <ControlTemplate x:Key="TabItemControlTemplate" TargetType="{x:Type TabItem}">
+        <Grid x:Name="templateRoot" SnapsToDevicePixels="true">
             <Border
                 x:Name="mainBorder"
                 Margin="0"
@@ -299,9 +287,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="tabitem-primary"
-        TargetType="{x:Type TabItem}">
+    <Style x:Key="tabitem-primary" TargetType="{x:Type TabItem}">
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="FontSize" Value="18" />
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
@@ -313,9 +299,7 @@
         <Setter Property="Template" Value="{StaticResource TabItemControlTemplate}" />
     </Style>
 
-    <Style
-        x:Key="tabcontrol-primary"
-        TargetType="{x:Type TabControl}">
+    <Style x:Key="tabcontrol-primary" TargetType="{x:Type TabControl}">
         <Setter Property="Padding" Value="4" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -327,12 +311,8 @@
         <Setter Property="Template" Value="{StaticResource TabControlTemplate}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource tabcontrol-primary}"
-        TargetType="{x:Type TabControl}" />
-    <Style
-        BasedOn="{StaticResource tabitem-primary}"
-        TargetType="{x:Type TabItem}" />
+    <Style BasedOn="{StaticResource tabcontrol-primary}" TargetType="{x:Type TabControl}" />
+    <Style BasedOn="{StaticResource tabitem-primary}" TargetType="{x:Type TabItem}" />
 
 </ResourceDictionary>
 

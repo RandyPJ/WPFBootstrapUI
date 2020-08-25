@@ -18,9 +18,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="listboxitem-primary"
-        TargetType="{x:Type ListBoxItem}">
+    <Style x:Key="listboxitem-primary" TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -85,9 +83,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="listboxitem-secondary"
-        TargetType="{x:Type ListBoxItem}">
+    <Style x:Key="listboxitem-secondary" TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -152,9 +148,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="listboxitem-success"
-        TargetType="{x:Type ListBoxItem}">
+    <Style x:Key="listboxitem-success" TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -219,9 +213,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="listboxitem-danger"
-        TargetType="{x:Type ListBoxItem}">
+    <Style x:Key="listboxitem-danger" TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -286,9 +278,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="listboxitem-warning"
-        TargetType="{x:Type ListBoxItem}">
+    <Style x:Key="listboxitem-warning" TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -353,9 +343,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="listboxitem-info"
-        TargetType="{x:Type ListBoxItem}">
+    <Style x:Key="listboxitem-info" TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -420,9 +408,7 @@
         </Setter>
     </Style>
 
-    <Style
-        x:Key="listboxitem-dark"
-        TargetType="{x:Type ListBoxItem}">
+    <Style x:Key="listboxitem-dark" TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,4" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -487,9 +473,7 @@
         </Setter>
     </Style>
 
-    <ControlTemplate
-        x:Key="ListBoxControlTemplate"
-        TargetType="{x:Type ListBox}">
+    <ControlTemplate x:Key="ListBoxControlTemplate" TargetType="{x:Type ListBox}">
         <Border
             x:Name="Bd"
             Padding="1"
@@ -498,9 +482,7 @@
             BorderThickness="{TemplateBinding BorderThickness}"
             CornerRadius="6"
             SnapsToDevicePixels="true">
-            <ScrollViewer
-                Padding="{TemplateBinding Padding}"
-                Focusable="false">
+            <ScrollViewer Padding="{TemplateBinding Padding}" Focusable="false">
                 <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
             </ScrollViewer>
         </Border>
@@ -520,9 +502,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="listbox-primary"
-        TargetType="{x:Type ListBox}">
+    <Style x:Key="listbox-primary" TargetType="{x:Type ListBox}">
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="LightGray" />
         <Setter Property="BorderThickness" Value="1" />
@@ -538,11 +518,7 @@
         <Setter Property="Template" Value="{StaticResource ListBoxControlTemplate}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource listboxitem-primary}"
-        TargetType="{x:Type ListBoxItem}" />
-    <Style
-        BasedOn="{StaticResource listbox-primary}"
-        TargetType="{x:Type ListBox}" />
+    <Style BasedOn="{StaticResource listboxitem-primary}" TargetType="{x:Type ListBoxItem}" />
+    <Style BasedOn="{StaticResource listbox-primary}" TargetType="{x:Type ListBox}" />
 
 </ResourceDictionary>

@@ -15,7 +15,7 @@ namespace WPFBootstrapUI.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Alert), new FrameworkPropertyMetadata(typeof(Alert)));
         }
-        
+
         public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(Alert), new PropertyMetadata(new CornerRadius(2.0)));
         public static readonly DependencyProperty IsAlertDismissibleProperty = DependencyProperty.Register("IsAlertDismissible", typeof(bool), typeof(Alert), new PropertyMetadata(false));
         public static readonly DependencyProperty AlertDismissButtonForegroundProperty = DependencyProperty.RegisterAttached("AlertDismissButtonForeground", typeof(Brush), typeof(Alert), new PropertyMetadata(Brushes.Transparent, OnAlertAssistDismissForegroundChanged));

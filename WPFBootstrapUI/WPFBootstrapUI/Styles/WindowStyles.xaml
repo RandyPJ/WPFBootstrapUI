@@ -5,9 +5,7 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <!--#region Window commnad button-->
-    <ControlTemplate
-        x:Key="WindowCommandButtonTemplate"
-        TargetType="{x:Type Button}">
+    <ControlTemplate x:Key="WindowCommandButtonTemplate" TargetType="{x:Type Button}">
         <Grid Background="Transparent">
             <Border
                 x:Name="MouseOverBorder"
@@ -30,9 +28,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="WindowCommandButtonStyle"
-        TargetType="{x:Type Button}">
+    <Style x:Key="WindowCommandButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Height" Value="Auto" />
         <Setter Property="Width" Value="Auto" />
         <Setter Property="Background" Value="Transparent" />
@@ -52,9 +48,7 @@
     <!--#endregion-->
 
 
-    <ControlTemplate
-        x:Key="WindowTemplate"
-        TargetType="{x:Type Window}">
+    <ControlTemplate x:Key="WindowTemplate" TargetType="{x:Type Window}">
         <Border
             x:Name="RootBorder"
             BorderBrush="{StaticResource PrimarySolidColorBrush}"
@@ -66,9 +60,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
 
-                    <Rectangle
-                        Height="35"
-                        Fill="{StaticResource PrimarySolidColorBrush}" />
+                    <Rectangle Height="35" Fill="{StaticResource PrimarySolidColorBrush}" />
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -103,15 +95,9 @@
                             Grid.Column="3"
                             Click="OnMinimize"
                             Style="{StaticResource WindowCommandButtonStyle}">
-                            <Viewbox
-                                Width="16"
-                                Height="16">
-                                <Canvas
-                                    Width="16"
-                                    Height="16">
-                                    <Path
-                                        Data="M20,14H4V10H20"
-                                        Fill="{Binding ElementName=MinimizeButton, Path=Foreground}" />
+                            <Viewbox Width="16" Height="16">
+                                <Canvas Width="16" Height="16">
+                                    <Path Data="M20,14H4V10H20" Fill="{Binding ElementName=MinimizeButton, Path=Foreground}" />
                                 </Canvas>
                             </Viewbox>
                         </Button>
@@ -121,15 +107,9 @@
                             Grid.Column="4"
                             Click="OnRestoreMaximize"
                             Style="{StaticResource WindowCommandButtonStyle}">
-                            <Viewbox
-                                Width="16"
-                                Height="16">
-                                <Canvas
-                                    Width="16"
-                                    Height="16">
-                                    <Path
-                                        Data="M4,4H20V20H4V4M6,8V18H18V8H6Z"
-                                        Fill="{Binding ElementName=MaximizeRestoreButton, Path=Foreground}" />
+                            <Viewbox Width="16" Height="16">
+                                <Canvas Width="16" Height="16">
+                                    <Path Data="M4,4H20V20H4V4M6,8V18H18V8H6Z" Fill="{Binding ElementName=MaximizeRestoreButton, Path=Foreground}" />
                                 </Canvas>
                             </Viewbox>
                         </Button>
@@ -140,15 +120,9 @@
                             VerticalAlignment="Center"
                             Click="OnClose"
                             Style="{StaticResource WindowCommandButtonStyle}">
-                            <Viewbox
-                                Width="16"
-                                Height="16">
-                                <Canvas
-                                    Width="16"
-                                    Height="16">
-                                    <Path
-                                        Data="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
-                                        Fill="{Binding ElementName=CloseButton, Path=Foreground}" />
+                            <Viewbox Width="16" Height="16">
+                                <Canvas Width="16" Height="16">
+                                    <Path Data="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" Fill="{Binding ElementName=CloseButton, Path=Foreground}" />
                                 </Canvas>
                             </Viewbox>
                         </Button>
@@ -180,9 +154,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="window-primary"
-        TargetType="{x:Type Window}">
+    <Style x:Key="window-primary" TargetType="{x:Type Window}">
         <Setter Property="Background" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="BorderThickness" Value="0.8" />
