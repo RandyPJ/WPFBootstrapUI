@@ -180,4 +180,5 @@
     </Style>
 
     <Style BasedOn="{StaticResource alert-primary}" TargetType="{x:Type AlertControl:Alert}" />
+
 </ResourceDictionary>

@@ -719,9 +719,9 @@
                     FontSize="60"
                     FontWeight="Light" />
 
-                <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
+                <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="Your name" />
 
-                <TextBox Grid.Row="2" bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
+                <TextBox Grid.Row="2" bootstrap:TextBoxAssist.PlaceHolder="My name" />
             </Grid>
         </TabItem>
 
@@ -927,7 +927,7 @@
                     Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Grid}}"
                     Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Grid}}"
                     HorizontalAlignment="Center"
-                    Header="Datos del Paciente">
+                    Header="Information">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
@@ -937,23 +937,23 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <TextBox Grid.Row="0" bootstrap:TextBoxAssist.PlaceHolder="Nombre" />
+                        <TextBox Grid.Row="0" bootstrap:TextBoxAssist.PlaceHolder="Your name" />
 
-                        <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="Apellido" />
+                        <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="My name" />
 
                         <CheckBox
                             Grid.Row="2"
                             HorizontalAlignment="Left"
-                            Content="Activo" />
+                            Content="Active" />
 
                         <StackPanel Grid.Row="3" Orientation="Horizontal">
                             <Button
                                 HorizontalAlignment="Left"
-                                Content="Guardar"
+                                Content="Save"
                                 Style="{StaticResource btn-primary}" />
                             <Button
                                 HorizontalAlignment="Left"
-                                Content="Cancelar"
+                                Content="Cancel"
                                 Style="{StaticResource btn-danger}" />
                         </StackPanel>
                     </Grid>
@@ -1191,7 +1191,7 @@
             </Grid>
         </TabItem>
 
-        <TabItem Header="Carousel">
+        <!--<TabItem Header="Carousel">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -1212,6 +1212,6 @@
                 <bootstrap:Carousel />
 
             </Grid>
-        </TabItem>
+        </TabItem>-->
     </TabControl>
 </Window>
