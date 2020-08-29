@@ -152,7 +152,7 @@ namespace WPFBootstrapUI.ControlsAssists
         }
 
         ///Toggles the content of the ShowPasswordButton.
-        ///Decides if the <see cref="PasswordBox"/> PasswordBox can take inputs.
+        ///Decides if the <see cref="PasswordBox"/> can take inputs.
         private static bool ToggleShowPasswordButtonContent = false;
 
         private static void ButtonClicked(object sender, RoutedEventArgs e)

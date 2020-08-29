@@ -5,12 +5,8 @@
 
     <BorderGapMaskConverter x:Key="BorderGapMaskConverter" />
 
-    <ControlTemplate
-        x:Key="GroupBoxTemplate"
-        TargetType="{x:Type GroupBox}">
-        <Grid
-            SnapsToDevicePixels="true"
-            TextBlock.FontFamily="{TemplateBinding FontFamily}">
+    <ControlTemplate x:Key="GroupBoxTemplate" TargetType="{x:Type GroupBox}">
+        <Grid SnapsToDevicePixels="true" TextBlock.FontFamily="{TemplateBinding FontFamily}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
@@ -46,9 +42,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="groupbox-primary"
-        TargetType="{x:Type GroupBox}">
+    <Style x:Key="groupbox-primary" TargetType="{x:Type GroupBox}">
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="BorderThickness" Value="0,0,0,2" />
@@ -58,7 +52,5 @@
         <Setter Property="Template" Value="{StaticResource GroupBoxTemplate}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource groupbox-primary}"
-        TargetType="{x:Type GroupBox}" />
+    <Style BasedOn="{StaticResource groupbox-primary}" TargetType="{x:Type GroupBox}" />
 </ResourceDictionary>

@@ -21,6 +21,7 @@
         <ResourceDictionary Source="../Styles/JumbotronStyles.xaml" />
         <ResourceDictionary Source="../Styles/ModalStyles.xaml" />
         <ResourceDictionary Source="../Styles/SpinnerStyles.xaml" />
+        <ResourceDictionary Source="../Styles/CarouselStyles.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

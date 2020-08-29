@@ -3,9 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ControlTemplate
-        x:Key="ToolTipControlTemplate"
-        TargetType="{x:Type ToolTip}">
+    <ControlTemplate x:Key="ToolTipControlTemplate" TargetType="{x:Type ToolTip}">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -101,9 +99,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="tooltip-dark"
-        TargetType="{x:Type ToolTip}">
+    <Style x:Key="tooltip-dark" TargetType="{x:Type ToolTip}">
         <Setter Property="MinWidth" Value="100" />
         <Setter Property="Panel.ZIndex" Value="2" />
         <Setter Property="Padding" Value="10,5" />
@@ -119,7 +115,5 @@
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource tooltip-dark}"
-        TargetType="{x:Type ToolTip}" />
+    <Style BasedOn="{StaticResource tooltip-dark}" TargetType="{x:Type ToolTip}" />
 </ResourceDictionary>

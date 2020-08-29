@@ -71,8 +71,6 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-
-    <!--  Styles categories  -->
     <Style x:Key="progressbar-primary" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />

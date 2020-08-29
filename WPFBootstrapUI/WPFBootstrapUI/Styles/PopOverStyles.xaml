@@ -4,9 +4,7 @@
     xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ControlTemplate
-        x:Key="PopOverControlTemplate"
-        TargetType="{x:Type Controls:PopOver}">
+    <ControlTemplate x:Key="PopOverControlTemplate" TargetType="{x:Type Controls:PopOver}">
         <Grid
             x:Name="Container"
             Width="{TemplateBinding Width}"
@@ -51,12 +49,8 @@
                     BorderBrush="LightGray"
                     BorderThickness="1.4"
                     CornerRadius="6">
-                    <Grid
-                        x:Name="PopupContainer"
-                        Background="Transparent">
-                        <Border
-                            Padding="2"
-                            CornerRadius="6" />
+                    <Grid x:Name="PopupContainer" Background="Transparent">
+                        <Border Padding="2" CornerRadius="6" />
                         <TextBlock
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -90,9 +84,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="popover-primary"
-        TargetType="{x:Type Controls:PopOver}">
+    <Style x:Key="popover-primary" TargetType="{x:Type Controls:PopOver}">
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -107,7 +99,5 @@
         <Setter Property="Template" Value="{StaticResource PopOverControlTemplate}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource popover-primary}"
-        TargetType="{x:Type Controls:PopOver}" />
+    <Style BasedOn="{StaticResource popover-primary}" TargetType="{x:Type Controls:PopOver}" />
 </ResourceDictionary>
