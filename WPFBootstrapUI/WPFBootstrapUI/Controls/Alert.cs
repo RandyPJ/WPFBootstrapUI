@@ -5,10 +5,10 @@ using System.Windows.Media;
 
 namespace WPFBootstrapUI.Controls
 {
-    [TemplatePart(Name = "PART_DismissButton", Type = typeof(Button))]
+    [TemplatePart(Name = DismissButtonName, Type = typeof(Button))]
     public class Alert : ContentControl
     {
-        private const string _dismissButtonName = "PART_DismissButton";
+        private const string DismissButtonName = "PART_DismissButton";
         private Button DismissButton;
 
         public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(Alert), new PropertyMetadata(new CornerRadius(2.0)));
@@ -44,10 +44,10 @@ namespace WPFBootstrapUI.Controls
         }
         public override void OnApplyTemplate()
         {
-            DismissButton = GetTemplateChild(_dismissButtonName) as Button;
+            DismissButton = (Button)GetTemplateChild(DismissButtonName);
 
             if (DismissButton == null)
-                throw new InvalidOperationException($"Control {_dismissButtonName} not found in the template.");
+                throw new InvalidOperationException($"Control {DismissButtonName} not found in the template.");
 
             DismissButton.Click -= DismissButton_Click;
 
@@ -61,9 +61,9 @@ namespace WPFBootstrapUI.Controls
         {
             this.Visibility = Visibility.Collapsed;
         }
-        private static void OnAlertAssistDismissForegroundChanged(DependencyObject element, DependencyPropertyChangedEventArgs e)
+        private static void OnAlertAssistDismissForegroundChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e)
         {
-            Button button = element as Button;
+            Button button = (Button)obj;
             if (e.NewValue != e.OldValue)
                 button.Foreground = (Brush)e.NewValue;
         }
