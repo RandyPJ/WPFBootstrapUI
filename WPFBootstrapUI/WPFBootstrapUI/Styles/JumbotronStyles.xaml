@@ -1,11 +1,28 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
+    <ControlTemplate x:Key="JumbotronTemplate" TargetType="{x:Type controls:Jumbotron}">
+        <Border
+            x:Name="PART_OutterBorder"
+            Padding="{TemplateBinding Padding}"
+            Background="{TemplateBinding Background}"
+            CornerRadius="{TemplateBinding CornerRadius}">
+            <Grid x:Name="PART_Container" TextElement.FontFamily="{StaticResource SegoeUI}">
+                <ContentPresenter VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+            </Grid>
+        </Border>
+    </ControlTemplate>
 
-    <Style x:Key="jumbotron" TargetType="{x:Type Panel}">
+    <Style x:Key="jumbotron" TargetType="{x:Type controls:Jumbotron}">
         <Setter Property="Background" Value="{StaticResource JumbotronSolidColorBrush}" />
+        <Setter Property="CornerRadius" Value="6" />
+        <Setter Property="Padding" Value="40" />
+        <Setter Property="Template" Value="{StaticResource JumbotronTemplate}" />
     </Style>
+
+    <Style BasedOn="{StaticResource jumbotron}" TargetType="{x:Type controls:Jumbotron}" />
 
 </ResourceDictionary>

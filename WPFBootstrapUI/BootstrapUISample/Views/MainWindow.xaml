@@ -1191,7 +1191,7 @@
             </Grid>
         </TabItem>
 
-        <!--<TabItem Header="Carousel">
+        <TabItem Header="Jumbotron">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -1209,9 +1209,13 @@
                     FontWeight="Light"
                     ToolTipService.Placement="Bottom" />
 
-                <bootstrap:Carousel />
+                <bootstrap:Jumbotron>
+                    <StackPanel HorizontalAlignment="Left">
+                        <Label>This is a jumbotron</Label>
+                    </StackPanel>
+                </bootstrap:Jumbotron>
 
             </Grid>
-        </TabItem>-->
+        </TabItem>
     </TabControl>
 </Window>

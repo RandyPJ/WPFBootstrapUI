@@ -1,13 +1,13 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:Controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:Converters="clr-namespace:WPFBootstrapUI.Converters"
+    xmlns:controls="clr-namespace:WPFBootstrapUI.Controls"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <Converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
-    <ControlTemplate x:Key="BadgeControlTemplate" TargetType="{x:Type Controls:Badge}">
+    <ControlTemplate x:Key="BadgeControlTemplate" TargetType="{x:Type controls:Badge}">
         <StackPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
             <Border
                 x:Name="InnerBorder"
@@ -30,7 +30,7 @@
     </ControlTemplate>
 
     <!--  Normal Badges  -->
-    <Style x:Key="badge-primary" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-primary" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -41,7 +41,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-secondary" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-secondary" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -52,7 +52,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-success" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-success" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -63,7 +63,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-danger" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-danger" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -74,7 +74,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-warning" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-warning" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -85,7 +85,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-info" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-info" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -96,7 +96,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-light" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-light" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -107,7 +107,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-dark" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-dark" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -119,7 +119,7 @@
     </Style>
 
     <!--  Pill Badges  -->
-    <Style x:Key="badge-pill-primary" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-primary" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -130,7 +130,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-secondary" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-secondary" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -141,7 +141,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-success" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-success" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -152,7 +152,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-danger" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-danger" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -163,7 +163,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-warning" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-warning" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -174,7 +174,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-info" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-info" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -185,7 +185,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-light" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-light" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -196,7 +196,7 @@
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
 
-    <Style x:Key="badge-pill-dark" TargetType="{x:Type Controls:Badge}">
+    <Style x:Key="badge-pill-dark" TargetType="{x:Type controls:Badge}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
@@ -208,5 +208,5 @@
     </Style>
 
 
-    <Style BasedOn="{StaticResource badge-primary}" TargetType="{x:Type Controls:Badge}" />
+    <Style BasedOn="{StaticResource badge-primary}" TargetType="{x:Type controls:Badge}" />
 </ResourceDictionary>
