@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
  
 	<PropertyGroup>
-      <TargetFrameworks>net45;net451;net46;net461;net471;net472;net48</TargetFrameworks>
+      <TargetFrameworks>net45;net451;net46;net461;net472;net48</TargetFrameworks>
       <UseWPF>true</UseWPF>
       <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
       <RootNamespace>WPFBootstrapUI</RootNamespace>
@@ -38,6 +38,7 @@
       <Compile Include="Controls\Card.cs" />
       <Compile Include="Controls\CardChildPanel.cs" />
       <Compile Include="Controls\Carousel.cs" />
+      <Compile Include="Controls\Jumbotron.cs" />
       <Compile Include="Controls\Modals\Modal.cs" />
       <Compile Include="Controls\Modals\ModalService.cs" />
       <Compile Include="Controls\Modals\ModalResult.cs" />
