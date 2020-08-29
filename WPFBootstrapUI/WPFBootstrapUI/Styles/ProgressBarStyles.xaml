@@ -3,18 +3,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
-    <ControlTemplate
-        x:Key="ProgressBarTemplate"
-        TargetType="{x:Type ProgressBar}">
+    <ControlTemplate x:Key="ProgressBarTemplate" TargetType="{x:Type ProgressBar}">
         <Grid x:Name="TemplateRoot">
             <Border
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 CornerRadius="6" />
-            <Rectangle
-                x:Name="PART_Track"
-                Height="20" />
+            <Rectangle x:Name="PART_Track" Height="20" />
             <Grid
                 x:Name="PART_Indicator"
                 HorizontalAlignment="Left"
@@ -45,31 +41,15 @@
                     <VisualState x:Name="Determinate" />
                     <VisualState x:Name="Indeterminate">
                         <Storyboard RepeatBehavior="Forever">
-                            <DoubleAnimationUsingKeyFrames
-                                Storyboard.TargetName="Animation"
-                                Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
-                                <EasingDoubleKeyFrame
-                                    KeyTime="0"
-                                    Value="0.25" />
-                                <EasingDoubleKeyFrame
-                                    KeyTime="0:0:1"
-                                    Value="0.25" />
-                                <EasingDoubleKeyFrame
-                                    KeyTime="0:0:2"
-                                    Value="0.25" />
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Animation" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.25" />
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.25" />
+                                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.25" />
                             </DoubleAnimationUsingKeyFrames>
-                            <PointAnimationUsingKeyFrames
-                                Storyboard.TargetName="Animation"
-                                Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
-                                <EasingPointKeyFrame
-                                    KeyTime="0"
-                                    Value="-0.5,0.5" />
-                                <EasingPointKeyFrame
-                                    KeyTime="0:0:1"
-                                    Value="0.5,0.5" />
-                                <EasingPointKeyFrame
-                                    KeyTime="0:0:2"
-                                    Value="1.5,0.5" />
+                            <PointAnimationUsingKeyFrames Storyboard.TargetName="Animation" Storyboard.TargetProperty="(UIElement.RenderTransformOrigin)">
+                                <EasingPointKeyFrame KeyTime="0" Value="-0.5,0.5" />
+                                <EasingPointKeyFrame KeyTime="0:0:1" Value="0.5,0.5" />
+                                <EasingPointKeyFrame KeyTime="0:0:2" Value="1.5,0.5" />
                             </PointAnimationUsingKeyFrames>
                         </Storyboard>
                     </VisualState>
@@ -91,9 +71,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style
-        x:Key="progressbar-primary"
-        TargetType="{x:Type ProgressBar}">
+
+    <!--  Styles categories  -->
+    <Style x:Key="progressbar-primary" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource PrimarySolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightSolidColorBrush}" />
@@ -102,9 +82,7 @@
         <Setter Property="Template" Value="{StaticResource ProgressBarTemplate}" />
     </Style>
 
-    <Style
-        x:Key="progressbar-secondary"
-        TargetType="{x:Type ProgressBar}">
+    <Style x:Key="progressbar-secondary" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource SecondarySolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightSolidColorBrush}" />
@@ -113,9 +91,7 @@
         <Setter Property="Template" Value="{StaticResource ProgressBarTemplate}" />
     </Style>
 
-    <Style
-        x:Key="progressbar-success"
-        TargetType="{x:Type ProgressBar}">
+    <Style x:Key="progressbar-success" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource SuccessSolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightSolidColorBrush}" />
@@ -124,9 +100,7 @@
         <Setter Property="Template" Value="{StaticResource ProgressBarTemplate}" />
     </Style>
 
-    <Style
-        x:Key="progressbar-danger"
-        TargetType="{x:Type ProgressBar}">
+    <Style x:Key="progressbar-danger" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource DangerSolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightSolidColorBrush}" />
@@ -135,9 +109,7 @@
         <Setter Property="Template" Value="{StaticResource ProgressBarTemplate}" />
     </Style>
 
-    <Style
-        x:Key="progressbar-warning"
-        TargetType="{x:Type ProgressBar}">
+    <Style x:Key="progressbar-warning" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource WarningSolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightSolidColorBrush}" />
@@ -146,9 +118,7 @@
         <Setter Property="Template" Value="{StaticResource ProgressBarTemplate}" />
     </Style>
 
-    <Style
-        x:Key="progressbar-info"
-        TargetType="{x:Type ProgressBar}">
+    <Style x:Key="progressbar-info" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource InfoSolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightSolidColorBrush}" />
@@ -157,9 +127,7 @@
         <Setter Property="Template" Value="{StaticResource ProgressBarTemplate}" />
     </Style>
 
-    <Style
-        x:Key="progressbar-dark"
-        TargetType="{x:Type ProgressBar}">
+    <Style x:Key="progressbar-dark" TargetType="{x:Type ProgressBar}">
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Background" Value="{StaticResource LightHoveredSolidColorBrush}" />
         <Setter Property="BorderBrush" Value="{StaticResource LightSolidColorBrush}" />
@@ -168,8 +136,6 @@
         <Setter Property="Template" Value="{StaticResource ProgressBarTemplate}" />
     </Style>
 
-    <Style
-        BasedOn="{StaticResource progressbar-primary}"
-        TargetType="{x:Type ProgressBar}" />
+    <Style BasedOn="{StaticResource progressbar-primary}" TargetType="{x:Type ProgressBar}" />
 
 </ResourceDictionary>
