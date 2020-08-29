@@ -4,7 +4,7 @@ using WPFBootstrapUI.Controls.Modals;
 
 namespace BootstrapUISample
 {
-    /// <summary>
+	/// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
@@ -13,7 +13,6 @@ namespace BootstrapUISample
         {
             InitializeComponent();
         }
-
         private List<Persona> GetList()
         {
             return new List<Persona>() 
@@ -27,7 +26,7 @@ namespace BootstrapUISample
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ModalResult resultado = ModalService.ShowModal(this, "Modal", "This is a modal", "Aceptar", "Cancelar", true);
+            _ = ModalService.ShowModal(this, "Modal", "This is a modal", "Aceptar", "Cancelar", true);
         }
     }
 }
