@@ -10,16 +10,21 @@
             Padding="{TemplateBinding Padding}"
             Background="{TemplateBinding Background}"
             CornerRadius="{TemplateBinding CornerRadius}">
-            <Grid x:Name="PART_Container" TextElement.FontFamily="{StaticResource SegoeUI}">
-                <ContentPresenter VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+            <Grid x:Name="PART_Container" TextElement.FontFamily="{TemplateBinding FontFamily}">
+                <ContentPresenter
+                    Margin="{TemplateBinding Margin}"
+                    VerticalAlignment="Center"
+                    Content="{TemplateBinding Content}" />
             </Grid>
         </Border>
     </ControlTemplate>
 
     <Style x:Key="jumbotron" TargetType="{x:Type controls:Jumbotron}">
+        <Setter Property="TextElement.FontFamily" Value="{StaticResource Helvetica}" />
         <Setter Property="Background" Value="{StaticResource JumbotronSolidColorBrush}" />
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="Padding" Value="40" />
+        <Setter Property="Margin" Value="20" />
         <Setter Property="Template" Value="{StaticResource JumbotronTemplate}" />
     </Style>
 

@@ -11,19 +11,19 @@
         <StackPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
             <Border
                 x:Name="InnerBorder"
-                Padding="2"
                 Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding Background}"
-                BorderThickness="1"
                 CornerRadius="{TemplateBinding CornerRadius}"
                 UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
-                <TextBlock
-                    x:Name="PART_Content"
-                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                    Focusable="False"
-                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                    Text="{TemplateBinding Text}" />
+                <Grid Margin="{TemplateBinding Padding}">
+                    <TextBlock
+                        x:Name="PART_Content"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Focusable="False"
+                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                        Text="{TemplateBinding Text}" />
+                </Grid>
             </Border>
         </StackPanel>
         <ControlTemplate.Triggers />
@@ -35,8 +35,8 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
@@ -46,8 +46,8 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
     </Style>
@@ -57,7 +57,7 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -68,7 +68,7 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -79,7 +79,7 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -90,7 +90,7 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource InfoSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -101,7 +101,7 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -112,7 +112,7 @@
         <Setter Property="CornerRadius" Value="6" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -124,7 +124,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource PrimarySolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -135,7 +135,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SecondarySolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -146,7 +146,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource SuccessSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -157,7 +157,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DangerSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -168,7 +168,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource WarningSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -179,7 +179,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource InfoSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -190,7 +190,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource LightSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource DarkSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />
@@ -201,7 +201,7 @@
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="FontFamily" Value="{StaticResource SegoeUI}" />
         <Setter Property="Background" Value="{StaticResource DarkSolidColorBrush}" />
-        <Setter Property="Padding" Value="10,8" />
+        <Setter Property="Padding" Value="4,2" />
         <Setter Property="TextBlock.FontWeight" Value="Bold" />
         <Setter Property="Foreground" Value="{StaticResource WhiteSolidColorBrush}" />
         <Setter Property="Template" Value="{StaticResource BadgeControlTemplate}" />

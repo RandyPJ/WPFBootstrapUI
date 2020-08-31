@@ -5,6 +5,9 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <FontFamily x:Key="SegoeUI">Segoe UI</FontFamily>
+    <FontFamily x:Key="Helvetica">pack://application:,,,/WPFBootstrapUI;component/Fonts/#Helvetica.ttf</FontFamily>
+    <FontFamily x:Key="Arial">Arial</FontFamily>
+    <FontFamily x:Key="Helvetica Neue">pack://application:,,,/WPFBootstrapUI;component/Fonts/#HelveticaNeue.ttf</FontFamily>
 
     <System:Double x:Key="Font.Size.Title">30</System:Double>
     <System:Double x:Key="Font.Size.SubHeader">25</System:Double>

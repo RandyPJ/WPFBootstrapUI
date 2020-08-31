@@ -11,923 +11,211 @@
     WindowStartupLocation="CenterScreen"
     WindowState="Maximized">
 
-    <TabControl Margin="5">
-        <TabItem Header="Alert">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <TabControl Margin="5">
+            <TabItem Header="Alert">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <Label
+                            HorizontalAlignment="Center"
+                            Content="Alerts"
+                            FontFamily="{StaticResource SegoeUI}"
+                            FontSize="60"
+                            FontWeight="Light"
+                            ToolTip="Hola"
+                            ToolTipService.Placement="Bottom" />
 
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <StackPanel>
-                    <Label
-                        HorizontalAlignment="Center"
-                        Content="Alerts"
-                        FontFamily="{StaticResource SegoeUI}"
-                        FontSize="60"
-                        FontWeight="Light"
-                        ToolTip="Hola"
-                        ToolTipService.Placement="Bottom" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Primary"
+                            IsAlertDismissible="True"
+                            Style="{StaticResource alert-primary}" />
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Primary"
-                        IsAlertDismissible="True"
-                        Style="{StaticResource alert-primary}" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Secondary"
+                            IsAlertDismissible="True"
+                            Style="{StaticResource alert-secondary}" />
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Secondary"
-                        IsAlertDismissible="True"
-                        Style="{StaticResource alert-secondary}" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Success"
+                            IsAlertDismissible="True"
+                            Style="{StaticResource alert-success}" />
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Success"
-                        IsAlertDismissible="True"
-                        Style="{StaticResource alert-success}" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Danger"
+                            IsAlertDismissible="True"
+                            Style="{StaticResource alert-danger}" />
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Danger"
-                        IsAlertDismissible="True"
-                        Style="{StaticResource alert-danger}" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Warning"
+                            IsAlertDismissible="True"
+                            Style="{StaticResource alert-warning}" />
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Warning"
-                        IsAlertDismissible="True"
-                        Style="{StaticResource alert-warning}" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Info"
+                            Style="{StaticResource alert-info}" />
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Info"
-                        Style="{StaticResource alert-info}" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Light"
+                            Style="{StaticResource alert-light}" />
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Light"
-                        Style="{StaticResource alert-light}" />
+                        <bootstrap:Alert
+                            Margin="10"
+                            Content="Alert Dark"
+                            Style="{StaticResource alert-dark}" />
+                    </StackPanel>
+                </ScrollViewer>
 
-                    <bootstrap:Alert
-                        Margin="10"
-                        Content="Alert Dark"
-                        Style="{StaticResource alert-dark}" />
-                </StackPanel>
-            </ScrollViewer>
+            </TabItem>
 
-        </TabItem>
-
-        <TabItem Header="Badge">
-            <Grid HorizontalAlignment="Center">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Margin="20"
-                    HorizontalAlignment="Center"
-                    Content="Badges"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light" />
-
-                <StackPanel Grid.Row="1" Orientation="Horizontal">
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-primary}"
-                        Text="primary"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-secondary}"
-                        Text="secondary"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-success}"
-                        Text="success"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-danger}"
-                        Text="danger"
-                        ToolTip="Hola mundo" />
-
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-warning}"
-                        Text="warning"
-                        ToolTip="Hola mundo" />
-
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-info}"
-                        Text="info"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-light}"
-                        Text="light"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-dark}"
-                        Text="dark"
-                        ToolTip="Hola mundo" />
-                </StackPanel>
-
-                <Label
-                    Grid.Row="2"
-                    Margin="20"
-                    HorizontalAlignment="Center"
-                    Content="Pill Badges"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light" />
-                <StackPanel Grid.Row="3" Orientation="Horizontal">
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-primary}"
-                        Text="primary"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-secondary}"
-                        Text="secondary"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-success}"
-                        Text="success"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-danger}"
-                        Text="danger"
-                        ToolTip="Hola mundo" />
-
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-warning}"
-                        Text="warning"
-                        ToolTip="Hola mundo" />
-
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-info}"
-                        Text="info"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-light}"
-                        Text="light"
-                        ToolTip="Hola mundo" />
-
-                    <bootstrap:Badge
-                        Grid.Row="1"
-                        Margin="3"
-                        Style="{StaticResource badge-pill-dark}"
-                        Text="dark"
-                        ToolTip="Hola mundo" />
-                </StackPanel>
-
-            </Grid>
-        </TabItem>
-
-        <TabItem Header="Card">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <Grid>
+            <TabItem Header="Badge">
+                <Grid HorizontalAlignment="Center">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="500" />
-                        <ColumnDefinition Width="500" />
-                        <ColumnDefinition Width="500" />
-                    </Grid.ColumnDefinitions>
 
                     <Label
-                        Grid.Row="0"
-                        Grid.ColumnSpan="3"
                         Margin="20"
                         HorizontalAlignment="Center"
-                        Content="Card"
+                        Content="Badges"
                         FontFamily="{StaticResource SegoeUI}"
                         FontSize="60"
                         FontWeight="Light" />
 
-                    <bootstrap:Card
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Margin="10"
-                        Style="{StaticResource card-primary}">
-                        <StackPanel Orientation="Vertical">
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-primary}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header (Card primary)" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-primary}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-primary}"
+                            Text="primary" />
 
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-secondary}"
+                            Text="secondary" />
 
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-light}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </StackPanel>
-                    </bootstrap:Card>
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-success}"
+                            Text="success" />
 
-                    <bootstrap:Card
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-danger}"
+                            Text="danger" />
+
+
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-warning}"
+                            Text="warning" />
+
+
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-info}"
+                            Text="info" />
+
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-light}"
+                            Text="light" />
+
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-dark}"
+                            Text="dark" />
+                    </StackPanel>
+
+                    <Label
                         Grid.Row="2"
-                        Grid.Column="0"
-                        Margin="10"
-                        Style="{StaticResource card-secondary}">
-                        <StackPanel Orientation="Vertical">
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-secondary}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header (Card secondary)" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-secondary}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
-
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-light}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </StackPanel>
-                    </bootstrap:Card>
-
-                    <bootstrap:Card
-                        Grid.Row="3"
-                        Grid.Column="0"
-                        Margin="10"
-                        Style="{StaticResource card-success}">
-                        <StackPanel Orientation="Vertical">
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-success}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header (Card success)" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-success}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
-
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-light}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </StackPanel>
-
-                    </bootstrap:Card>
-
-                    <bootstrap:Card
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Margin="10"
-                        Style="{StaticResource card-danger}">
-                        <StackPanel Orientation="Vertical">
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-danger}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header (Card danger)" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-danger}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
-
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-light}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </StackPanel>
-                    </bootstrap:Card>
-
-                    <bootstrap:Card
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Margin="10"
-                        Style="{StaticResource card-warning}">
-                        <StackPanel Orientation="Vertical">
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-warning}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header (Card warning)" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-warning}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
-
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-light}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </StackPanel>
-                    </bootstrap:Card>
-
-                    <bootstrap:Card
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        Margin="10"
-                        Style="{StaticResource card-dark}">
-                        <StackPanel Orientation="Vertical">
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-dark}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header (Card dark)" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-dark}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
-
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-light}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </StackPanel>
-                    </bootstrap:Card>
-
-                    <bootstrap:Card
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        Margin="10"
-                        Style="{StaticResource card-light}">
-                        <StackPanel Orientation="Vertical">
-                            <bootstrap:CardChildPanel
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Style="{StaticResource card-header-light}">
-                                <bootstrap:CardChildPanel.Content>
-                                    <TextBlock
-                                        Margin="10,10,0,0"
-                                        FontWeight="Bold"
-                                        Text="Card Header (Card light)" />
-                                </bootstrap:CardChildPanel.Content>
-                            </bootstrap:CardChildPanel>
-                            <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock
-                                        Grid.Row="0"
-                                        Text="Special title treatment With supporting text below as a natural lead-in to additional content."
-                                        TextWrapping="Wrap" />
-
-                                    <Button
-                                        Grid.Row="1"
-                                        Margin="0,10,0,0"
-                                        HorizontalAlignment="Left"
-                                        Content="Go somewhere"
-                                        Style="{StaticResource btn-primary}" />
-                                </Grid>
-                            </bootstrap:CardChildPanel>
-                        </StackPanel>
-                    </bootstrap:Card>
-
-                </Grid>
-            </ScrollViewer>
-
-        </TabItem>
-
-        <TabItem Header="Button">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" HorizontalAlignment="Center">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-
-                    <Label
-                        Grid.Row="0"
-                        Grid.ColumnSpan="8"
                         Margin="20"
                         HorizontalAlignment="Center"
-                        Content="Buttons"
+                        Content="Pill Badges"
                         FontFamily="{StaticResource SegoeUI}"
                         FontSize="60"
                         FontWeight="Light" />
+                    <StackPanel Grid.Row="3" Orientation="Horizontal">
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-primary}"
+                            Text="primary"
+                            ToolTip="Hola mundo" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalContentAlignment="Center"
-                        Content="Primary"
-                        Style="{StaticResource btn-primary}" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-secondary}"
+                            Text="secondary"
+                            ToolTip="Hola mundo" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Content="Secondary"
-                        Style="{StaticResource btn-secondary}" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-success}"
+                            Text="success"
+                            ToolTip="Hola mundo" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        Content="Success"
-                        Style="{StaticResource btn-success}" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-danger}"
+                            Text="danger"
+                            ToolTip="Hola mundo" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="4"
-                        Content="Danger"
-                        Style="{StaticResource btn-danger}" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="5"
-                        Content="Warning"
-                        Style="{StaticResource btn-warning}" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-warning}"
+                            Text="warning"
+                            ToolTip="Hola mundo" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="6"
-                        Content="Info"
-                        Style="{StaticResource btn-info}" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="7"
-                        Content="Light"
-                        Style="{StaticResource btn-light}" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-info}"
+                            Text="info"
+                            ToolTip="Hola mundo" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="8"
-                        Content="Dark"
-                        Style="{StaticResource btn-dark}" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-light}"
+                            Text="light"
+                            ToolTip="Hola mundo" />
 
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="9"
-                        Style="{StaticResource btn-link}" />
+                        <bootstrap:Badge
+                            Grid.Row="1"
+                            Margin="3"
+                            Style="{StaticResource badge-pill-dark}"
+                            Text="dark"
+                            ToolTip="Hola mundo" />
+                    </StackPanel>
+
                 </Grid>
+            </TabItem>
 
-                <Grid
-                    Grid.Row="1"
-                    Grid.ColumnSpan="7"
-                    HorizontalAlignment="Center">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-
-                    <Label
-                        Grid.Row="0"
-                        Grid.ColumnSpan="7"
-                        Margin="20"
-                        HorizontalAlignment="Center"
-                        Content="Outline buttons"
-                        FontFamily="{StaticResource SegoeUI}"
-                        FontSize="60"
-                        FontWeight="Light" />
-
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        VerticalContentAlignment="Center"
-                        Content="Primary"
-                        Style="{StaticResource btn-outline-primary}"
-                        ToolTip="hola mundo"
-                        ToolTipService.Placement="Left" />
-
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Content="Secondary"
-                        Style="{StaticResource btn-outline-secondary}" />
-
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        Content="Success"
-                        Style="{StaticResource btn-outline-success}" />
-
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="4"
-                        Content="Danger"
-                        Style="{StaticResource btn-outline-danger}" />
-
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="5"
-                        Content="Warning"
-                        Style="{StaticResource btn-outline-warning}" />
-
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="6"
-                        Content="Info"
-                        Style="{StaticResource btn-outline-info}" />
-
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="7"
-                        Content="Dark"
-                        Style="{StaticResource btn-outline-dark}" />
-                </Grid>
-            </Grid>
-
-        </TabItem>
-
-        <TabItem Header="TextBox">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.Row="0"
-                    Margin="20"
-                    HorizontalAlignment="Center"
-                    Content="TextBox"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light" />
-
-                <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="Your name" />
-
-                <TextBox Grid.Row="2" bootstrap:TextBoxAssist.PlaceHolder="My name" />
-            </Grid>
-        </TabItem>
-
-        <TabItem Header="PasswordBox">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.Row="0"
-                    Margin="20"
-                    HorizontalAlignment="Center"
-                    Content="PasswordBox"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light" />
-
-                <PasswordBox
-                    x:Name="txtPassword"
-                    Grid.Row="1"
-                    bootstrap:PasswordBoxAssist.PlaceHolder="Password"
-                    bootstrap:PasswordBoxAssist.Text="{Binding Contrasena}" />
-            </Grid>
-        </TabItem>
-
-        <TabItem Header="ToolTip">
-            <Grid HorizontalAlignment="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.ColumnSpan="5"
-                    HorizontalAlignment="Center"
-                    Content="ToolTips"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTip="Hola"
-                    ToolTipService.Placement="Bottom" />
-
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Content="ToolTip Left"
-                    Style="{StaticResource btn-primary}"
-                    ToolTip="ToolTip Left"
-                    ToolTipService.Placement="Left" />
-
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Content="ToolTip Top"
-                    Style="{StaticResource btn-primary}"
-                    ToolTip="ToolTip Top"
-                    ToolTipService.Placement="Top" />
-
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    Content="ToolTip Right"
-                    Style="{StaticResource btn-primary}"
-                    ToolTip="ToolTip Right"
-                    ToolTipService.Placement="Right" />
-
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="3"
-                    Content="ToolTip Bottom"
-                    Style="{StaticResource btn-primary}"
-                    ToolTip="ToolTip Bottom"
-                    ToolTipService.Placement="Bottom" />
-
-            </Grid>
-        </TabItem>
-
-        <TabItem Header="ComboBox">
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="ComboBox"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
-
-                <ComboBox Grid.Row="1">
-                    <ComboBoxItem Content="First item" />
-                    <ComboBoxItem Content="Second item" />
-                    <ComboBoxItem Content="Third item" />
-                    <ComboBoxItem Content="Forth item" />
-                    <ComboBoxItem Content="Fifth item" />
-                </ComboBox>
-            </Grid>
-
-        </TabItem>
-
-
-
-        <TabItem Header="CheckBox">
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="CheckBox"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
-
-                <CheckBox
-                    Grid.Row="1"
-                    HorizontalAlignment="Center"
-                    Content="Default CheckBox" />
-
-                <CheckBox
-                    Grid.Row="2"
-                    HorizontalAlignment="Center"
-                    Content="Disabled CheckBox"
-                    IsEnabled="False" />
-            </Grid>
-
-        </TabItem>
-
-        <TabItem Header="RadioButton">
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="RadioButton"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
-
-                <RadioButton
-                    Grid.Row="1"
-                    HorizontalAlignment="Center"
-                    Content="Default CheckBox" />
-
-                <RadioButton
-                    Grid.Row="2"
-                    HorizontalAlignment="Center"
-                    Content="Disabled CheckBox"
-                    IsEnabled="False" />
-            </Grid>
-
-        </TabItem>
-
-        <TabItem Header="GroupBox">
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="GroupBox"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
-
-                <GroupBox
-                    Grid.Row="1"
-                    Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Grid}}"
-                    Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Grid}}"
-                    HorizontalAlignment="Center"
-                    Header="Information">
+            <TabItem Header="Card">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
@@ -936,286 +224,992 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="500" />
+                            <ColumnDefinition Width="500" />
+                            <ColumnDefinition Width="500" />
+                        </Grid.ColumnDefinitions>
 
-                        <TextBox Grid.Row="0" bootstrap:TextBoxAssist.PlaceHolder="Your name" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="3"
+                            Margin="20"
+                            HorizontalAlignment="Center"
+                            Content="Card"
+                            FontFamily="{StaticResource SegoeUI}"
+                            FontSize="60"
+                            FontWeight="Light" />
 
-                        <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="My name" />
+                        <bootstrap:Card
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="10"
+                            Style="{StaticResource card-primary}">
+                            <StackPanel Orientation="Vertical">
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-primary}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header (Card primary)" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-primary}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
 
-                        <CheckBox
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere"
+                                            Style="{StaticResource btn-light}" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel>
+                            </StackPanel>
+                        </bootstrap:Card>
+
+                        <bootstrap:Card
                             Grid.Row="2"
-                            HorizontalAlignment="Left"
-                            Content="Active" />
+                            Grid.Column="0"
+                            Margin="10"
+                            Style="{StaticResource card-secondary}">
+                            <StackPanel Orientation="Vertical">
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-secondary}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header (Card secondary)" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-secondary}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
 
-                        <StackPanel Grid.Row="3" Orientation="Horizontal">
-                            <Button
-                                HorizontalAlignment="Left"
-                                Content="Save"
-                                Style="{StaticResource btn-primary}" />
-                            <Button
-                                HorizontalAlignment="Left"
-                                Content="Cancel"
-                                Style="{StaticResource btn-danger}" />
-                        </StackPanel>
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere"
+                                            Style="{StaticResource btn-light}" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel>
+                            </StackPanel>
+                        </bootstrap:Card>
+
+                        <bootstrap:Card
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="10"
+                            Style="{StaticResource card-success}">
+                            <StackPanel Orientation="Vertical">
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-success}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header (Card success)" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-success}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere"
+                                            Style="{StaticResource btn-light}" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel>
+                            </StackPanel>
+
+                        </bootstrap:Card>
+
+                        <bootstrap:Card
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Style="{StaticResource card-danger}">
+                            <StackPanel Orientation="Vertical">
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-danger}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header (Card danger)" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-danger}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere"
+                                            Style="{StaticResource btn-light}" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel>
+                            </StackPanel>
+                        </bootstrap:Card>
+
+                        <bootstrap:Card
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="10"
+                            Style="{StaticResource card-warning}">
+                            <StackPanel Orientation="Vertical">
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-warning}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header (Card warning)" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-warning}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere"
+                                            Style="{StaticResource btn-light}" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel>
+                            </StackPanel>
+                        </bootstrap:Card>
+
+                        <bootstrap:Card
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Margin="10"
+                            Style="{StaticResource card-dark}">
+                            <StackPanel Orientation="Vertical">
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-dark}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header (Card dark)" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-dark}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere"
+                                            Style="{StaticResource btn-light}" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel>
+                            </StackPanel>
+                        </bootstrap:Card>
+
+                        <bootstrap:Card
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Margin="10"
+                            Style="{StaticResource card-light}">
+                            <StackPanel Orientation="Vertical">
+                                <bootstrap:CardChildPanel
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{StaticResource card-header-light}">
+                                    <bootstrap:CardChildPanel.Content>
+                                        <TextBlock
+                                            Margin="10,10,0,0"
+                                            FontWeight="Bold"
+                                            Text="Card Header (Card light)" />
+                                    </bootstrap:CardChildPanel.Content>
+                                </bootstrap:CardChildPanel>
+                                <bootstrap:CardChildPanel Grid.Row="1" Style="{StaticResource card-body-light}">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            Text="Special title treatment With supporting text below as a natural lead-in to additional content."
+                                            TextWrapping="Wrap" />
+
+                                        <Button
+                                            Grid.Row="1"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Left"
+                                            Content="Go somewhere"
+                                            Style="{StaticResource btn-primary}" />
+                                    </Grid>
+                                </bootstrap:CardChildPanel>
+                            </StackPanel>
+                        </bootstrap:Card>
+
                     </Grid>
-                </GroupBox>
-            </Grid>
+                </ScrollViewer>
 
-        </TabItem>
+            </TabItem>
 
-        <TabItem Header="ProgreBar">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+            <TabItem Header="Button">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
 
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="ProgressBar"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="8"
+                            Margin="20"
+                            HorizontalAlignment="Center"
+                            Content="Buttons"
+                            FontFamily="{StaticResource SegoeUI}"
+                            FontSize="60"
+                            FontWeight="Light" />
 
-                <ProgressBar
-                    Grid.Row="1"
-                    Margin="10"
-                    Style="{StaticResource progressbar-primary}"
-                    Value="30" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            VerticalContentAlignment="Center"
+                            Content="Primary"
+                            Style="{StaticResource btn-primary}" />
 
-                <ProgressBar
-                    Grid.Row="2"
-                    Margin="10"
-                    Style="{StaticResource progressbar-secondary}"
-                    Value="40" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Content="Secondary"
+                            Style="{StaticResource btn-secondary}" />
 
-                <ProgressBar
-                    Grid.Row="3"
-                    Margin="10"
-                    Style="{StaticResource progressbar-danger}"
-                    Value="50" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Content="Success"
+                            Style="{StaticResource btn-success}" />
 
-                <ProgressBar
-                    Grid.Row="4"
-                    Margin="10"
-                    Style="{StaticResource progressbar-success}"
-                    Value="60" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="4"
+                            Content="Danger"
+                            Style="{StaticResource btn-danger}" />
 
-                <ProgressBar
-                    Grid.Row="5"
-                    Margin="10"
-                    Style="{StaticResource progressbar-warning}"
-                    Value="70" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="5"
+                            Content="Warning"
+                            Style="{StaticResource btn-warning}" />
 
-                <ProgressBar
-                    Grid.Row="6"
-                    Margin="10"
-                    Style="{StaticResource progressbar-info}"
-                    Value="80" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="6"
+                            Content="Info"
+                            Style="{StaticResource btn-info}" />
 
-                <ProgressBar
-                    Grid.Row="7"
-                    Margin="10"
-                    Style="{StaticResource progressbar-dark}"
-                    Value="90" />
-            </Grid>
-        </TabItem>
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="7"
+                            Content="Light"
+                            Style="{StaticResource btn-light}" />
 
-        <TabItem Header="PopOver">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="8"
+                            Content="Dark"
+                            Style="{StaticResource btn-dark}" />
 
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="PopOver"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="9"
+                            Style="{StaticResource btn-link}" />
+                    </Grid>
 
-                <bootstrap:PopOver
-                    Grid.Row="1"
-                    Width="100"
-                    Content="Hola"
-                    PopOverText="This is a simple popover"
-                    PopupPlacement="Bottom"
-                    Style="{StaticResource popover-primary}" />
-            </Grid>
-        </TabItem>
+                    <Grid
+                        Grid.Row="1"
+                        Grid.ColumnSpan="7"
+                        HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
 
-        <TabItem Header="ListBox">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="ListBox"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="7"
+                            Margin="20"
+                            HorizontalAlignment="Center"
+                            Content="Outline buttons"
+                            FontFamily="{StaticResource SegoeUI}"
+                            FontSize="60"
+                            FontWeight="Light" />
 
-                <ListBox Grid.Row="1">
-                    <ListBox.Resources>
-                        <Style BasedOn="{StaticResource listboxitem-success}" TargetType="{x:Type ListBoxItem}" />
-                    </ListBox.Resources>
-                    <ListBoxItem>Hola</ListBoxItem>
-                    <ListBoxItem>Hola</ListBoxItem>
-                    <ListBoxItem>Hola</ListBoxItem>
-                    <ListBoxItem>Hola</ListBoxItem>
-                    <ListBoxItem>Hola</ListBoxItem>
-                </ListBox>
-            </Grid>
-        </TabItem>
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            VerticalContentAlignment="Center"
+                            Content="Primary"
+                            Style="{StaticResource btn-outline-primary}"
+                            ToolTip="hola mundo"
+                            ToolTipService.Placement="Left" />
 
-        <TabItem Header="ListView">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Content="Secondary"
+                            Style="{StaticResource btn-outline-secondary}" />
 
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="ListView"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Content="Success"
+                            Style="{StaticResource btn-outline-success}" />
 
-                <ListView x:Name="myListView" Grid.Row="1">
-                    <ListViewItem>Hola</ListViewItem>
-                    <ListViewItem>Hola</ListViewItem>
-                    <ListViewItem>Hola</ListViewItem>
-                    <ListViewItem>Hola</ListViewItem>
-                    <ListViewItem>Hola</ListViewItem>
-                </ListView>
-            </Grid>
-        </TabItem>
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="4"
+                            Content="Danger"
+                            Style="{StaticResource btn-outline-danger}" />
 
-        <TabItem Header="Modal">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="5"
+                            Content="Warning"
+                            Style="{StaticResource btn-outline-warning}" />
 
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="Modal"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="6"
+                            Content="Info"
+                            Style="{StaticResource btn-outline-info}" />
 
-                <Button
-                    Grid.Row="1"
-                    Width="140"
-                    Click="Button_Click"
-                    Content="Show Modal" />
-            </Grid>
-        </TabItem>
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="7"
+                            Content="Dark"
+                            Style="{StaticResource btn-outline-dark}" />
+                    </Grid>
+                </Grid>
 
-        <TabItem Header="Spinner">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
+            </TabItem>
 
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="Spinner"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
+            <TabItem Header="TextBox">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        HorizontalAlignment="Center"
+                        Content="TextBox"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light" />
+
+                    <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="Your name" />
+
+                    <TextBox Grid.Row="2" bootstrap:TextBoxAssist.PlaceHolder="My name" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="PasswordBox">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="20"
+                        HorizontalAlignment="Center"
+                        Content="PasswordBox"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light" />
+
+                    <PasswordBox
+                        x:Name="txtPassword"
+                        Grid.Row="1"
+                        bootstrap:PasswordBoxAssist.PlaceHolder="Password"
+                        bootstrap:PasswordBoxAssist.Text="{Binding Contrasena}" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="ToolTip">
+                <Grid HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.ColumnSpan="5"
+                        HorizontalAlignment="Center"
+                        Content="ToolTips"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTip="Hola"
+                        ToolTipService.Placement="Bottom" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Content="ToolTip Left"
+                        Style="{StaticResource btn-primary}"
+                        ToolTip="ToolTip Left"
+                        ToolTipService.Placement="Left" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Content="ToolTip Top"
+                        Style="{StaticResource btn-primary}"
+                        ToolTip="ToolTip Top"
+                        ToolTipService.Placement="Top" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Content="ToolTip Right"
+                        Style="{StaticResource btn-primary}"
+                        ToolTip="ToolTip Right"
+                        ToolTipService.Placement="Right" />
+
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Content="ToolTip Bottom"
+                        Style="{StaticResource btn-primary}"
+                        ToolTip="ToolTip Bottom"
+                        ToolTipService.Placement="Bottom" />
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="ComboBox">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="ComboBox"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <ComboBox Grid.Row="1">
+                        <ComboBoxItem Content="First item" />
+                        <ComboBoxItem Content="Second item" />
+                        <ComboBoxItem Content="Third item" />
+                        <ComboBoxItem Content="Forth item" />
+                        <ComboBoxItem Content="Fifth item" />
+                    </ComboBox>
+                </Grid>
+
+            </TabItem>
 
 
-                <StackPanel
-                    Grid.Row="1"
-                    HorizontalAlignment="Center"
-                    Orientation="Horizontal">
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-primary}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-secondary}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-danger}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-success}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-warning}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-light}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-dark}" />
-                </StackPanel>
 
-                <Label
-                    Grid.Row="2"
-                    HorizontalAlignment="Center"
-                    Content="Spinner grow"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
+            <TabItem Header="CheckBox">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="CheckBox"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <CheckBox
+                        Grid.Row="1"
+                        HorizontalAlignment="Center"
+                        Content="Default CheckBox" />
+
+                    <CheckBox
+                        Grid.Row="2"
+                        HorizontalAlignment="Center"
+                        Content="Disabled CheckBox"
+                        IsEnabled="False" />
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="RadioButton">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="RadioButton"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <RadioButton
+                        Grid.Row="1"
+                        HorizontalAlignment="Center"
+                        Content="Default CheckBox" />
+
+                    <RadioButton
+                        Grid.Row="2"
+                        HorizontalAlignment="Center"
+                        Content="Disabled CheckBox"
+                        IsEnabled="False" />
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="GroupBox">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="GroupBox"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <GroupBox
+                        Grid.Row="1"
+                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Grid}}"
+                        Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Grid}}"
+                        HorizontalAlignment="Center"
+                        Header="Information">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBox Grid.Row="0" bootstrap:TextBoxAssist.PlaceHolder="Your name" />
+
+                            <TextBox Grid.Row="1" bootstrap:TextBoxAssist.PlaceHolder="My name" />
+
+                            <CheckBox
+                                Grid.Row="2"
+                                HorizontalAlignment="Left"
+                                Content="Active" />
+
+                            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                                <Button
+                                    HorizontalAlignment="Left"
+                                    Content="Save"
+                                    Style="{StaticResource btn-primary}" />
+                                <Button
+                                    HorizontalAlignment="Left"
+                                    Content="Cancel"
+                                    Style="{StaticResource btn-danger}" />
+                            </StackPanel>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="ProgreBar">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="ProgressBar"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <ProgressBar
+                        Grid.Row="1"
+                        Margin="10"
+                        Style="{StaticResource progressbar-primary}"
+                        Value="30" />
+
+                    <ProgressBar
+                        Grid.Row="2"
+                        Margin="10"
+                        Style="{StaticResource progressbar-secondary}"
+                        Value="40" />
+
+                    <ProgressBar
+                        Grid.Row="3"
+                        Margin="10"
+                        Style="{StaticResource progressbar-danger}"
+                        Value="50" />
+
+                    <ProgressBar
+                        Grid.Row="4"
+                        Margin="10"
+                        Style="{StaticResource progressbar-success}"
+                        Value="60" />
+
+                    <ProgressBar
+                        Grid.Row="5"
+                        Margin="10"
+                        Style="{StaticResource progressbar-warning}"
+                        Value="70" />
+
+                    <ProgressBar
+                        Grid.Row="6"
+                        Margin="10"
+                        Style="{StaticResource progressbar-info}"
+                        Value="80" />
+
+                    <ProgressBar
+                        Grid.Row="7"
+                        Margin="10"
+                        Style="{StaticResource progressbar-dark}"
+                        Value="90" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="PopOver">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="PopOver"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <bootstrap:PopOver
+                        Grid.Row="1"
+                        Width="100"
+                        Content="Hola"
+                        PopOverText="This is a simple popover"
+                        PopupPlacement="Bottom"
+                        Style="{StaticResource popover-primary}" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="ListBox">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="ListBox"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <ListBox Grid.Row="1">
+                        <ListBox.Resources>
+                            <Style BasedOn="{StaticResource listboxitem-success}" TargetType="{x:Type ListBoxItem}" />
+                        </ListBox.Resources>
+                        <ListBoxItem>Hola</ListBoxItem>
+                        <ListBoxItem>Hola</ListBoxItem>
+                        <ListBoxItem>Hola</ListBoxItem>
+                        <ListBoxItem>Hola</ListBoxItem>
+                        <ListBoxItem>Hola</ListBoxItem>
+                    </ListBox>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="ListView">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="ListView"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <ListView x:Name="myListView" Grid.Row="1">
+                        <ListViewItem>Hola</ListViewItem>
+                        <ListViewItem>Hola</ListViewItem>
+                        <ListViewItem>Hola</ListViewItem>
+                        <ListViewItem>Hola</ListViewItem>
+                        <ListViewItem>Hola</ListViewItem>
+                    </ListView>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Modal">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="Modal"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <Button
+                        Grid.Row="1"
+                        Width="140"
+                        Click="Button_Click"
+                        Content="Show Modal" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Spinner">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="Spinner"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
 
 
-                <StackPanel
-                    Grid.Row="3"
-                    HorizontalAlignment="Center"
-                    Orientation="Horizontal">
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-primary-grow}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-secondary-grow}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-danger-grow}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-success-grow}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-warning-grow}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-light-grow}" />
-                    <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-dark-grow}" />
-                </StackPanel>
-            </Grid>
-        </TabItem>
-
-        <TabItem Header="Jumbotron">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-
-                <Label
-                    Grid.Row="0"
-                    HorizontalAlignment="Center"
-                    Content="Carousel"
-                    FontFamily="{StaticResource SegoeUI}"
-                    FontSize="60"
-                    FontWeight="Light"
-                    ToolTipService.Placement="Bottom" />
-
-                <bootstrap:Jumbotron>
-                    <StackPanel HorizontalAlignment="Left">
-                        <Label>This is a jumbotron</Label>
+                    <StackPanel
+                        Grid.Row="1"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-primary}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-secondary}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-danger}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-success}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-warning}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-light}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-dark}" />
                     </StackPanel>
-                </bootstrap:Jumbotron>
 
-            </Grid>
-        </TabItem>
-    </TabControl>
+                    <Label
+                        Grid.Row="2"
+                        HorizontalAlignment="Center"
+                        Content="Spinner grow"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+
+                    <StackPanel
+                        Grid.Row="3"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-primary-grow}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-secondary-grow}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-danger-grow}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-success-grow}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-warning-grow}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-light-grow}" />
+                        <bootstrap:Spinner Margin="10" Style="{StaticResource spinner-dark-grow}" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Jumbotron">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Content="Jumbotron"
+                        FontFamily="{StaticResource SegoeUI}"
+                        FontSize="60"
+                        FontWeight="Light"
+                        ToolTipService.Placement="Bottom" />
+
+                    <bootstrap:Jumbotron Grid.Row="1">
+                        <StackPanel HorizontalAlignment="Left">
+                            <TextBlock
+                                FontSize="60"
+                                Text="Bootstrap jumbotron"
+                                TextWrapping="Wrap" />
+                            <Label>This is a jumbotron</Label>
+                        </StackPanel>
+                    </bootstrap:Jumbotron>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </ScrollViewer>
 </Window>

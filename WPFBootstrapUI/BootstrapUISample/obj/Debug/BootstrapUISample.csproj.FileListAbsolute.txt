@@ -22,7 +22,6 @@ C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\D
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\bin\Debug\WPFBootstrapUI.pdb
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\App.g.cs
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample_MarkupCompile.cache
-C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample_MarkupCompile.lref
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.g.resources
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.Properties.Resources.resources
 C:\Users\usuario\Documents\WPFBootstrapUI\WPFBootstrapUI\BootstrapUISample\obj\Debug\BootstrapUISample.csproj.GenerateResource.cache
