@@ -21,12 +21,14 @@ namespace WPFBootstrapUI.Controls.Modals
             if (ownerWindow == null)
                 return ModalResult.None;
 
-            Modal modal = new Modal(ownerWindow);
-            modal.Title = title;
-            modal.Message = message;
-            modal.AcceptButtonText = acceptButtonText;
-            modal.CancelButtonText = cancelButtonText;
-            modal.IsDesition = isDesition;
+            Modal modal = new Modal(ownerWindow)
+            {
+                Title = title,
+                Message = message,
+                AcceptButtonText = acceptButtonText,
+                CancelButtonText = cancelButtonText,
+                IsDesition = isDesition
+            };
 
             ownerWindow.Opacity = 0.6;
             ownerWindow.Dispatcher.Invoke(new Action(() => modal.ShowDialog()));
@@ -49,12 +51,14 @@ namespace WPFBootstrapUI.Controls.Modals
         {
             TaskCompletionSource<ModalResult?> modalResultSource = new TaskCompletionSource<ModalResult?>();
 
-            Modal modal = new Modal(ownerWindow);
-            modal.Title = title;
-            modal.Message = message;
-            modal.AcceptButtonText = acceptButtonText;
-            modal.CancelButtonText = cancelButtonText;
-            modal.IsDesition = isDesition;
+            Modal modal = new Modal(ownerWindow)
+            {
+                Title = title,
+                Message = message,
+                AcceptButtonText = acceptButtonText,
+                CancelButtonText = cancelButtonText,
+                IsDesition = isDesition
+            };
 
             ownerWindow.Opacity = 0.6;
 

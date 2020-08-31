@@ -42,11 +42,7 @@
             To="0"
             Duration="0:0:0.73" />
     </Storyboard>
-
-
     <!--#endregion-->
-
-
 
     <!--  Normal Spinners  -->
     <ControlTemplate x:Key="SpinnerControlTemplate" TargetType="{x:Type Controls:Spinner}">
