@@ -29,6 +29,10 @@ using System.Windows.Media.TextFormatting;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
+using WPFBootstrapUI;
+using WPFBootstrapUI.Controls;
+using WPFBootstrapUI.ControlsAssists;
+using WPFBootstrapUI.Converters;
 
 
 namespace BootstrapUISample {
