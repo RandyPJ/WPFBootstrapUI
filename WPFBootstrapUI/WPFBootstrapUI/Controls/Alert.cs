@@ -39,7 +39,7 @@ namespace WPFBootstrapUI.Controls
 
         static Alert()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Alert), new FrameworkPropertyMetadata(typeof(Alert)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Alert),new FrameworkPropertyMetadata(typeof(Alert)));
         }
         public override void OnApplyTemplate()
         {

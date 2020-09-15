@@ -1144,7 +1144,6 @@
                         FontWeight="Light"
                         ToolTipService.Placement="Bottom" />
 
-
                     <StackPanel
                         Grid.Row="1"
                         HorizontalAlignment="Center"
@@ -1202,7 +1201,7 @@
                     <bootstrap:Jumbotron Grid.Row="1">
                         <StackPanel HorizontalAlignment="Left">
                             <TextBlock
-                                FontSize="60"
+                                FontSize="50"
                                 Text="Bootstrap jumbotron"
                                 TextWrapping="Wrap" />
                             <Label>This is a jumbotron</Label>
