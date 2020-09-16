@@ -29,6 +29,7 @@
     <ItemGroup>
       <Compile Include="Animations\StoryBoardHelper.cs" />
       <Compile Include="ControlsAssists\PasswordBoxAssist.cs" />
+      <Compile Include="ControlsAssists\ShadowAssist.cs" />
       <Compile Include="ControlsAssists\TextBoxAssist.cs" />
       <Compile Include="ControlsAssists\BorderAssist.cs" />
       <Compile Include="ControlsAssists\LinkButtonTextAssist.cs" />
