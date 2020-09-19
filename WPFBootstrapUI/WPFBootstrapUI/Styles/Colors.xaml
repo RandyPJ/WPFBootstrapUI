@@ -4,7 +4,7 @@
     xmlns:local="clr-namespace:WPFBootstrapUI.Styles">
 
     <!--  Base and Solid Colors  -->
-    <Color x:Key="PrimaryColor">#0074d9</Color>
+    <Color x:Key="PrimaryColor">#007bff</Color>
     <Color x:Key="InfoColor">#17a2b8</Color>
     <Color x:Key="SuccessColor">#28a745</Color>
     <Color x:Key="WarningColor">#ffc107</Color>

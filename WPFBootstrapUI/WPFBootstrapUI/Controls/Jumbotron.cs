@@ -9,7 +9,6 @@ namespace WPFBootstrapUI.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Jumbotron), new FrameworkPropertyMetadata(typeof(Jumbotron)));
         }
-
         public CornerRadius CornerRadius
         {
             get { return (CornerRadius)GetValue(CornerRadiusProperty); }
