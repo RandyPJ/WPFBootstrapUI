@@ -54,6 +54,7 @@
         <DependentUpon>Settings.settings</DependentUpon>
       </Compile>
       <Compile Include="Styles\WindowStyles.xaml.cs" />
+      <Compile Include="WPFBootstrapColors\BootstrapColors.cs" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="Properties\Resources.resx" />

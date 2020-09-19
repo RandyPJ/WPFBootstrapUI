@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using WPFBootstrapUI.WPFBootstrapColors;
 
 namespace WPFBootstrapUI.Controls
 {
