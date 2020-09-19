@@ -13,6 +13,7 @@ namespace BootstrapUISample
         {
             InitializeComponent();
         }
+
         private List<Persona> GetList()
         {
             return new List<Persona>() 
