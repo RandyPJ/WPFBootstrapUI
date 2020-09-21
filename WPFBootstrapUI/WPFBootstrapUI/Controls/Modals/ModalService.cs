@@ -18,22 +18,30 @@ namespace WPFBootstrapUI.Controls.Modals
         /// <returns></returns>
         public static ModalResult ShowModal(Window ownerWindow, string title, string message, string acceptButtonText, string cancelButtonText, bool isDesition)
         {
-            if (ownerWindow == null)
-                return ModalResult.None;
-
-            Modal modal = new Modal(ownerWindow)
+            Modal modal;
+            try
             {
-                Title = title,
-                Message = message,
-                AcceptButtonText = acceptButtonText,
-                CancelButtonText = cancelButtonText,
-                IsDesition = isDesition
-            };
+                if (ownerWindow == null)
+                    return ModalResult.None;
 
-            ownerWindow.Opacity = 0.6;
-            ownerWindow.Dispatcher.Invoke(new Action(() => modal.ShowDialog()));
-            ownerWindow.Opacity = 1;
+                modal = new Modal(ownerWindow)
+                {
+                    Title = title,
+                    Message = message,
+                    AcceptButtonText = acceptButtonText,
+                    CancelButtonText = cancelButtonText,
+                    IsDesition = isDesition
+                };
 
+                ownerWindow.Opacity = 0.6;
+                ownerWindow.Dispatcher.Invoke(new Action(() => modal.ShowDialog()));
+                ownerWindow.Opacity = 1;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             return modal.ModalResult;
         }
 
@@ -50,26 +58,31 @@ namespace WPFBootstrapUI.Controls.Modals
         public static async Task<ModalResult?> ShowModalAsync(Window ownerWindow, string title, string message, string acceptButtonText, string cancelButtonText, bool isDesition)
         {
             TaskCompletionSource<ModalResult?> modalResultSource = new TaskCompletionSource<ModalResult?>();
-
-            Modal modal = new Modal(ownerWindow)
+            try
             {
-                Title = title,
-                Message = message,
-                AcceptButtonText = acceptButtonText,
-                CancelButtonText = cancelButtonText,
-                IsDesition = isDesition
-            };
+                Modal modal = new Modal(ownerWindow)
+                {
+                    Title = title,
+                    Message = message,
+                    AcceptButtonText = acceptButtonText,
+                    CancelButtonText = cancelButtonText,
+                    IsDesition = isDesition
+                };
 
-            ownerWindow.Opacity = 0.6;
+                ownerWindow.Opacity = 0.6;
 
-            await ownerWindow.Dispatcher.BeginInvoke(new Action(() => 
+                await ownerWindow.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    modal.ShowDialog();
+                    modalResultSource.SetResult(modal.ModalResult);
+                }));
+
+                ownerWindow.Opacity = 1;
+            }
+            catch (Exception)
             {
-                modal.ShowDialog();
-                modalResultSource.SetResult(modal.ModalResult);
-            }));
-
-            ownerWindow.Opacity = 1;
-
+                throw;
+            }
             return await modalResultSource.Task;
         }
     }

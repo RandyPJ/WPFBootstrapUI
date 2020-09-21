@@ -71,7 +71,6 @@
                             Style="{StaticResource alert-dark}" />
                     </StackPanel>
                 </ScrollViewer>
-
             </TabItem>
 
             <TabItem Header="Badge">
@@ -116,13 +115,11 @@
                             Style="{StaticResource badge-danger}"
                             Text="danger" />
 
-
                         <bootstrap:Badge
                             Grid.Row="1"
                             Margin="3"
                             Style="{StaticResource badge-warning}"
                             Text="warning" />
-
 
                         <bootstrap:Badge
                             Grid.Row="1"
@@ -180,14 +177,12 @@
                             Text="danger"
                             ToolTip="Hola mundo" />
 
-
                         <bootstrap:Badge
                             Grid.Row="1"
                             Margin="3"
                             Style="{StaticResource badge-pill-warning}"
                             Text="warning"
                             ToolTip="Hola mundo" />
-
 
                         <bootstrap:Badge
                             Grid.Row="1"
@@ -210,7 +205,6 @@
                             Text="dark"
                             ToolTip="Hola mundo" />
                     </StackPanel>
-
                 </Grid>
             </TabItem>
 
@@ -358,7 +352,6 @@
                                     </Grid>
                                 </bootstrap:CardChildPanel>
                             </StackPanel>
-
                         </bootstrap:Card>
 
                         <bootstrap:Card
@@ -520,10 +513,8 @@
                                 </bootstrap:CardChildPanel>
                             </StackPanel>
                         </bootstrap:Card>
-
                     </Grid>
                 </ScrollViewer>
-
             </TabItem>
 
             <TabItem Header="Button">
@@ -690,7 +681,6 @@
                             Style="{StaticResource btn-outline-dark}" />
                     </Grid>
                 </Grid>
-
             </TabItem>
 
             <TabItem Header="TextBox">
@@ -799,7 +789,6 @@
                         Style="{StaticResource btn-primary}"
                         ToolTip="ToolTip Bottom"
                         ToolTipService.Placement="Bottom" />
-
                 </Grid>
             </TabItem>
 
@@ -828,10 +817,7 @@
                         <ComboBoxItem Content="Fifth item" />
                     </ComboBox>
                 </Grid>
-
             </TabItem>
-
-
 
             <TabItem Header="CheckBox">
 
@@ -862,7 +848,6 @@
                         Content="Disabled CheckBox"
                         IsEnabled="False" />
                 </Grid>
-
             </TabItem>
 
             <TabItem Header="RadioButton">
@@ -894,7 +879,6 @@
                         Content="Disabled CheckBox"
                         IsEnabled="False" />
                 </Grid>
-
             </TabItem>
 
             <TabItem Header="GroupBox">
@@ -951,7 +935,6 @@
                         </Grid>
                     </GroupBox>
                 </Grid>
-
             </TabItem>
 
             <TabItem Header="ProgreBar">
@@ -1165,7 +1148,6 @@
                         FontSize="60"
                         FontWeight="Light"
                         ToolTipService.Placement="Bottom" />
-
 
                     <StackPanel
                         Grid.Row="3"

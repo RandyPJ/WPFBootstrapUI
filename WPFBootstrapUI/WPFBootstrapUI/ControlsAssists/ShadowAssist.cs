@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WPFBootstrapUI.ControlsAssists
+﻿namespace WPFBootstrapUI.ControlsAssists
 {
     public class ShadowAssist
     {
-        
     }
 }
