@@ -319,8 +319,6 @@
         <Setter Property="Template" Value="{StaticResource CardChildPanelControlTemplate}" />
     </Style>
 
-
-
     <Style x:Key="card-footer-light" TargetType="{x:Type Controls:CardChildPanel}">
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />

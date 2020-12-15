@@ -20,14 +20,6 @@ namespace WPFBootstrapUI.Controls
             get { return (bool)GetValue(IsAlertDismissibleProperty); }
             set { SetValue(IsAlertDismissibleProperty, value); }
         }
-        public static CornerRadius GetCornerRadius(DependencyObject obj)
-        {
-            return (CornerRadius)obj.GetValue(CornerRadiusProperty);
-        }
-        public static void SetCornerRadius(DependencyObject obj, CornerRadius value)
-        {
-            obj.SetValue(CornerRadiusProperty, value);
-        }
         public static Brush GetAlertDismissButtonForeground(DependencyObject obj)
         {
             return (Brush)obj.GetValue(AlertDismissButtonForegroundProperty);
@@ -36,7 +28,14 @@ namespace WPFBootstrapUI.Controls
         {
             obj.SetValue(AlertDismissButtonForegroundProperty, value);
         }
-
+        public static CornerRadius GetCornerRadius(DependencyObject obj)
+        {
+            return (CornerRadius)obj.GetValue(CornerRadiusProperty);
+        }
+        public static void SetCornerRadius(DependencyObject obj, CornerRadius value)
+        {
+            obj.SetValue(CornerRadiusProperty, value);
+        }
         static Alert()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Alert),new FrameworkPropertyMetadata(typeof(Alert)));
@@ -50,11 +49,11 @@ namespace WPFBootstrapUI.Controls
 
             DismissButton.Click -= DismissButton_Click;
 
-            base.OnApplyTemplate();
-
             SetAlertDismissButtonForeground(DismissButton, this.Foreground);
 
             DismissButton.Click += DismissButton_Click;
+
+            base.OnApplyTemplate();
         }
         private void DismissButton_Click(object sender, RoutedEventArgs e)
         {
