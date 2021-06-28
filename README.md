@@ -15,6 +15,7 @@ The Bootstrap UI for WPF.
 * Edit the App.xaml to following:
 
 ```xaml
+
 <Application x:Class="BootstrapUISample.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -34,6 +35,7 @@ The Bootstrap UI for WPF.
 **Edit the MainWindow.xaml to following:**
 
 ```xaml
+
 <Window
     ...
     xmlns:bootstrap="http://schemas.rpj.com/WPFBootstrapUI"
