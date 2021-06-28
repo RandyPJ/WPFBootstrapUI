@@ -33,7 +33,7 @@ The Bootstrap UI for WPF.
 
 **Edit the MainWindow.xaml to following:**
 
-```
+```javascript
 <Window
     ...
     xmlns:bootstrap="http://schemas.rpj.com/WPFBootstrapUI"
