@@ -14,7 +14,7 @@ The Bootstrap UI for WPF.
 * Install from nuget: _Install-Package WPFBootstrapUI_.
 * Edit the App.xaml to following:
 
-```
+```xaml
 <Application x:Class="BootstrapUISample.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -33,7 +33,7 @@ The Bootstrap UI for WPF.
 
 **Edit the MainWindow.xaml to following:**
 
-```javascript
+```xaml
 <Window
     ...
     xmlns:bootstrap="http://schemas.rpj.com/WPFBootstrapUI"
@@ -57,8 +57,6 @@ The Bootstrap UI for WPF.
             Content="Hello World" />
     </Grid>
  </Window>
- 
- const { createServer } from './holamundo.js'
 ```
 
 More information in the [wiki](https://github.com/RandyPJ/WPFBootstrapUI/wiki/Inicio)
