@@ -5,7 +5,7 @@ The Bootstrap UI for WPF.
 ### **Features**
 
 * Modern styles.
-* Targets .Net Framework >= 4.5.
+* Targets .Net Framework >= 4.5 && .NET6+
 * No packages dependencies.
 
 ### **Quick start**
