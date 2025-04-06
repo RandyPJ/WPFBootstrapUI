@@ -37,7 +37,7 @@ jobs:
     - name: Build and Pack NuGet package
       run: dotnet pack src/services/Florage.Shared/Florage.Shared.csproj -p:Version='${{ steps.gitversion.outputs.SemVer }}' -c Release
     - name: Upload NuGet package to GitHub
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-pages-artifact@v3
       with:
         name: nugetPackage
         path: bin/Release/ 
