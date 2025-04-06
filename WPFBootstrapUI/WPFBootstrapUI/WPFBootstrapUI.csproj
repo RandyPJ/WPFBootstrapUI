@@ -1,68 +1,68 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
  
 	<PropertyGroup>
-      <TargetFrameworks>net45;net451;net46;net461;net472;net48</TargetFrameworks>
-      <UseWPF>true</UseWPF>
-      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-      <RootNamespace>WPFBootstrapUI</RootNamespace>
-      <AssemblyName>WPFBootstrapUI</AssemblyName>
-      <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-      <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
-	    <LangVersion>8.0</LangVersion>
+	  <TargetFrameworks>net45;net451;net46;net461;net472;net48;net6.0-windows;net7.0-windows;net8.0-windows;net9.0-windows</TargetFrameworks>
+	  <UseWPF>true</UseWPF>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <RootNamespace>WPFBootstrapUI</RootNamespace>
+	  <AssemblyName>WPFBootstrapUI</AssemblyName>
+	  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	  <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+	  <LangVersion>latest</LangVersion>
 
-      <!--Nuget Information-->
-      <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-      <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+	  <!--Nuget Information-->
+	  <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+	  <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <Title>WPFBootstrapUI</Title>
-	  <PackageVersion>1.0.0.8</PackageVersion>
+	  <PackageVersion>1.0.0.9</PackageVersion>
 	  <Description>The Bootstrap UI for WPF.</Description>
-      <PackageProjectUrl>https://github.com/RandyPJ/WPFBootstrapUI</PackageProjectUrl>
-      <PackageLicenseExpression>MIT</PackageLicenseExpression>
-      <RepositoryUrl>https://github.com/RandyPJ/WPFBootstrapUI</RepositoryUrl>
-      <RepositoryType>Public</RepositoryType>
-      <PackageTags>WPF .NET Bootstrap Desktop</PackageTags>
-      <PackageReleaseNotes>New control: Spinner. Border improvements to (card, button and other controls).</PackageReleaseNotes>
-      <Authors>.Randy</Authors>
-    </PropertyGroup>
+	  <PackageProjectUrl>https://github.com/RandyPJ/WPFBootstrapUI</PackageProjectUrl>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <RepositoryUrl>https://github.com/RandyPJ/WPFBootstrapUI</RepositoryUrl>
+	  <RepositoryType>Public</RepositoryType>
+	  <PackageTags>WPF .NET Bootstrap Desktop</PackageTags>
+	  <PackageReleaseNotes>Support for .NET6+</PackageReleaseNotes>
+	  <Authors>.Randy</Authors>
+	</PropertyGroup>
   
-    <ItemGroup>
-      <Compile Include="Animations\StoryBoardHelper.cs" />
-      <Compile Include="ControlsAssists\PasswordBoxAssist.cs" />
-      <Compile Include="ControlsAssists\ShadowAssist.cs" />
-      <Compile Include="ControlsAssists\TextBoxAssist.cs" />
-      <Compile Include="ControlsAssists\BorderAssist.cs" />
-      <Compile Include="ControlsAssists\LinkButtonTextAssist.cs" />
-      <Compile Include="Controls\Alert.cs" />
-      <Compile Include="Controls\Badge.cs" />
-      <Compile Include="Controls\BootstrapWindow.cs" />
-      <Compile Include="Controls\Card.cs" />
-      <Compile Include="Controls\CardChildPanel.cs" />
-      <Compile Include="Controls\Carousel.cs" />
-      <Compile Include="Controls\Jumbotron.cs" />
-      <Compile Include="Controls\Modals\Modal.cs" />
-      <Compile Include="Controls\Modals\ModalService.cs" />
-      <Compile Include="Controls\Modals\ModalResult.cs" />
-      <Compile Include="Controls\PopOver.cs" />
-      <Compile Include="Controls\Spinner.cs" />
-      <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
-      <Compile Include="Properties\AssemblyInfo.cs" />
-      <Compile Include="Properties\Resources.Designer.cs" />
-      <Compile Include="Properties\Settings.Designer.cs">
-        <DesignTimeSharedInput>True</DesignTimeSharedInput>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>Settings.settings</DependentUpon>
-      </Compile>
-      <Compile Include="Styles\WindowStyles.xaml.cs" />
-      <Compile Include="WPFBootstrapColors\BootstrapColors.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <EmbeddedResource Include="Properties\Resources.resx" />
-    </ItemGroup>
-    <ItemGroup>
-      <None Update="Properties\Settings.settings">
-        <Generator>SettingsSingleFileGenerator</Generator>
-        <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-      </None>
-    </ItemGroup>
+	<ItemGroup>
+	  <Compile Include="Animations\StoryBoardHelper.cs" />
+	  <Compile Include="ControlsAssists\PasswordBoxAssist.cs" />
+	  <Compile Include="ControlsAssists\ShadowAssist.cs" />
+	  <Compile Include="ControlsAssists\TextBoxAssist.cs" />
+	  <Compile Include="ControlsAssists\BorderAssist.cs" />
+	  <Compile Include="ControlsAssists\LinkButtonTextAssist.cs" />
+	  <Compile Include="Controls\Alert.cs" />
+	  <Compile Include="Controls\Badge.cs" />
+	  <Compile Include="Controls\BootstrapWindow.cs" />
+	  <Compile Include="Controls\Card.cs" />
+	  <Compile Include="Controls\CardChildPanel.cs" />
+	  <Compile Include="Controls\Carousel.cs" />
+	  <Compile Include="Controls\Jumbotron.cs" />
+	  <Compile Include="Controls\Modals\Modal.cs" />
+	  <Compile Include="Controls\Modals\ModalService.cs" />
+	  <Compile Include="Controls\Modals\ModalResult.cs" />
+	  <Compile Include="Controls\PopOver.cs" />
+	  <Compile Include="Controls\Spinner.cs" />
+	  <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+	  <Compile Include="Properties\AssemblyInfo.cs" />
+	  <Compile Include="Properties\Resources.Designer.cs" />
+	  <Compile Include="Properties\Settings.Designer.cs">
+		<DesignTimeSharedInput>True</DesignTimeSharedInput>
+		<AutoGen>True</AutoGen>
+		<DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	  <Compile Include="Styles\WindowStyles.xaml.cs" />
+	  <Compile Include="WPFBootstrapColors\BootstrapColors.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="Properties\Resources.resx" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Properties\Settings.settings">
+		<Generator>SettingsSingleFileGenerator</Generator>
+		<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
 </Project>
